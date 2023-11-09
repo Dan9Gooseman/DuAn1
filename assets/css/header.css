@@ -10,3 +10,25 @@
     justify-content: space-between;
     align-items: center;
 }
+.header .header-main > img{
+    padding-left:6rem;
+}
+.header .header-main .header-search-bar{
+    /* position: relative; */
+    width:40rem;
+}
+/* .header .header-main .header-search-bar i{
+    position: absolute;
+    left:0.5rem;
+    top:1.25rem;
+} */
+/* .header .header-main .header-search-bar input{
+    width:25rem;
+    height:2.5rem;
+    padding-left:2rem;
+    border-radius: 1.25rem 0 0 1.25rem;
+} */
+/* .header .header-main .header-search-bar button{
+    width:5rem;
+    height:2.5rem;
+} */

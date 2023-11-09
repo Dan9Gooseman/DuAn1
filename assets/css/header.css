@@ -1,0 +1,12 @@
+.header{
+    width:100%;
+}
+.header .header-address{
+    display:flex;
+    justify-content: center;
+}
+.header .header-main{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}

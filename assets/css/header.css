@@ -17,18 +17,13 @@
     /* position: relative; */
     width:40rem;
 }
-/* .header .header-main .header-search-bar i{
-    position: absolute;
-    left:0.5rem;
-    top:1.25rem;
-} */
-/* .header .header-main .header-search-bar input{
-    width:25rem;
-    height:2.5rem;
-    padding-left:2rem;
-    border-radius: 1.25rem 0 0 1.25rem;
-} */
-/* .header .header-main .header-search-bar button{
-    width:5rem;
-    height:2.5rem;
-} */
+.background{
+    background-color: #255C45 !important;
+    color:white !important;
+}
+.radius-1{
+    border-radius: 2rem 0 0 2rem !important;
+}
+.radius-2{
+    border-radius:0 2rem 2rem 0 !important;
+}

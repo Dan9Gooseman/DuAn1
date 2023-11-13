@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="content-ctproduct">
+      <div class="img-thongtin">
+        <div class="img-chinh">
+          <img
+            class="img-fluid"
+            src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
+            alt="ProductS"
+          />
+          <div class="img-slide">
+            <img
+              class="img-fluid"
+              src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
+              alt="ProductS"
+            /><img
+              class="img-fluid"
+              src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
+              alt="ProductS"
+            /><img
+              class="img-fluid"
+              src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
+              alt="ProductS"
+            /><img
+              class="img-fluid"
+              src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
+              alt="ProductS"
+            />
+          </div>
+        </div>
+        <div class="ttin">
+          <div class="name-product">
+            <h2>Tên Sản Phẩm :</h2>
+          </div>
+          <div class="price-product">
+            <h2>Giá Sản Phẩm :</h2>
+          </div>
+          <div class="Trademark-product">
+            <h2>Thương Hiệu:</h2>
+          </div>
+          <div class="DungTich-product">
+            <h2>Dung Tích :</h2>
+            <div class="dungtich">
+              <button>330ml</button>
+              <button>330ml</button>
+              <button>330ml</button>
+            </div>
+          </div>
+          <div class="quantity">
+            <h2>Số Lượng:</h2>
+            <button class="giam-sl">-</button>
+
+            <input
+              type="number"
+              min="1"
+              value="1"
+              id="quantityInput"
+              readonly
+            />
+            <button class="tang-sl">+</button>
+          </div>
+          <div class="shoping">
+            <div class="shopping-mua">
+              <button><h2>Mua Ngay</h2></button>
+            </div>
+            <div class="shoping-them">
+              <button><h2>Thêm Vào Giỏ Hàng</h2></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cmt-ct_product">
+        <div class="cmt"></div>
+        <div class="ct_product"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Lấy phần tử số lượng và nút tăng/giảm
+      var quantityInput = document.getElementById("quantityInput");
+
+      // Bắt sự kiện khi nút tăng được click
+      document.querySelector(".tang-sl").addEventListener("click", function () {
+        increaseQuantity();
+      });
+
+      // Bắt sự kiện khi nút giảm được click
+      document.querySelector(".giam-sl").addEventListener("click", function () {
+        decreaseQuantity();
+      });
+
+      // Hàm tăng số lượng
+      function increaseQuantity() {
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+      }
+
+      // Hàm giảm số lượng, không giảm dưới 1
+      function decreaseQuantity() {
+        var currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      }
+    });
+  </script>
+</html>

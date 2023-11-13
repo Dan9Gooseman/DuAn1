@@ -1,0 +1,66 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+img{
+    width: 100px;
+}
+body{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* height: 100vh; */
+}
+.container{
+    margin: 0 5rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* max-width: 100%;
+    min-height: 300px; */
+}
+.container .header{
+    background-color: #E0E0E0;
+}
+.container .header .taikhoan{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container .header .menu{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.container .header .menu .menu1{
+    padding-right: 20px;
+}
+.container .header .menu .menu2{
+   padding-left: 20px;
+}
+.main{
+    padding: 30px 30px 30px 30px;
+    border: solid #E0E0E0 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1px;
+}
+
+button{
+    padding: 5PX 5PX 5PX 5PX;
+    border: #255C45 1px;
+    background-color: black;
+    color: #E0E0E0;
+}
+button:hover{
+    color: #E0E0E0;
+    background-color:  #255C45;
+}

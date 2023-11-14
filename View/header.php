@@ -5,9 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/header&footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="Global/css/header&footer.css" rel="stylesheet">
+    <?php
+
+    if(isset($_GET['act'])&&($_GET['act']!="")){
+        $act=$_GET['act'];
+        switch($act){
+            // case "home":
+            //     echo '<link rel="stylesheet" href="assets/css/home.css">';
+        }
+    }else{
+        echo '<link rel="stylesheet" href="assets/css/home.css">';
+    }
+    ?>
 </head>
 
 <body>
@@ -21,7 +33,7 @@
             </a>
             <div class="header-search-bar">
                 <div class="input-group relative">
-                    <input type="text" class="form-control shadow-none padding-left radius-1"
+                    <input name="search-bar" type="text" class="form-control shadow-none padding-left radius-1"
                         placeholder="Nhập từ khóa tìm kiếm" aria-label="Recipient's username"
                         aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary background radius-2" type="button" id="button-addon2">Tìm

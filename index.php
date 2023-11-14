@@ -1,15 +1,12 @@
 <?php
-// include "model/pdo.php";
-// include "model/pdo_product.php";
-// include "model/pdo_type.php";
-include "view/header.php";
-// $all_product = load_all_product();
-// $all_type = load_all_type();
-// $top10_product = load_top10_product();
 
-// if(isset($_GET['act'])&&($_GET['act']!="")){
-//     $act=$_GET['act'];
-//     switch($act){
+// include files
+include "view/header.php";
+
+// ktra tran trang nguoi dung dang xem
+if(isset($_GET['act'])&&($_GET['act']!="")){
+    $act=$_GET['act'];
+    switch($act){
 //         case "products":
 //             if(isset($_POST['keyword']) &&  $_POST['keyword'] != 0 ){
 //                 $kyw = $_POST['keyword'];
@@ -39,10 +36,9 @@ include "view/header.php";
 //             }
 //             break;
         
-//     }
-// }else{
-//     include "view/home.php";
-// }
-
+    }
+}else{
+    include "view/home.php";
+}
 include "view/footer.php";
 ?>

@@ -7,6 +7,9 @@ include "view/header.php";
 if(isset($_GET['act'])&&($_GET['act']!="")){
     $act=$_GET['act'];
     switch($act){
+        case "dangnhap":
+            include "view/sanpham.php";
+            break;
 //         case "products":
 //             if(isset($_POST['keyword']) &&  $_POST['keyword'] != 0 ){
 //                 $kyw = $_POST['keyword'];

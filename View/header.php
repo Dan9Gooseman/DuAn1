@@ -42,7 +42,7 @@
             </div>
             <div class="header-user-cart">
                 <div class="user">
-                    <a id="custom-btn" class="btn btn-primary" href="#" role="button">Đăng nhập</a>
+                    <a id="custom-btn" class="btn btn-primary" href="../View/dangnhap.php" role="button">Đăng nhập</a>
                 </div>
                 <div class="cart">
                     <a href="#">

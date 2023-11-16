@@ -30,22 +30,25 @@
   margin-bottom: 30px;
 }
 .product {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  display: flex;
+  justify-content: center;
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  /* gap: 10px; */
 }
 .product a {
   text-decoration: none;
   margin-bottom: 20px;
 }
 .product-box {
+  max-width: 300px;
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
   border-radius: 2px;
-  width: 90%;
+  width: 100%;
   margin: 1%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 
 .product-image {
@@ -104,7 +107,10 @@
 }
 
 .menu {
-  width: auto;
+  position: absolute;
+  left: 4rem;
+  top: 4rem;
+  z-index: 1;
   display: none;
   background-color: #ffffff;
   padding: 10px;
@@ -136,10 +142,11 @@
   margin: 0 5rem;
 }
 .img-thongtin {
-  height: auto;
+  display: flex;
+  justify-content: center;
 }
 .img-chinh {
-  float: left;
+  /* float: left; */
   width: 38%;
 }
 .img-chinh img {
@@ -148,7 +155,7 @@
   margin-bottom: 30px;
 }
 .ttin {
-  float: right;
+  /* float: right; */
   width: 60%;
 }
 .img-slide {
@@ -219,7 +226,22 @@
   padding: 0px;
   border: 0px;
 }
-/* .cmt-ct_product {
-  min-height: 100px;
-  background-color: red;
-} */
+
+.img-thongtin {
+  height: auto;
+  margin-bottom: 30px; /* Khoảng cách 30px giữa img-thongtin và cmt-ct_product */
+}
+
+.cmt-ct_product {
+  /* min-height: 100px;
+  background-color: red; */
+  display: flex;
+  justify-content: center;
+}
+.cmt {
+  width: 58%;
+  margin-right: 2%;
+}
+.ct_product {
+  width: 40%;
+}

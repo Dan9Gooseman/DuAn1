@@ -23,25 +23,25 @@ body {
   width: 100%;
   /* min-height: 300px; */
 }
-.container-quenmk .header {
+.container-quenmk .header-quenmk {
   background-color: #e0e0e0;
 }
-.container-quenmk .header .taikhoan {
+.container-quenmk .header-quenmk .taikhoan {
   padding-top: 20px;
   display: flex;
   justify-content: center;
 }
 
-.container-quenmk .header .menu {
+.container-quenmk .header-quenmk .menu {
   display: flex;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.container-quenmk .header .menu .menu1 {
+.container-quenmk .header-quenmk .menu .menu1 {
   padding-right: 20px;
 }
-.container-quenmk .header .menu .menu2 {
+.container-quenmk .header-quenmk .menu .menu2 {
   padding-left: 20px;
 }
 .form {

@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="../css/dangkydangnhap.css" />
-  <title>Modern Login Page | AsmrProg</title>
-</head>
-
-<body>
-  <div class="container" id="container">
+<div class="outer-container">
+  <div class="inner-container" id="container">
     <div class="form-container sign-up">
       <form>
         <h1>Tạo tài khoản</h1>
         <div class="social-icons">
-          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brand qs fa-google-plus-g"></i></a>
           <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
           <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -37,7 +26,7 @@
         </div>
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Mật khẩu" />
-        <a href="../quenmk/quenmatkhau.html">Quên mật khẩu?</a>
+        <a href="index.php?act=quenmk">Quên mật khẩu?</a>
         <button>Đăng nhập</button>
       </form>
     </div>
@@ -62,7 +51,6 @@
       </div>
     </div>
   </div>
-  <script src="../js/dangkydangnhap.js"></script>
-</body>
+</div>
 
-</html>
+<script src="assets/js/dangkydangnhap.js"></script>

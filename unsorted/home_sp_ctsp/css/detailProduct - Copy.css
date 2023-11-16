@@ -4,7 +4,7 @@
 /* 
  */
 .container-fluid {
-  margin: 0 5rem;
+  padding: 0 5rem;
 }
 @media (min-width: 1200px) {
   .display-7 {
@@ -100,4 +100,36 @@
     width: 100%;
     margin-left: 0.5rem;
   }
+}
+
+.cmt-ct_product {
+  display: flex;
+  justify-content: space-around;
+}
+.cmt {
+  width: 90%;
+}
+.ct_product {
+  width: 100%;
+  margin-top: 2%;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+.cmt th:nth-child(1),
+.cmt td:nth-child(1) {
+  width: 20%;
+}
+
+.cmt th:nth-child(2),
+.cmt td:nth-child(2) {
+  width: 50%;
+}
+
+.cmt th:nth-child(3),
+.cmt td:nth-child(3) {
+  width: 30%;
 }

@@ -13,6 +13,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "quenmk":
             include "view/user/quenmk.php";
             break;
+        case "sanpham":
+            if (isset($_GET['danhmuc']) && ($_GET['danhmuc'] != "")) {
+                $danhmuc = $_GET['danhmuc'];
+            } else {
+                $danhmuc = "";
+            }
+            // include "view/page/sanpham.php";
+            break;
             //         case "products":
             //             if(isset($_POST['keyword']) &&  $_POST['keyword'] != 0 ){
             //                 $kyw = $_POST['keyword'];

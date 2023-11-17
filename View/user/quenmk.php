@@ -1,15 +1,11 @@
 <div class="container-quenmk">
-    <div class="form">
-        <h4>Quên mật khẩu</h4>
-        <div class="form1">
-            <div class="chu">
-                <span>Nhập email</span>
-            </div>
-            <div class="nut">
-                <input type="email" placeholder="Email" />
-            </div>
-        </div>
-        <button>Gửi</button>
-        <button>Nhập lại</button>
+    <div>
+        <form class="form-holder">
+            <p>Quên mật khẩu? Vui lòng nhập tên đăng nhập hoặc địa chỉ email. Bạn sẽ nhận được mật khẩu của mình qua email.</p>
+            <p class="p">Tên đăng nhập hoặc email</p>
+            <input type="text">
+            <button>NHẬN LẠI MẬT KHẨU</button>
+        </form>
+
     </div>
 </div>

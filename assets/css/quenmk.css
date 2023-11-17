@@ -1,71 +1,24 @@
-* {
-  /* margin: 0;
-    padding: 0; */
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
-img {
-  width: 100px;
-}
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  /* height: 100vh; */
-}
+
 .container-quenmk {
-  margin: 0 5rem;
-
-  position: relative;
-  overflow: hidden;
-  /* width: 800px; */
-  width: 100%;
-  /* min-height: 300px; */
-}
-.container-quenmk .header-quenmk {
-  background-color: #e0e0e0;
-}
-.container-quenmk .header-quenmk .taikhoan {
-  padding-top: 20px;
   display: flex;
   justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  padding: 2rem 0;
+  margin: 5rem 0 10rem 0;
 }
-
-.container-quenmk .header-quenmk .menu {
+.p{
+  font-weight: bold;
+}
+.form-holder{
   display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  flex-direction: column;
 }
-.container-quenmk .header-quenmk .menu .menu1 {
-  padding-right: 20px;
+.form-holder > input{
+  margin-bottom: 1rem;
 }
-.container-quenmk .header-quenmk .menu .menu2 {
-  padding-left: 20px;
-}
-.form {
-  padding: 20px 20%;
-  border: solid #e0e0e0 1px;
-}
-.nut {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.form h4 {
-  padding-bottom: 20px;
-}
-.nut input {
-  width: 100%;
-}
-.form button {
-  margin: 20px 20px 0 0;
+.form-holder > button{
+  width:15rem;
+  color:white;
   background-color: black;
-  color: #e0e0e0;
-  padding: 5px 5px 5px 5px;
-  border: #255c45 1px;
-}
-.form button:hover {
-  color: #e0e0e0;
-  background-color: #255c45;
 }

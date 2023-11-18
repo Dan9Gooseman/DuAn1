@@ -64,6 +64,8 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="index.php?act=sanpham&danhmuc=daugoi">Dầu gội</a></li>
                                 <li><a class="dropdown-item" href="index.php?act=sanpham&danhmuc=dauxa">Dầu xả</a></li>
+                                <li><a class="dropdown-item" href="index.php?act=sanpham&danhmuc=dauxa">Dầu dưỡng tóc</a></li>
+                                <li><a class="dropdown-item" href="index.php?act=sanpham&danhmuc=dauxa">Kem dưỡng tóc</a></li>
                                 <!-- <li><hr class="dropdown-divider"></li> -->
                             </ul>
                         </li>

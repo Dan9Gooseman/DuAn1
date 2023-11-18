@@ -1,7 +1,11 @@
 <div class="content-trangchu">
     <div class="banner">
-        <div class="bn1"></div>
-        <div class="bn2"></div>
+        <div class="bn1">
+            <img src="assets/banner/main-banner.jpg" style="width:100%;">
+        </div>
+        <div class="bn2">
+        <img src="assets/banner/mini-banner1.jpg" id="loop-banner" style="width:100%;">
+        </div>
     </div>
     <div class="pbmn">
         <h1>Phiên Bản Mới Nhất</h1>
@@ -103,3 +107,4 @@
         </div>
     </div>
 </div>
+<script src="assets/js/home.js"></script>

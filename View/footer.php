@@ -51,7 +51,7 @@
 
         }
     } else {
-        echo '<link rel="stylesheet" href="assets/css/home.css">';
+        echo '<link rel="stylesheet" href="assets/js/home.js">';
     }
     ?>
     

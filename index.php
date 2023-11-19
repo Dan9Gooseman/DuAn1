@@ -7,7 +7,7 @@ require_once "model/pdo.php";
 require_once "model/sanpham.php";
 //preload
 $top10_spnew = pdo_top10_spnew();
-// var_dump($top10_spnew);
+var_dump($top10_spnew);
 
 // ktra trang nguoi dung dang xem
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
@@ -23,7 +23,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
                 $sp_id = $_GET['sp_id'];
                 // $onesp = loadone_sanpham($sp_id);
-                extract($onesp);
+                // extract($onesp);
                 // $sp_cungloai = load_sanpham_cungloai($sp_id, $dm_id);
                 // $updateluotxem = update_luotxem($sp_id, $sp_luotxem);
                 include "view/page/chitietsanpham.php";

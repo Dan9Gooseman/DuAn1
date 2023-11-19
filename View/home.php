@@ -4,7 +4,7 @@
             <img src="assets/banner/main-banner.jpg" style="width:100%;">
         </div>
         <div class="bn2">
-            <img src="assets/banner/mini-banner1.jpg" id="loop-banner" style="width:100%;">
+        <img src="assets/banner/mini-banner1.jpg" id="loop-banner" style="width:100%;">
         </div>
     </div>
     <div class="pbmn">
@@ -56,9 +56,7 @@
             <button class="buy-now-button">Mua ngay</button>
         </div>
     </div>
-    <div class="banner2">
-        <img style="width: 100%;" src="assets\banner\sale.jpg" alt="">
-    </div>
+    <div class="banner2"></div>
     <div class="pbmn">
         <h1>Danh Sách Sản Phẩm</h1>
     </div>

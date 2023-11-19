@@ -1,9 +1,13 @@
 <?php
 // include page
 include "View/header.php";
+include "Global/global.php";
 // include model
-include "model/pdo.php";
-
+require_once "model/pdo.php";
+require_once "model/sanpham.php";
+//preload
+$top10_spnew = pdo_top10_spnew();
+// var_dump($top10_spnew);
 
 // ktra trang nguoi dung dang xem
 if (isset($_GET['act']) && ($_GET['act'] != "")) {

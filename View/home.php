@@ -57,7 +57,7 @@
         </div>
     </div>
     <div class="banner2">
-        <img src="assets\uploads\sale.jpg" alt="">
+        <img style="width: 100%;" src="assets\banner\sale.jpg" alt="">
     </div>
     <div class="pbmn">
         <h1>Danh Sách Sản Phẩm</h1>

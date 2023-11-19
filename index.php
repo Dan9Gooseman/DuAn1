@@ -1,9 +1,11 @@
 <?php
-
-// include files
+// include page
 include "View/header.php";
+// include model
+include "model/pdo.php";
 
-// ktra tran trang nguoi dung dang xem
+
+// ktra trang nguoi dung dang xem
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {

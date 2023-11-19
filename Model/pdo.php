@@ -5,7 +5,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh'); //timezone
 function pdo_get_connection()
 {
     $servername = "localhost";
-    $dbname = "ph31064_assignment";
+    $dbname = "duan1";
     $username = "root";
     $password = "vertrigo";
     $port = 3308;

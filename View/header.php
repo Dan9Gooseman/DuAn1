@@ -14,13 +14,25 @@
         switch ($act) {
             case "dangnhap":
                 echo '<link rel="stylesheet" href="assets/css/dangkydangnhap.css">';
+                break;
             case "quenmk":
                 echo '<link rel="stylesheet" href="assets/css/quenmk.css">';
+                break;
+            case "chitietsanpham":
+                if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
+                    echo '<link rel="stylesheet" href="assets/css/chitietsanpham.css">';
+                } else{
+                echo '<link rel="stylesheet" href="assets/css/notfound404.css">';
+                }
+                break;
+
         }
     } else {
         echo '<link rel="stylesheet" href="assets/css/home.css">';
     }
     ?>
+    
+
 </head>
 
 <body>
@@ -79,7 +91,7 @@
                             <a class="nav-link" id="clr-white" href="#">Liên hệ</a>
                         </li>
                     </ul>
-                    <a href="#" id="clr-white">(84) 839565603</a>
+                    <a href="#" id="clr-white" style="text-decoration: none;">(+84) 0912345678</a>
                 </div>
             </div>
         </nav>

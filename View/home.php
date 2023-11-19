@@ -12,7 +12,7 @@
     </div>
     <div class="product">
         <div class="product-box">
-            <a href="#"><img class="product-image a" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+            <a href="index.php?act=chitietsanpham&sp_id="><img class="product-image a" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
             <a href="" class="a">
                 <h2 class="product-name">Tên sản phẩm</h2>
             </a>
@@ -62,11 +62,11 @@
     </div>
     <div class="product">
         <div class="product-box">
-            <a href="#"><img class="product-image a" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
-            <a href="" class="a">
+            <a href="index.php?act=chitietsanpham&sp_id="><img class="product-image a" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+            <a href="index.php?act=chitietsanpham&sp_id=" class="a">
                 <h2 class="product-name">Tên sản phẩm</h2>
             </a>
-            <a href="#" class="a">
+            <a href="index.php?act=chitietsanpham&sp_id=" class="a">
                 <p class="product-price">Giá tiền: $100</p>
             </a>
             <button class="add-to-cart-button">Thêm vào giỏ hàng</button>

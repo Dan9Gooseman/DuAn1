@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CHI TIẾT SẢN PHẨM</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="css/detailProduct - Copy.css" rel="stylesheet" />
-</head>
-
-<body>
   <div class="container-fluid my-3">
     <div class="row">
       <div class="col-md-4">
         <div class="">
-          <img class="img-fluid" src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
-            alt="ProductS" />
+          <img class="img-fluid" src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64" alt="ProductS" />
           <!-- <div class="row my-3">
             <div class="col">
               <img class="w-100" src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
@@ -38,8 +23,8 @@
           </div> -->
         </div>
       </div>
-      <div class="col-md-8">
-        <div class="container-fluid">
+      <div class="col-md-5">
+        <div class="">
           <h3 class="display-7 word-wrap">tên sản phẩm</h3>
           <div class="flex item-padding item-center-horizontal">
             <div class="price">69.000.000đ</div>
@@ -51,8 +36,7 @@
             <div class="flex item-center-horizontal margin-top-2">
               <div style="margin: 0 2rem 0.5rem 0">Dung Tích</div>
               <div class="" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check custom-radio" name="btnradio" id="btnradio1" autocomplete="off"
-                  checked />
+                <input type="radio" class="btn-check custom-radio" name="btnradio" id="btnradio1" autocomplete="off" checked />
                 <label class="btn btn-outline-primary btn-style" for="btnradio1">330ml</label>
                 <input type="radio" class="btn-check custom-radio" name="btnradio" id="btnradio4" autocomplete="off" />
                 <label class="btn btn-outline-primary btn-style" for="btnradio4">690ml</label>
@@ -100,6 +84,9 @@
           </div>
         </div>
       </div>
+      <div class="col-md-3">
+        <img src="assets/banner/aside.jpg" style="margin-top:6rem;">
+      </div>
     </div>
   </div>
   <div class="comment-container">
@@ -137,11 +124,3 @@
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/01804f5b6a.js" crossorigin="anonymous"></script>
-  <script src="js/detailProduct.js"></script>
-</body>
-
-</html>

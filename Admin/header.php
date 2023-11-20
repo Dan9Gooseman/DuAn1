@@ -84,7 +84,16 @@
                             <a class="nav-link" id="clr-white" href="index.php?act=addsp">SẢN PHẨM</a>
                         </li>
                         <li class="nav-item" id="custom-padding-sm">
-                            <a class="nav-link" id="clr-white" href="index.php?act=adddt">BIẾN THỂ SẢN PHẨM</a>
+                            <a class="nav-link" id="clr-white" href="index.php?act=addbtsp">BIẾN THỂ SẢN PHẨM</a>
+                        </li>
+                        <li class="nav-item" id="custom-padding-sm">
+                            <a class="nav-link" id="clr-white" href="index.php?act=listdonhang">ĐƠN HÀNG</a>
+                        </li>
+                        <li class="nav-item" id="custom-padding-sm">
+                            <a class="nav-link" id="clr-white" href="index.php?act=adddonhangct">ĐƠN HÀNG CHI TIẾT</a>
+                        </li>
+                        <li class="nav-item" id="custom-padding-sm">
+                            <a class="nav-link" id="clr-white" href="index.php?act=adddcnh">ĐỊA CHỈ NHẬN HÀNG</a>
                         </li>
                         <li class="nav-item" id="custom-padding-sm">
                             <a class="nav-link" id="clr-white" href="index.php?act=listtk">TÀI KHOẢN KHÁCH HÀNG</a>

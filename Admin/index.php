@@ -1,12 +1,18 @@
 <?php
-include "model/pdo.php";
 include "header.php";
-include "model/taikhoan.php";
+
+include "model/pdo.php";
+
 include "model/thuonghieu.php";
-include "model/binhluan.php";
-include "model/dungtich.php";
 include "model/danhmuc.php";
+include "model/dungtich.php";
 include "model/sanpham.php";
+include "model/bienthesanpham.php";
+include "model/donhang.php";
+include "model/donhangchitiet.php";
+include "model/diachinhanhang.php";
+include "model/taikhoan.php";
+include "model/binhluan.php";
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -58,6 +64,20 @@ if (isset($_GET['act'])) {
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
             break;
+            //CN TRANG BIEN THE SAN PHAM
+        case 'addbtsp':
+            include "bienthesanpham/add.php";
+            break;
+        case 'listbtsp':
+            $listbienthesanpham = loadall_bienthesanpham();
+            include "bienthesanpham/list.php";
+            break;
+            //CN TRANG DON HANG
+        case 'listdonhang':
+            $listdonhang = loadall_donhang();
+            include "donhang/list.php";
+            break;
+
         default:
             include  "home.php";
             break;

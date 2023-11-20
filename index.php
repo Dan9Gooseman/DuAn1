@@ -6,8 +6,9 @@ include "Global/global.php";
 require_once "model/pdo.php";
 require_once "model/sanpham.php";
 //preload
-$top10_spnew = pdo_top10_spnew();
-var_dump($top10_spnew);
+$top10_new = pdo_top10_new();
+$top10_buy = pdo_top10_buy();
+// var_dump($top10_new);
 
 // ktra trang nguoi dung dang xem
 if (isset($_GET['act']) && ($_GET['act'] != "")) {

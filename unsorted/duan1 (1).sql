@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2023 at 09:16 AM
+-- Generation Time: Nov 20, 2023 at 04:02 AM
 -- Server version: 5.7.25
 -- PHP Version: 7.1.26
 
@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bienthesanpham` (
   `btsp_id` int(11) NOT NULL,
-  `btsp_giatien` double(10,2) NOT NULL,
+  `btsp_ten` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `btsp_giatien` int(10) NOT NULL,
   `btsp_soluongconlai` int(11) NOT NULL,
   `sp_id` int(11) NOT NULL,
   `dm_id` int(11) NOT NULL,
@@ -42,49 +43,49 @@ CREATE TABLE `bienthesanpham` (
 -- Dumping data for table `bienthesanpham`
 --
 
-INSERT INTO `bienthesanpham` (`btsp_id`, `btsp_giatien`, `btsp_soluongconlai`, `sp_id`, `dm_id`, `th_id`, `dt_id`) VALUES
-(1, 154000.00, 100, 1, 1, 1, 1),
-(2, 220000.00, 67, 1, 1, 1, 2),
-(3, 534000.00, 34, 1, 1, 1, 3),
-(11, 158000.00, 112, 2, 1, 1, 1),
-(12, 240000.00, 84, 2, 1, 1, 2),
-(13, 540000.00, 12, 2, 1, 1, 3),
-(14, 158000.00, 89, 3, 1, 1, 1),
-(15, 240000.00, 99, 3, 1, 1, 2),
-(16, 5.00, 41, 3, 1, 1, 3),
-(17, 154000.00, 123, 4, 1, 1, 1),
-(18, 220000.00, 79, 4, 1, 1, 2),
-(19, 510000.00, 8, 4, 1, 1, 3),
-(20, 134000.00, 98, 5, 1, 2, 1),
-(21, 214000.00, 55, 5, 1, 2, 2),
-(22, 516000.00, 10, 5, 1, 1, 3),
-(23, 122000.00, 177, 6, 1, 2, 1),
-(24, 247000.00, 88, 6, 1, 2, 2),
-(25, 560000.00, 56, 6, 1, 2, 3),
-(26, 171000.00, 143, 7, 1, 2, 1),
-(27, 288000.00, 123, 7, 1, 2, 2),
-(28, 598000.00, 45, 7, 1, 2, 3),
-(29, 174000.00, 131, 8, 1, 2, 1),
-(30, 294000.00, 9, 8, 1, 2, 2),
-(31, 611000.00, 23, 8, 1, 2, 3),
-(32, 650000.00, 56, 9, 3, 4, 1),
-(33, 999000.00, 8, 9, 3, 4, 2),
-(34, 1800000.00, 4, 9, 3, 4, 3),
-(35, 640000.00, 54, 10, 3, 4, 1),
-(36, 980000.00, 55, 10, 3, 4, 2),
-(37, 1840000.00, 12, 10, 3, 4, 3),
-(38, 670000.00, 100, 11, 3, 4, 1),
-(39, 999000.00, 79, 11, 3, 4, 2),
-(40, 1840000.00, 8, 11, 3, 4, 3),
-(41, 720000.00, 65, 12, 1, 3, 1),
-(42, 1350000.00, 42, 12, 1, 3, 2),
-(43, 2100.00, 4, 12, 1, 3, 3),
-(44, 650000.00, 51, 13, 1, 3, 1),
-(45, 1550000.00, 55, 13, 1, 3, 2),
-(46, 2200000.00, 0, 13, 1, 3, 3),
-(47, 950000.00, 23, 14, 1, 3, 1),
-(48, 1900000.00, 0, 14, 1, 3, 2),
-(49, 3600000.00, 0, 14, 1, 3, 3);
+INSERT INTO `bienthesanpham` (`btsp_id`, `btsp_ten`, `btsp_giatien`, `btsp_soluongconlai`, `sp_id`, `dm_id`, `th_id`, `dt_id`) VALUES
+(1, 'DẦU GỘI NƯỚC HOA X-MEN METAL A', 154000, 100, 1, 1, 1, 1),
+(2, 'DẦU GỘI NƯỚC HOA X-MEN METAL B', 220000, 67, 1, 1, 1, 2),
+(3, 'DẦU GỘI NƯỚC HOA X-MEN METAL C', 534000, 34, 1, 1, 1, 3),
+(11, 'DẦU GỘI NƯỚC HOA X-MEN FIRE A', 158000, 112, 2, 1, 1, 1),
+(12, 'DẦU GỘI NƯỚC HOA X-MEN FIRE B', 240000, 84, 2, 1, 1, 2),
+(13, 'DẦU GỘI NƯỚC HOA X-MEN FIRE C', 540000, 12, 2, 1, 1, 3),
+(14, 'DẦU GỘI NƯỚC HOA X-MEN WOOD A', 158000, 89, 3, 1, 1, 1),
+(15, 'DẦU GỘI NƯỚC HOA X-MEN WOOD B', 240000, 99, 3, 1, 1, 2),
+(16, 'DẦU GỘI NƯỚC HOA X-MEN WOOD C', 520000, 41, 3, 1, 1, 3),
+(17, 'DẦU GỘI NƯỚC HOA X-MEN WATER A', 154000, 123, 4, 1, 1, 1),
+(18, 'DẦU GỘI NƯỚC HOA X-MEN WATER B', 220000, 79, 4, 1, 1, 2),
+(19, 'DẦU GỘI NƯỚC HOA X-MEN WATER C', 510000, 8, 4, 1, 1, 3),
+(20, 'ROMANO FORCE A', 134000, 98, 5, 1, 2, 1),
+(21, 'ROMANO FORCE B', 214000, 55, 5, 1, 2, 2),
+(22, 'ROMANO FORCE C', 516000, 10, 5, 1, 1, 3),
+(23, 'ROMANO ATTITUDE A', 122000, 177, 6, 1, 2, 1),
+(24, 'ROMANO ATTITUDE B', 247000, 88, 6, 1, 2, 2),
+(25, 'ROMANO ATTITUDE C', 560000, 56, 6, 1, 2, 3),
+(26, 'ROMANO CLASSIC A', 171000, 143, 7, 1, 2, 1),
+(27, 'ROMANO CLASSIC B', 288000, 123, 7, 1, 2, 2),
+(28, 'ROMANO CLASSIC C', 598000, 45, 7, 1, 2, 3),
+(29, 'ROMANO VIP A', 174000, 131, 8, 1, 2, 1),
+(30, 'ROMANO VIP B', 294000, 9, 8, 1, 2, 2),
+(31, 'ROMANO VIP C', 611000, 23, 8, 1, 2, 3),
+(32, 'Dầu Hấp Dưỡng Ẩm Sâu IntenseHydrating Mask A', 650000, 56, 9, 3, 4, 1),
+(33, 'Dầu Hấp Dưỡng Ẩm Sâu IntenseHydrating Mask B', 999000, 8, 9, 3, 4, 2),
+(34, 'Dầu Hấp Dưỡng Ẩm Sâu IntenseHydrating Mask C', 1800000, 4, 9, 3, 4, 3),
+(35, 'Dầu Dưỡng Tóc Nguyên Bản Moroccanoil Treatment Original A', 640000, 54, 10, 3, 4, 1),
+(36, 'Dầu Dưỡng Tóc Nguyên Bản Moroccanoil Treatment Original B', 980000, 55, 10, 3, 4, 2),
+(37, 'Dầu Dưỡng Tóc Nguyên Bản Moroccanoil Treatment Original C', 1840000, 12, 10, 3, 4, 3),
+(38, 'Kem Tạo Kiểu Dưỡng Ẩm Hydrating Styling Cream A', 670000, 100, 11, 3, 4, 1),
+(39, 'Kem Tạo Kiểu Dưỡng Ẩm Hydrating Styling Cream B', 999000, 79, 11, 3, 4, 2),
+(40, 'Kem Tạo Kiểu Dưỡng Ẩm Hydrating Styling Cream C', 1840000, 8, 11, 3, 4, 3),
+(41, 'Dầu gội Bain Densité  A', 720000, 65, 12, 1, 3, 1),
+(42, 'Dầu gội Bain Densité  B', 1350000, 42, 12, 1, 3, 2),
+(43, 'Dầu gội Bain Densité  C', 2100000, 4, 12, 1, 3, 3),
+(44, 'Dầu gội Bain Fluidealiste A', 650000, 51, 13, 1, 3, 1),
+(45, 'Dầu gội Bain Fluidealiste B', 1550000, 55, 13, 1, 3, 2),
+(46, 'Dầu gội Bain Fluidealiste C', 2200000, 2, 13, 1, 3, 3),
+(47, 'Dầu gội Bain Lumiere A', 950000, 23, 14, 1, 3, 1),
+(48, 'Dầu gội Bain Lumiere B', 1900000, 5, 14, 1, 3, 2),
+(49, 'Dầu gội Bain Lumiere C', 3600000, 7, 14, 1, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -212,7 +213,7 @@ INSERT INTO `sanpham` (`sp_id`, `sp_ten`, `sp_mota`, `sp_img`, `sp_luotxem`) VAL
 (8, 'ROMANO VIP', 'o	Dầu gội cao cấp Romano VIP sở hữu hương nước hoa độc đáo, kết hợp công nghệ Platinum với khả năng chống oxi hóa giúp làm sạch sâu bụi bẩn, giảm nhờn ngứa trên tóc và da đầu. Hơn thế nữa, còn ngăn ngừa tóc gãy rụng và giúp tóc chắc khỏe.', 'vip_product-passicon1.png', 45),
 (9, 'Dầu Hấp Dưỡng Ẩm Sâu IntenseHydrating Mask', 'Dành cho tóc từ vừa đến khô dày\r\nMặt nạ tóc giúp duy trì độ ẩm, dẻo, độ bóng cho tóc. Sản phẩm được kết hợp với dầu Argan và các chất nuôi dưỡng khác.\r\n', 'Intense Hydrating Mask.png', 76),
 (10, 'Dầu Dưỡng Tóc Nguyên Bản Moroccanoil Treatment Original', 'o	Dành cho mọi loại tóc\r\no	Đa năng, dầu Argan kết hợp với dầu tóc để tạo độ mượt, chống rối tóc, dưỡng và tăng độ bóng đến 118%. Đây là loại dầu dưỡng số 1 \r\n', 'Moroccanoil Treatment Original.jpg', 114),
-(11, 'Kem Tạo Kiểu Dưỡng Ẩm Hydrating Styling Cream', 'o	Dành cho mọi loại tóc\r\no	A lightweight, multitasking styling cream that tames frizz and flyaways, moisturizes hair, and provides soft hold for smooth, sleek styles.\r\n', 'TREATMENT_ORIGINAL.jpg', 78),
+(11, 'Kem Tạo Kiểu Dưỡng Ẩm Hydrating Styling Cream', 'o	Dành cho mọi loại tóc\r\no	A lightweight, multitasking styling cream that tames frizz and flyaways, moisturizes hair, and provides soft hold for smooth, sleek styles.\r\n', 'moroccanoil-hydrating-styling-cream-1.jpg', 78),
 (12, 'Dầu gội Bain Densité ', 'o	Bain Densitélà dòng sản phẩm cao cấp đến từ thương hiệu Kérastase nổi tiếng. Với thành phần tự nhiên giúp tóc mọc chắc khỏe hơn và suôn mượt hơn, mang đến sự tự tin cho người dùng.', 'Bain Densit‚.jpg', 98),
 (13, 'Dầu gội Bain Fluidealiste', 'o	Dầu gội Bain Fluidealiste là một sản phẩm chăm sóc tóc chuyên sâu, thường được thiết kế đặc biệt để giúp kiểm soát và làm mềm tóc xoăn hoặc tóc uốn. Đây là một phần của dòng sản phẩm Kérastase chuyên về chăm sóc tóc chất lượng cao.\r\no	Bain Fluidealiste thường chứa các thành phần chống ẩm và dưỡng ẩm để giúp kiểm soát tóc, làm mềm mại và giảm độ xoăn hoặc uốn. Các dạng dưỡng tóc trong sản phẩm giúp tăng cường sức khỏe của tóc, đồng thời giảm tình trạng rối và khó quản lý.', 'Bain_Fluidealiste.jpg', 90),
 (14, 'Dầu gội Bain Lumiere', 'o	Dầu gội Bain Lumiere là một sản phẩm chăm sóc tóc chuyên sâu, được thiết kế để mang lại sự sáng bóng và nuôi dưỡng cho tóc nhuộm. Dầu gội này thường chứa các thành phần dưỡng ẩm và tái tạo tóc, giúp khôi phục độ mềm mại và giữ cho màu nhuộm trở nên bền lâu.', 'bain-lumiere.jpg', 219);

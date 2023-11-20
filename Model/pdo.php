@@ -5,7 +5,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh'); //timezone
 function pdo_get_connection()
 {
     $servername = "localhost";
-    $dbname = "ph31064_assignment";
+    $dbname = "duan1";
     $username = "root";
     $password = "vertrigo";
     $port = 3308;
@@ -49,11 +49,10 @@ function pdo_execute_lastInsertID($sql)
 
 function pdo_query($sql)
 {
-    $sql_args = array_slice(func_get_args(), 1);
     try {
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
+        $stmt->execute();
         $rows = $stmt->fetchAll();
         return $rows;
     } catch (PDOException $e) {

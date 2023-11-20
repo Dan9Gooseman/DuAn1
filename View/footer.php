@@ -44,14 +44,9 @@
             case "dangnhap":
                 echo '<link rel="stylesheet" href="assets/js/dangkydangnhap.js">';
                 break;
-            case "chitietsanpham":
-                if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
-                    echo '<Script src="assets/js/dangkydangnhap.js"></Script>';
-                }
-
         }
     } else {
-        echo '<link rel="stylesheet" href="assets/css/home.css">';
+        echo '<link rel="stylesheet" href="assets/js/home.js">';
     }
     ?>
     

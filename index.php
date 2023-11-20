@@ -1,15 +1,16 @@
 <?php
-// include page
-include "View/header.php";
-include "Global/global.php";
 // include model
 require_once "model/pdo.php";
 require_once "model/sanpham.php";
+require_once "model/danhmuc.php";
 //preload
 $top10_new = pdo_top10_new();
 $top10_buy = pdo_top10_buy();
-// var_dump($top10_new);
-
+$all_danhmuc = pdo_all_danhmuc();
+// var_dump($all_danhmuc);
+// include page
+include "View/header.php";
+include "Global/global.php";
 // ktra trang nguoi dung dang xem
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];

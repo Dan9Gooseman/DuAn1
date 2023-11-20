@@ -12,15 +12,24 @@
                     <th class="b">ID USER</th>
                     <th class="b">ID PRODUCT</th>
                     <th class="b">NGÀY BÌNH LUẬN</th>
+                    <th class="b"></th>
                 </tr>
-                <tr>
+                <?php
+                foreach ($listbinhluan as $bl) {
+                    extract($bl);
+                    echo '<tr>
                     <th></th>
-                    <th>MÃ BÌNH LUẬN</th>
-                    <th>NỘI DUNG BÌNH LUẬN</th>
-                    <th>ID USER</th>
-                    <th>ID PRODUCT</th>
-                    <th>NGÀY BÌNH LUẬN</th>
-                </tr>
+                    <th>' . $bl_id . '</th>
+                    <th>' . $bl_noidung . '</th>
+                    <th' . $user_id . '</th>
+                    <th>' . $btsp_id . '</th>
+                    <th>' . $bl_ngaytao . '</th>
+                    <th><a href="#"><input class="c" type="button" value="xóa"></a>
+                  </th>
+                </tr>';
+                }
+                ?>
+
 
             </table>
 

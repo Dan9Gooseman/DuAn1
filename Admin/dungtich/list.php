@@ -11,7 +11,20 @@
                     <th class="b">DUNG TÍCH</th>
                     <th class="b"></th>
                 </tr>
-                <tr>
+                <?php
+                foreach ($listdungtich as $dt) {
+                    extract($dt);
+                    echo '<tr>
+                    <th><input type="checkbox"></th>
+                    <th>' . $dt_id . '</th>
+                    <th>' . $dt_dungtich . '</th>
+                    
+                    <th><a href="#"><input class="c" type="button" value="xóa"></a>
+                    <a href="#"><input class="c" type="button" value="sửa"></a></th>
+                </tr>';
+                }
+                ?>
+                <!-- <tr>
                     <th></th>
                     <th>MÃ DUNG TÍCH</th>
                     <th>DUNG TÍCH</th>
@@ -22,13 +35,7 @@
                     <th>MÃ DUNG TÍCH</th>
                     <th>DUNG TÍCH</th>
                     <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ DUNG TÍCH</th>
-                    <th>DUNG TÍCH</th>
-                    <th></th>
-                </tr>
+                </tr> -->
             </table>
 
         </div>

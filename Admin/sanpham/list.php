@@ -11,32 +11,23 @@
                     <th class="b">TÊN SẢN PHẨM</th>
                     <th class="b">MÔ TẢ SẢN PHẨM</th>
                     <th class="b">ẢNH SẢN PHẨM</th>
+                    <th class="b">LƯỢT MUA SẢN PHẨM</th>
                     <th class="b"></th>
                 </tr>
-                <tr>
+                <?php
+                foreach ($listsanpham as $sp) {
+                    extract($sp);
+                    echo '<tr>
+                    <th><input type="checkbox"></th>
+                    <th>' . $sp_id . '</th>
+                    <th>' . $sp_ten . '</th>
+                    <th>' . $sp_mota . '</th>
                     <th></th>
-                    <th>MÃ SẢN PHẨM</th>
-                    <th>TÊN SẢN PHẨM</th>
-                    <th>MÔ TẢ SẢN PHẨM</th>
-                    <th>ẢNH SẢN PHẨM</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ SẢN PHẨM</th>
-                    <th>TÊN SẢN PHẨM</th>
-                    <th>MÔ TẢ SẢN PHẨM</th>
-                    <th>ẢNH SẢN PHẨM</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ SẢN PHẨM</th>
-                    <th>TÊN SẢN PHẨM</th>
-                    <th>MÔ TẢ SẢN PHẨM</th>
-                    <th>ẢNH SẢN PHẨM</th>
-                    <th></th>
-                </tr>
+                    <th>' . $sp_luotmua . '</th>
+                    <th><a href="#"><input class="c" type="button" value="xóa"></a></th>
+                </tr>';
+                }
+                ?>
             </table>
 
         </div>

@@ -12,17 +12,18 @@
                     <th class="b"></th>
                 </tr>
                 <?php
-                // foreach ($listdanhmuc as $dm) {
-                //     extract($dm);
-                //     echo '<tr>
-                //         <th></th>
-                //         <th>' . $dm_id . '</th>
-                //         <th>' . $dm_danhmuc . '</th>
-                //         <th></th>
-                //     </tr>';
-                // }
+                foreach ($listdanhmuc as $dm) {
+                    extract($dm);
+                    echo '<tr>
+                        <th><input type="checkbox"></th>
+                        <th>' . $dm_id . '</th>
+                        <th>' . $dm_danhmuc . '</th>
+                        <th><a href="#"><input class="c" type="button" value="xóa"></a>
+                        <a href="#"><input class="c" type="button" value="sửa"></a></th>
+                    </tr>';
+                }
                 ?>
-                <tr>
+                <!-- <tr>
                     <th></th>
                     <th>MÃ DANH MỤC</th>
                     <th>TÊN DANH MỤC</th>
@@ -39,7 +40,7 @@
                     <th>MÃ DANH MỤC</th>
                     <th>TÊN DANH MỤC</th>
                     <th></th>
-                </tr>
+                </tr> -->
             </table>
 
         </div>

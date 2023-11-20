@@ -11,24 +11,18 @@
                     <th class="b">THƯƠNG HIỆU</th>
                     <th class="b"></th>
                 </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ THƯƠNG HIỆU</th>
-                    <th>THƯƠNG HIỆU</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ THƯƠNG HIỆU</th>
-                    <th>THƯƠNG HIỆU</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ THƯƠNG HIỆU</th>
-                    <th>THƯƠNG HIỆU</th>
-                    <th></th>
-                </tr>
+                <?php
+                foreach ($listthuonghieu as $th) {
+                    extract($th);
+                    echo '<tr>
+                        <th><input type="checkbox"></th>
+                        <th>' . $th_id . '</th>
+                        <th>' . $th_thuonghieu . '</th>
+                        <th><a href="#"><input class="c" type="button" value="xóa"></a>
+                        <a href="#"><input class="c" type="button" value="sửa"></a></th>
+                    </tr>';
+                }
+                ?>
             </table>
 
         </div>

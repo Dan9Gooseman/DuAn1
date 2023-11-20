@@ -12,54 +12,24 @@
                     <th class="b">PASS</th>
                     <th class="b">EMAIL</th>
                     <th class="b">ADDRESS</th>
-                    <th class="b">TEL</th>
                     <th class="b">ROLE</th>
                     <th class="b"> </th>
                 </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ TÀI KHOẢN</th>
-                    <th>USER</th>
-                    <th>PASS</th>
-                    <th>EMAIL</th>
-                    <th>ADDRESS</th>
-                    <th>TEL</th>
-                    <th>ROLE</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ TÀI KHOẢN</th>
-                    <th>USER</th>
-                    <th>PASS</th>
-                    <th>EMAIL</th>
-                    <th>ADDRESS</th>
-                    <th>TEL</th>
-                    <th>ROLE</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ TÀI KHOẢN</th>
-                    <th>USER</th>
-                    <th>PASS</th>
-                    <th>EMAIL</th>
-                    <th>ADDRESS</th>
-                    <th>TEL</th>
-                    <th>ROLE</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ TÀI KHOẢN</th>
-                    <th>USER</th>
-                    <th>PASS</th>
-                    <th>EMAIL</th>
-                    <th>ADDRESS</th>
-                    <th>TEL</th>
-                    <th>ROLE</th>
-                    <th></th>
-                </tr>
+                <?php
+                foreach ($listuser as $user) {
+                    extract($user);
+                    echo '<tr>
+                    <th><input type="checkbox"></th>
+                    <th>' . $user_id . '</th>
+                    <th>' . $user_hovaten . '</th>
+                    <th>' . $user_password . '</th>
+                    <th>' . $user_email . '</th>
+                    <th>' . $dcnh_id . '</th>
+                    <th>' . $user_vaitro . '</th>
+                    <th><a href="#"><input class="c" type="button" value="xóa"></a></th>
+                </tr>';
+                }
+                ?>
             </table>
 
         </div>

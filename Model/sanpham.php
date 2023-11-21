@@ -36,4 +36,25 @@
         $top10_buy = pdo_query($sql);
         return $top10_buy;
     }
+
+//Lấy sản phẩm theo danh mục
+    function pdo_sanpham_theo_danhmuc($dm_id){
+        $sql = "select 
+                    s.*, 
+                    MIN(b.btsp_giatien) AS min_giatien, 
+                    MAX(b.btsp_giatien) AS max_giatien,
+                    d.dm_danhmuc
+                from 
+                    sanpham s 
+                inner join 
+                    bienthesanpham b on s.sp_id = b.sp_id 
+                inner join 
+                    danhmuc d on b.dm_id = d.dm_id 
+                where 
+                    d.dm_id = $dm_id 
+                group by 
+                    s.sp_id";
+        $sp_dm = pdo_query($sql);
+        return $sp_dm;
+    }
 ?>

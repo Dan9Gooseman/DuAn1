@@ -16,6 +16,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
         case "dangnhap":
+            if(isset($_POST['dangky'])&&($_POST['dangky'])){
+                $user_hovaten=$_POST['tendangnhap'];
+                $user_email = $_POST['email'];
+                $user_password = $_POST['pass'];
+                insert_user($user_hovaten,$user_email,$user_password);
+                $thongbao="Đã đăng ký thành công! Vui lòng đăng nhập để sử dụng tài khoản";
+            }
             include "view/user/dangnhap.php";
             break;
         case "quenmk":

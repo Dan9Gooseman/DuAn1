@@ -58,7 +58,7 @@ if (isset($_GET['act'])) {
             include "binhluan/list.php";
             break;
             // CN TRANG TK
-        case 'xoabl':
+        case 'xoauser':
             break;
         case 'listtk':
             $listuser = loadall_user();

@@ -25,7 +25,7 @@
                     <th>' . $dh_tongtien . '</th>
                     <th>' . $dh_trangthaidonhang . '</th>
                     <th>' . $user_id . '</th>
-                    <th><a href="#"><input class="c" type="button" value="xóa"></a></th>
+                    <th></th>
                 </tr>';
                 }
                 ?>

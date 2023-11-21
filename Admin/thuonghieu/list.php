@@ -14,12 +14,14 @@
                 <?php
                 foreach ($listthuonghieu as $th) {
                     extract($th);
+                    $xoath = "index.php?act=xoath&id=" . $th_id;
+                    $suath = "index.php?act=xoath&id=" . $th_id;
                     echo '<tr>
                         <th><input type="checkbox"></th>
                         <th>' . $th_id . '</th>
                         <th>' . $th_thuonghieu . '</th>
-                        <th><a href="#"><input class="c" type="button" value="xóa"></a>
-                        <a href="#"><input class="c" type="button" value="sửa"></a></th>
+                        <th><a href="' . $xoath . '"><input class="c" type="button" value="xóa"></a>
+                        <a href="' . $suath . '"><input class="c" type="button" value="sửa"></a></th>
                     </tr>';
                 }
                 ?>

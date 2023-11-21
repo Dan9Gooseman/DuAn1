@@ -17,6 +17,7 @@
                 <?php
                 foreach ($listbinhluan as $bl) {
                     extract($bl);
+                    $xoabl = "index.php?act=xoabl&id=" . $bl_id;
                     echo '<tr>
                     <th></th>
                     <th>' . $bl_id . '</th>
@@ -24,7 +25,7 @@
                     <th' . $user_id . '</th>
                     <th>' . $btsp_id . '</th>
                     <th>' . $bl_ngaytao . '</th>
-                    <th><a href="#"><input class="c" type="button" value="xóa"></a>
+                    <th><a href="' . $xoabl . '"><input class="c" type="button" value="xóa"></a>
                   </th>
                 </tr>';
                 }

@@ -7,17 +7,16 @@
             <table>
                 <tr class="a">
                     <th class="b"></th>
-                    <th class="b">MÃ TÀI KHOẢN</th>
-                    <th class="b">USER</th>
-                    <th class="b">PASS</th>
-                    <th class="b">EMAIL</th>
-                    <th class="b">ADDRESS</th>
-                    <th class="b">ROLE</th>
+                    <th class="b">ID ĐỊA CHỈ</th>
+                    <th class="b">ĐỊA CHỈ</th>
+                    <th class="b">SỐ ĐIỆN THOẠI</th>
+                    <th class="b">HỌ VÀ TÊN</th>
                     <th class="b"> </th>
                 </tr>
                 <?php
-                foreach ($listuser as $user) {
-                    extract($user);
+
+                foreach ($listdcnh as $dcnh) {
+                    extract($dcnh);
                     echo '<tr>
                     <th><input type="checkbox"></th>
                     <th>' . $user_id . '</th>
@@ -26,9 +25,10 @@
                     <th>' . $user_email . '</th>
                     <th>' . $dcnh_id . '</th>
                     <th>' . $user_vaitro . '</th>
-                    <th><a href="#"><input class="c" type="button" value="xóa"></a></th>
-                </tr>';
+                    <th></th>
+    </tr>';
                 }
+
                 ?>
             </table>
 

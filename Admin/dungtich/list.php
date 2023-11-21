@@ -14,13 +14,15 @@
                 <?php
                 foreach ($listdungtich as $dt) {
                     extract($dt);
+                    $xoadt = "index.php?act=xoadt&id=" . $dt_id;
+                    $suadt = "index.php?act=xoadt&id=" . $dt_id;
                     echo '<tr>
                     <th><input type="checkbox"></th>
                     <th>' . $dt_id . '</th>
                     <th>' . $dt_dungtich . '</th>
                     
-                    <th><a href="#"><input class="c" type="button" value="xóa"></a>
-                    <a href="#"><input class="c" type="button" value="sửa"></a></th>
+                    <th><a href="' . $xoadt . '"><input class="c" type="button" value="xóa"></a>
+                    <a href="' . $suadt . '"><input class="c" type="button" value="sửa"></a></th>
                 </tr>';
                 }
                 ?>

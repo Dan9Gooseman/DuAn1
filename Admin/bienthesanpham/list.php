@@ -20,6 +20,8 @@
                 <?php
                 foreach ($listbienthesanpham as $btsp) {
                     extract($btsp);
+                    $xoabtsp = "index.php?act=xoabtsp&id=" . $btsp_id;
+                    $suabtsp = "index.php?act=xoabtsp&id=" . $btsp_id;
                     echo '<tr>
                         <th><input type="checkbox"></th>
                         <th>' . $btsp_id . '</th>
@@ -30,8 +32,8 @@
                         <th>' . $dm_id . '</th>
                         <th>' . $th_id . '</th>
                         <th>' . $dt_id . '</th>
-                        <th><a href="#"><input class="c" type="button" value="xóa"></a>
-                        <a href="#"><input class="c" type="button" value="sửa"></a></th>
+                        <th><a href="' . $xoabtsp . '"><input class="c" type="button" value="xóa"></a>
+                        <a href="' . $suabtsp . '"><input class="c" type="button" value="sửa"></a></th>
                     </tr>';
                 }
                 ?>

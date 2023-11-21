@@ -17,6 +17,8 @@
                 <?php
                 foreach ($listsanpham as $sp) {
                     extract($sp);
+                    $xoasp = "index.php?act=xoasp&id=" . $sp_id;
+                    $suasp = "index.php?act=suasp&id=" . $sp_id;
                     echo '<tr>
                     <th><input type="checkbox"></th>
                     <th>' . $sp_id . '</th>
@@ -24,7 +26,8 @@
                     <th>' . $sp_mota . '</th>
                     <th></th>
                     <th>' . $sp_luotmua . '</th>
-                    <th><a href="#"><input class="c" type="button" value="xóa"></a></th>
+                    <th><a href="' . $xoasp . '"><input class="c" type="button" value="xóa"></a>
+                    <a href="' . $suasp . '"><input class="c" type="button" value="sửa"></a></th>
                 </tr>';
                 }
                 ?>

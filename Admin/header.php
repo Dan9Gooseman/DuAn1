@@ -90,10 +90,10 @@
                             <a class="nav-link" id="clr-white" href="index.php?act=listdonhang">ĐƠN HÀNG</a>
                         </li>
                         <li class="nav-item" id="custom-padding-sm">
-                            <a class="nav-link" id="clr-white" href="index.php?act=adddonhangct">ĐƠN HÀNG CHI TIẾT</a>
+                            <a class="nav-link" id="clr-white" href="index.php?act=listdhct">ĐƠN HÀNG CHI TIẾT</a>
                         </li>
                         <li class="nav-item" id="custom-padding-sm">
-                            <a class="nav-link" id="clr-white" href="index.php?act=adddcnh">ĐỊA CHỈ NHẬN HÀNG</a>
+                            <a class="nav-link" id="clr-white" href="index.php?act=listdcnh">ĐỊA CHỈ NHẬN HÀNG</a>
                         </li>
                         <li class="nav-item" id="custom-padding-sm">
                             <a class="nav-link" id="clr-white" href="index.php?act=listtk">TÀI KHOẢN KHÁCH HÀNG</a>

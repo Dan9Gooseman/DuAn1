@@ -18,6 +18,7 @@
                 <?php
                 foreach ($listuser as $user) {
                     extract($user);
+                    $xoauser = "index.php?act=xoauser&id=" . $user_id;
                     echo '<tr>
                     <th><input type="checkbox"></th>
                     <th>' . $user_id . '</th>
@@ -26,7 +27,7 @@
                     <th>' . $user_email . '</th>
                     <th>' . $dcnh_id . '</th>
                     <th>' . $user_vaitro . '</th>
-                    <th><a href="#"><input class="c" type="button" value="xóa"></a></th>
+                    <th><a href="' . $xoauser . '"><input class="c" type="button" value="xóa"></a></th>
                 </tr>';
                 }
                 ?>

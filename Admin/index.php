@@ -29,6 +29,8 @@ if (isset($_GET['act'])) {
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
+        case 'xoadm':
+            break;
             // CN DUNG TICH
         case 'adddt':
             include "dungtich/add.php";
@@ -36,6 +38,8 @@ if (isset($_GET['act'])) {
         case 'listdt':
             $listdungtich = loadall_dungtich();
             include "dungtich/list.php";
+            break;
+        case 'xoadt':
             break;
             // CN TRANG TH
         case 'addth':
@@ -45,6 +49,8 @@ if (isset($_GET['act'])) {
             $listthuonghieu = loadall_thuonghieu();
             include "thuonghieu/list.php";
             break;
+        case 'xoath':
+            break;
             // CN TRANG BL
         case 'listbl':
             $sql = "select * from binhluan order by bl_id";
@@ -52,9 +58,13 @@ if (isset($_GET['act'])) {
             include "binhluan/list.php";
             break;
             // CN TRANG TK
+        case 'xoabl':
+            break;
         case 'listtk':
             $listuser = loadall_user();
             include "taikhoan/list.php";
+            break;
+        case 'xoatk':
             break;
             // CN TRANG SP
         case 'addsp':
@@ -64,6 +74,8 @@ if (isset($_GET['act'])) {
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
             break;
+        case 'xoasp':
+            break;
             //CN TRANG BIEN THE SAN PHAM
         case 'addbtsp':
             include "bienthesanpham/add.php";
@@ -72,12 +84,22 @@ if (isset($_GET['act'])) {
             $listbienthesanpham = loadall_bienthesanpham();
             include "bienthesanpham/list.php";
             break;
+        case 'xoabtsp':
+            break;
             //CN TRANG DON HANG
         case 'listdonhang':
             $listdonhang = loadall_donhang();
             include "donhang/list.php";
             break;
-
+            //CN TRANG DON HANG
+        case 'listdcnh':
+            $listdcnh = loadall_dcnh();
+            include "diachinhanhang/list.php";
+            break;
+        case 'listdhct':
+            $listdhct = loadall_dhct();
+            include "donhangchitiet/list.php";
+            break;
         default:
             include  "home.php";
             break;

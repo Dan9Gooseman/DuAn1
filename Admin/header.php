@@ -72,10 +72,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item" id="custom-padding-sm">
-                            <a class="nav-link" id="clr-white" href="index.php?act=addth">THƯƠNG HIỆU</a>
+                            <a class="nav-link" id="clr-white" href="index.php?act=adddm">DANH MỤC</a>
                         </li>
                         <li class="nav-item" id="custom-padding-sm">
-                            <a class="nav-link" id="clr-white" href="index.php?act=adddm">DANH MỤC</a>
+                            <a class="nav-link" id="clr-white" href="index.php?act=addth">THƯƠNG HIỆU</a>
                         </li>
                         <li class="nav-item" id="custom-padding-sm">
                             <a class="nav-link" id="clr-white" href="index.php?act=adddt">DUNG TÍCH</a>

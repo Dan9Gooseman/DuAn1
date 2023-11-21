@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 
-include "model/pdo.php";
+include "../Model/pdo.php";
 
 include "model/thuonghieu.php";
 include "model/danhmuc.php";
@@ -19,11 +19,14 @@ if (isset($_GET['act'])) {
     switch ($act) {
             // CN TRANG DM
         case 'adddm':
-            //kiem tra nguoi dung cos kich khong
-            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                $name_dm = $_POST['name_dm'];
+            include 'danhmuc/add.php';
+            break;
+        case 'xoadm':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_danhmuc($_GET['id']);
             }
-            include "danhmuc/add.php";
+            $listdanhmuc = loadall_danhmuc(0);
+            include "danhmuc/list.php";
             break;
         case 'listdm':
             $listdanhmuc = loadall_danhmuc();
@@ -40,6 +43,11 @@ if (isset($_GET['act'])) {
             include "dungtich/list.php";
             break;
         case 'xoadt':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_dungtich($_GET['id']);
+            }
+            $listdungtich = loadall_dungtich(0);
+            include "dungtich/list.php";
             break;
             // CN TRANG TH
         case 'addth':
@@ -50,21 +58,36 @@ if (isset($_GET['act'])) {
             include "thuonghieu/list.php";
             break;
         case 'xoath':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_thuonghieu($_GET['id']);
+            }
+            $listthuonghieu = loadall_thuonghieu(0);
+            include "thuonghieu/list.php";
+            break;
             break;
             // CN TRANG BL
         case 'listbl':
-            $sql = "select * from binhluan order by bl_id";
-            $listbinhluan = pdo_query($sql);
+            $listbinhluan = loadall_binhluan();
+            include "binhluan/list.php";
+            break;
+        case 'xoabl':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_binhluan($_GET['id']);
+            }
+            $listbinhluan = loadall_binhluan(0);
             include "binhluan/list.php";
             break;
             // CN TRANG TK
-        case 'xoauser':
-            break;
         case 'listtk':
             $listuser = loadall_user();
             include "taikhoan/list.php";
             break;
-        case 'xoatk':
+        case 'xoauser':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_user($_GET['id']);
+            }
+            $listuser = loadall_user(0);
+            include "taikhoan/list.php";
             break;
             // CN TRANG SP
         case 'addsp':
@@ -75,6 +98,12 @@ if (isset($_GET['act'])) {
             include "sanpham/list.php";
             break;
         case 'xoasp':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_sanpham($_GET['id']);
+            }
+            $listsanpham = loadall_sanpham();
+            include "sanpham/list.php";
+            break;
             break;
             //CN TRANG BIEN THE SAN PHAM
         case 'addbtsp':

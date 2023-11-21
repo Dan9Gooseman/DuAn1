@@ -5,3 +5,8 @@ function loadall_dungtich()
     $listdungtich = pdo_query($sql);
     return  $listdungtich;
 }
+function delete_dungtich($id)
+{
+    $sql = "delete from dungtich where dt_id=" . $id;
+    pdo_execute($sql);
+}

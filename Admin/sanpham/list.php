@@ -11,7 +11,7 @@
                     <th class="b">TÊN SẢN PHẨM</th>
                     <th class="b">MÔ TẢ SẢN PHẨM</th>
                     <th class="b">ẢNH SẢN PHẨM</th>
-                    <th class="b">LƯỢT MUA SẢN PHẨM</th>
+                    <th class="b">LƯỢT XEM SẢN PHẨM</th>
                     <th class="b"></th>
                 </tr>
                 <?php

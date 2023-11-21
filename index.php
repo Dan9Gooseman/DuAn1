@@ -16,6 +16,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
         case "dangnhap":
+
             include "view/user/dangnhap.php";
             break;
         case "quenmk":
@@ -31,6 +32,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "view/page/chitietsanpham.php";
             }
             else{
+                include "view/page/notfound404.php";
+            }
+            break;
+        case "sanpham":
+            if (isset($_GET['dm_id']) && ($_GET['dm_id'] > 0)) {
+                $dm_id = $_GET['dm_id'];
+                $sp_dm = pdo_sanpham_theo_danhmuc($dm_id);
+                // var_dump($sp_dm);
+                include "view/page/sanpham.php";
+            }else{
                 include "view/page/notfound404.php";
             }
             break;

@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="Global/css/header&footer.css">
-    
+
     <?php
 
     if (isset($_GET['act']) && ($_GET['act'] != "")) {
@@ -23,17 +23,24 @@
             case "chitietsanpham":
                 if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
                     echo '<link rel="stylesheet" href="assets/css/chitietsanpham.css">';
-                } else{
-                echo '<link rel="stylesheet" href="assets/css/notfound404.css">';
+                } else {
+                    echo '<link rel="stylesheet" href="assets/css/notfound404.css">';
                 }
                 break;
-
+            case "sanpham":
+                if (isset($_GET['dm_id']) && ($_GET['dm_id'] > 0)) {
+                    $dm_id = $_GET['dm_id'];
+                    echo '<link rel="stylesheet" href="assets/css/sanpham.css">';
+                } else {
+                    echo '<link rel="stylesheet" href="assets/css/notfound404.css">';
+                }
+                break;
         }
     } else {
         echo '<link rel="stylesheet" href="assets/css/home.css">';
     }
     ?>
-    
+
 
 </head>
 
@@ -72,15 +79,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="clr-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" id="clr-white" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Danh mục sản phẩm
                             </a>
                             <ul class="dropdown-menu">
                                 <?php
-                                    foreach ($all_danhmuc as $danhmuc){
-                                        extract($danhmuc);
-                                        echo '<li><a class="dropdown-item" href="index.php?act=sanpham&danhmucid='. $dm_id .'">'. $dm_danhmuc .'</a></li>';
-                                    }
+                                foreach ($all_danhmuc as $danhmuc) {
+                                    extract($danhmuc);
+                                    echo '<li><a class="dropdown-item" href="index.php?act=sanpham&dm_id=' . $dm_id . '">' . $dm_danhmuc . '</a></li>';
+                                }
                                 ?>
                                 <!-- <li><a class="dropdown-item" href="index.php?act=sanpham&danhmuc=daugoi">Dầu gội</a></li>
                                 <li><a class="dropdown-item" href="index.php?act=sanpham&danhmuc=dauxa">Dầu xả</a></li>

@@ -1,4 +1,9 @@
 <?php
+function add_thuonghieu($thuonghieu_th)
+{
+    $sql = "insert into thuonghieu(th_thuonghieu) value('$thuonghieu_th') ";
+    pdo_execute($sql);
+}
 function loadall_thuonghieu()
 {
     $sql = "select * from thuonghieu order by th_id";

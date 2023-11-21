@@ -19,6 +19,11 @@ if (isset($_GET['act'])) {
     switch ($act) {
             // CN TRANG DM
         case 'adddm':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $danhmuc_dm = $_POST['danhmuc_dm'];
+                add_danhmuc($danhmuc_dm);
+                $thongbao = "THêm thành công";
+            }
             include 'danhmuc/add.php';
             break;
         case 'xoadm':
@@ -32,10 +37,29 @@ if (isset($_GET['act'])) {
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
             break;
-        case 'xoadm':
+        case 'suadm':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $dm = loadone_danhmuc($_GET['id']);
+            }
+            $listdanhmuc = loadall_danhmuc();
+            include "danhmuc/upload.php";
+            break;
+        case 'updatedm':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $danhmuc_dm = $_POST['danhmuc_dm'];
+                $id = $_POST['id'];
+                update_danhmuc($id, $danhmuc_dm);
+            }
+            $listdanhmuc = loadall_danhmuc();
+            include "danhmuc/list.php";
             break;
             // CN DUNG TICH
         case 'adddt':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $dungtich_dt = $_POST['dungtich_dt'];
+                add_dungtich($dungtich_dt);
+                $thongbao = "THêm thành công";
+            }
             include "dungtich/add.php";
             break;
         case 'listdt':
@@ -51,6 +75,11 @@ if (isset($_GET['act'])) {
             break;
             // CN TRANG TH
         case 'addth':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $thuonghieu_th = $_POST['thuonghieu_th'];
+                add_thuonghieu($thuonghieu_th);
+                $thongbao = "THêm thành công";
+            }
             include "thuonghieu/add.php";
             break;
         case 'listth':
@@ -91,6 +120,20 @@ if (isset($_GET['act'])) {
             break;
             // CN TRANG SP
         case 'addsp':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $sanpham_sp = $_POST['sanpham_sp'];
+                $mota_sp = $_POST['mota_sp'];
+                $img = $_FILES['img_sp']['name'];
+                $target_dir = "1/";
+                $target_file = $target_dir . basename($_FILES["img_sp"]["name"]);
+                if (move_uploaded_file($_FILES["img_sp"]["tmp_name"], $target_file)) {
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                } else {
+                    // echo "Sorry, there was an error uploading your file.";
+                }
+                add_sanpham($sanpham_sp, $mota_sp, $img);
+                $thongbao = "THêm thành công";
+            }
             include "sanpham/add.php";
             break;
         case 'listsp':

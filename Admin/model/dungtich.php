@@ -1,4 +1,9 @@
 <?php
+function add_dungtich($dungtich_dt)
+{
+    $sql = "insert into dungtich(dt_dungtich) value('$dungtich_dt') ";
+    pdo_execute($sql);
+}
 function loadall_dungtich()
 {
     $sql = "select * from dungtich order by dt_id";

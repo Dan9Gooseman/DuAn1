@@ -7,7 +7,6 @@
             <table>
                 <tr class="a">
                     <th class="b"></th>
-                    <th class="b"></th>
                     <th class="b">ID ĐƠN HÀNG</th>
                     <th class="b">NGÀY TẠO</th>
                     <th class="b">TỔNG TIỀN</th>

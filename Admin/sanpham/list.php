@@ -9,9 +9,10 @@
                     <th class="b"></th>
                     <th class="b">MÃ SẢN PHẨM</th>
                     <th class="b">TÊN SẢN PHẨM</th>
-                    <th class="b">MÔ TẢ SẢN PHẨM</th>
                     <th class="b">ẢNH SẢN PHẨM</th>
-                    <th class="b">LƯỢT MUA SẢN PHẨM</th>
+                    <th class="b">MÔ TẢ SẢN PHẨM</th>
+
+                    <th class="b">LƯỢT MUA</th>
                     <th class="b"></th>
                 </tr>
                 <?php
@@ -19,12 +20,18 @@
                     extract($sp);
                     $xoasp = "index.php?act=xoasp&id=" . $sp_id;
                     $suasp = "index.php?act=suasp&id=" . $sp_id;
+                    $img = "../assets/uploads/" . $sp_img;
+                    if (is_file($img)) {
+                        $hinh = "<img src='" . $img . "' height='300' width='150'>";
+                    } else {
+                        $hinh = "không hình ảnh";
+                    }
                     echo '<tr>
                     <th><input type="checkbox"></th>
                     <th>' . $sp_id . '</th>
                     <th>' . $sp_ten . '</th>
+                    <th>' . $hinh . '</th>
                     <th>' . $sp_mota . '</th>
-                    <th></th>
                     <th>' . $sp_luotmua . '</th>
                     <th><a href="' . $xoasp . '"><input class="c" type="button" value="xóa"></a>
                     <a href="' . $suasp . '"><input class="c" type="button" value="sửa"></a></th>

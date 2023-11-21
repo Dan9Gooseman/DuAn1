@@ -11,7 +11,6 @@
                     <th class="b">ĐỊA CHỈ</th>
                     <th class="b">SỐ ĐIỆN THOẠI</th>
                     <th class="b">HỌ VÀ TÊN</th>
-                    <th class="b"> </th>
                 </tr>
                 <?php
 
@@ -19,13 +18,10 @@
                     extract($dcnh);
                     echo '<tr>
                     <th><input type="checkbox"></th>
-                    <th>' . $user_id . '</th>
-                    <th>' . $user_hovaten . '</th>
-                    <th>' . $user_password . '</th>
-                    <th>' . $user_email . '</th>
                     <th>' . $dcnh_id . '</th>
-                    <th>' . $user_vaitro . '</th>
-                    <th></th>
+                    <th>' . $dcnh_diachi . '</th>
+                    <th>' . $dcnh_sdt . '</th>
+                    <th>' . $dcnh_hovaten . '</th>
     </tr>';
                 }
 

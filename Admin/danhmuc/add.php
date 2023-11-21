@@ -6,7 +6,7 @@
         <form action="index.php?act=adddm" method="post">
             <div class="dulieu">
                 Danh Mục :
-                <input type="text" name="name_dm" required>
+                <input type="text" name="danhmuc_dm" required>
 
             </div>
             <div class="nut_cn">
@@ -14,6 +14,10 @@
                 <input type="reset" value="nhập lại">
                 <a href="index.php?act=listdm"><input type="button" value="danh sách"></a>
             </div>
+            <?php
+            if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
+
+            ?>
 
 
         </form>

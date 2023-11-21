@@ -5,3 +5,8 @@ function loadall_user()
     $listuser = pdo_query($sql);
     return $listuser;
 }
+function delete_user($id)
+{
+    $sql = "delete from user where user_id=" . $id;
+    pdo_execute($sql);
+}

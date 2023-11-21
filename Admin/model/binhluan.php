@@ -5,3 +5,9 @@ function loadall_binhluan()
     $listbinhluan = pdo_query($sql);
     return $listbinhluan;
 }
+
+function delete_binhluan($id)
+{
+    $sql = "delete from binhluan where bl_id=" . $id;
+    pdo_execute($sql);
+}

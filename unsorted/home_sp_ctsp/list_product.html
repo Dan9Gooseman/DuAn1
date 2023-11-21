@@ -1,250 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danh Sách product</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js"></script>
-  </head>
-  <body>
-    <div class="content-list">
-      <div class="loc-product">
-        <div class="loc-one-product">
-          <div class="box" id="myBox">
-            <button class="button-boloc" onclick="toggleMenu()">
-              Hiển Thị Bộ Lọc
-            </button>
-            <div class="menu" id="myMenu">
-              <div class="boloc">
-                Thương Hiệu :<br />
-                <div class="nut a">
-                  <button class="b">a</button><button class="b">a</button
-                  ><button class="b">a</button><button class="b">a</button
-                  ><button class="b">a</button>
-                </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh Sách product</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <div class="content-list">
+    <div class="loc-product">
+      <div class="loc-one-product">
+        <div class="box" id="myBox">
+          <button class="button-boloc" onclick="toggleMenu()">
+            Hiển Thị Bộ Lọc
+          </button>
+          <div class="menu" id="myMenu">
+            <div class="boloc">
+              Thương Hiệu :<br />
+              <div class="nut a">
+                <button class="b">a</button><button class="b">a</button><button class="b">a</button><button
+                  class="b">a</button><button class="b">a</button>
               </div>
-              <div class="boloc">
-                Loại Sản Phẩm :<br />
-                <div class="nut a">
-                  <button class="b">a</button><button class="b">a</button
-                  ><button class="b">a</button><button class="b">a</button
-                  ><button class="b">a</button>
-                </div>
+            </div>
+            <div class="boloc">
+              Loại Sản Phẩm :<br />
+              <div class="nut a">
+                <button class="b">a</button><button class="b">a</button><button class="b">a</button><button
+                  class="b">a</button><button class="b">a</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="loc-two-product">
-          <div class="box" id="myBox">
-            <button onclick="toggleMenu()">Hiển Thị Bộ Lọc</button>
-            <div class="menu" id="myMenu">
-              <div class="boloc">Thương Hiệu :<br /></div>
-              <div class="boloc">Loại Sản Phẩm :<br /></div>
-            </div>
+      </div>
+      <div class="loc-two-product">
+        <div class="box" id="myBox">
+          <button onclick="toggleMenu()">Hiển Thị Bộ Lọc</button>
+          <div class="menu" id="myMenu">
+            <div class="boloc">Thương Hiệu :<br /></div>
+            <div class="boloc">Loại Sản Phẩm :<br /></div>
           </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
-        </div>
-        <div class="product-box">
-          <a href="#"
-            ><img
-              class="product-image"
-              src="img/anh-my-pham-06.jpg"
-              alt="Hình ảnh sản phẩm"
-          /></a>
-          <a href=""><h2 class="product-name">Tên sản phẩm</h2></a>
-          <a href="#"><p class="product-price">Giá tiền: $100</p></a>
-          <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
-          <button class="buy-now-button">Mua ngay</button>
         </div>
       </div>
     </div>
-  </body>
+    <div class="product">
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+      <div class="product-box">
+        <a href="#"><img class="product-image" src="img/anh-my-pham-06.jpg" alt="Hình ảnh sản phẩm" /></a>
+        <a href="">
+          <h2 class="product-name">Tên sản phẩm</h2>
+        </a>
+        <a href="#">
+          <p class="product-price">Giá tiền: $100</p>
+        </a>
+        <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+        <button class="buy-now-button">Mua ngay</button>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

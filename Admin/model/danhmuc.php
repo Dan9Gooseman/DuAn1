@@ -6,3 +6,8 @@ function loadall_danhmuc()
     $listdanhmuc = pdo_query($sql);
     return $listdanhmuc;
 }
+// xóa danh mục
+function delete_danhmuc($id){
+    $sql="delete from danhmuc where dm_id=".$id;
+    pdo_execute($sql);
+}

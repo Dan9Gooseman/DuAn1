@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 20, 2023 at 04:02 AM
+-- Generation Time: Nov 20, 2023 at 11:01 AM
 -- Server version: 5.7.25
 -- PHP Version: 7.1.26
 
@@ -195,14 +195,14 @@ CREATE TABLE `sanpham` (
   `sp_ten` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `sp_mota` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `sp_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `sp_luotxem` int(11) NOT NULL
+  `sp_luotmua` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sanpham`
 --
 
-INSERT INTO `sanpham` (`sp_id`, `sp_ten`, `sp_mota`, `sp_img`, `sp_luotxem`) VALUES
+INSERT INTO `sanpham` (`sp_id`, `sp_ten`, `sp_mota`, `sp_img`, `sp_luotmua`) VALUES
 (1, 'DẦU GỘI NƯỚC HOA X-MEN METAL', '•	Dầu gội đặc biệt với bộ đôi sức mạnh:\r\no	Công thức MENZ (ZPTO + Vitamin E + Methol), giúp dưỡng gia đầu, sạch sảng khoái &amp; đánh bay gàu.\r\no	Công thức MENZ (ZPTO + Vitamin E + Methol), giúp dưỡng gia đầu, sạch sảng khoái &amp; đánh bay gàu.\r\no	Khối lượng: 380g/ 650g/ 900g\r\n', 'Xmen_Metal.jpg', 124),
 (2, 'DẦU GỘI NƯỚC HOA X-MEN FIRE', '•	Dầu gội nam đặc Sạch sâu gấp biệt với bộ đôi sức mạnh:\r\no	Sạch sâu gấp 2 lần với chiết xuất trà xanh, giúp đánh bay dầu nhờn, bụi bẩn & ngứa làm sạch tối đa tóc & da đầu.\r\no	Mùi hương nam tính mạnh mẽ, lưu hương suốt cả ngày.\r\no	Khối lượng: 380g/ 650g\r\n', 'Xmen_Fire.jpg', 101),
 (3, 'DẦU GỘI NƯỚC HOA X-MEN WOOD', '•	Dầu gội nam đặc Sạch sâu gấp biệt với bộ đôi sức mạnh:\r\no	Sạch sâu gấp 2 lần với chiết xuất trà xanh, giúp đánh bay dầu nhờn, bụi bẩn & ngứa làm sạch tối đa tóc & da đầu.\r\no	Mùi hương nam tính mạnh mẽ, lưu hương suốt cả ngày.\r\no	Khối lượng: 380g/ 650g\r\n', 'Xmen_Wood.jpg', 98),

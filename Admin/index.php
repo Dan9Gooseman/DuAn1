@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 
-include "../Model/pdo.php";
+include "model/pdo.php";
 
 include "model/thuonghieu.php";
 include "model/danhmuc.php";
@@ -73,6 +73,22 @@ if (isset($_GET['act'])) {
             $listdungtich = loadall_dungtich(0);
             include "dungtich/list.php";
             break;
+        case 'updatedt':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $dt_dungtich = $_POST['dt_dungtich'];
+                $id = $_POST['id'];
+                update_dungtich($id, $dt_dungtich);
+            }
+            $listdungtich = loadall_dungtich();
+            include "dungtich/list.php";
+            break;
+        case 'suadt':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $dt = loadone_dungtich($_GET['id']);
+            }
+            $listdanhmuc = loadall_danhmuc();
+            include "dungtich/upload.php";
+            break;
             // CN TRANG TH
         case 'addth':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
@@ -82,6 +98,7 @@ if (isset($_GET['act'])) {
             }
             include "thuonghieu/add.php";
             break;
+
         case 'listth':
             $listthuonghieu = loadall_thuonghieu();
             include "thuonghieu/list.php";
@@ -93,6 +110,21 @@ if (isset($_GET['act'])) {
             $listthuonghieu = loadall_thuonghieu(0);
             include "thuonghieu/list.php";
             break;
+        case 'suath':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $th = loadone_thuonghieu($_GET['id']);
+            }
+            $listthuonghieu = loadall_thuonghieu(0);
+            include "thuonghieu/upload.php";
+            break;
+        case 'updateth':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $name = $_POST['name'];
+                $id = $_POST['id'];
+                update_thuonghieu($id, $name);
+            }
+            $listthuonghieu = loadall_thuonghieu();
+            include 'thuonghieu/list.php';
             break;
             // CN TRANG BL
         case 'listbl':
@@ -147,9 +179,36 @@ if (isset($_GET['act'])) {
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
             break;
+        case 'suasp':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $sp = loadone_sanpham($_GET['id']);
+            }
+            $listsanpham = loadall_sanpham(0);
+            include "sanpham/upload.php";
+            break;
+        case 'updatesp':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $id = $_POST['id'];
+                $name = $_POST['name'];
+                $mota = $_POST['mota'];
+                update_sanpham($id, $name, $mota);
+            }
+            $listsanpham = loadall_sanpham(0);
+            include 'sanpham/list.php';
             break;
             //CN TRANG BIEN THE SAN PHAM
         case 'addbtsp':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $sp_id = $_POST['sp_id'];
+                $th_id = $_POST['th_id'];
+                $dt_id = $_POST['dt_id'];
+                $dm_id = $_POST['dm_id'];
+                $name_btsp = $_POST['name_btsp'];
+                $price_btsp = $_POST['price_btsp'];
+                $sl_btsp = $_POST['sl_btsp'];
+                add_btsp($name_btsp, $sl_btsp, $price_btsp, $sp_id, $th_id, $dt_id, $dm_id);
+                $thongbao = "THêm thành công";
+            }
             include "bienthesanpham/add.php";
             break;
         case 'listbtsp':
@@ -157,6 +216,33 @@ if (isset($_GET['act'])) {
             include "bienthesanpham/list.php";
             break;
         case 'xoabtsp':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_btsp($_GET['id']);
+            }
+            $listbienthesanpham = loadall_bienthesanpham();
+            include "bienthesanpham/list.php";
+            break;
+        case 'suabtsp':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $btsp = loadone_bienthesanpham($_GET['id']);
+            }
+            $listbienthesanpham = loadall_bienthesanpham(0);
+            include "bienthesanpham/upload.php";
+            break;
+        case 'updatebtsp':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $id = $_POST['id'];
+                $sp1_id = $_POST['sp1_id'];
+                $th1_id = $_POST['th1_id'];
+                $dt1_id = $_POST['dt1_id'];
+                $dm1_id = $_POST['dm1_id'];
+                $name_btsp = $_POST['name_btsp'];
+                $price_btsp = $_POST['price_btsp'];
+                $sl_btsp = $_POST['sl_btsp'];
+                update_bienthesanpham($id,$name_btsp, $sl_btsp, $price_btsp, $sp1_id, $th1_id, $dt1_id, $dm1_id);
+            }
+            $listbienthesanpham = loadall_bienthesanpham(0);
+            include 'bienthesanpham/list.php';
             break;
             //CN TRANG DON HANG
         case 'listdonhang':

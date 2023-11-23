@@ -48,6 +48,12 @@ tr th {
   height: 40px;
   margin: 30px 0px;
 }
+.dulieu_fix input {
+  border-radius: 5px;
+  width: 15%;
+  height: 40px;
+  margin: 30px 10px;
+}
 
 .nut_cn input {
   width: auto;

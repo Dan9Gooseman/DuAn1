@@ -32,6 +32,25 @@
         echo '<link rel="stylesheet" href="assets/css/home.css">';
     }
     ?>
+    <script>
+    function uncheckAll() {
+        var checkboxes = document.getElementsByTagName('input');
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].type == 'checkbox') {
+                checkboxes[i].checked = false;
+            }
+        }
+    }
+    function toggleCheckbox() {
+        var checkboxes = document.getElementsByTagName('input');
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].type == 'checkbox') {
+                checkboxes[i].checked = !checkboxes[i].checked;
+            }
+        }
+    }
+</script>
+
 
 
 </head>
@@ -55,7 +74,7 @@
             </div>
             <div class="header-user-cart">
                 <div class="user">
-                    <a id="custom-btn" class="btn btn-primary" href="index.php?act=dangnhap" role="button">Đăng nhập</a>
+                    <a id="custom-btn" class="btn btn-primary" href="../index.php" role="button">Quay lại shop</a>
                 </div>
                 <div class="cart">
                     <a href="#">

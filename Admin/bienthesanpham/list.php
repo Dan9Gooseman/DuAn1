@@ -1,6 +1,6 @@
 <div class="row">
     <div>
-        <h1 style="text-align: center; margin: 30px;">DANH SÁCH DANH MỤC</h1>
+        <h1 style="text-align: center; margin: 30px;">DANH SÁCH BIẾN THỂ SẢN PHẨM</h1>
     </div>
     <div class="">
         <div class="">
@@ -21,7 +21,7 @@
                 foreach ($listbienthesanpham as $btsp) {
                     extract($btsp);
                     $xoabtsp = "index.php?act=xoabtsp&id=" . $btsp_id;
-                    $suabtsp = "index.php?act=xoabtsp&id=" . $btsp_id;
+                    $suabtsp = "index.php?act=suabtsp&id=" . $btsp_id;
                     echo '<tr>
                         <th><input type="checkbox"></th>
                         <th>' . $btsp_id . '</th>
@@ -37,32 +37,14 @@
                     </tr>';
                 }
                 ?>
-                <!-- <tr>
-                    <th></th>
-                    <th>MÃ DANH MỤC</th>
-                    <th>TÊN DANH MỤC</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ DANH MỤC</th>
-                    <th>TÊN DANH MỤC</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>MÃ DANH MỤC</th>
-                    <th>TÊN DANH MỤC</th>
-                    <th></th>
-                </tr> -->
             </table>
 
         </div>
         <div class="nut_cn">
-            <input class="mr" type="button" value="chọn tât cả">
-            <input class="mr" type="button" value="bỏ chọn tất cả">
+            <input class="mr" type="button" value="chọn tât cả" onclick="toggleCheckbox()">
+            <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
             <input class="mr" type="button" value="xóa mục đã chọn">
-            <a href="index.php?act=adddm"><input type="button" value="nhập thêm"></a>
+            <a href="index.php?act=addbtsp"><input type="button" value="nhập thêm"></a>
         </div>
     </div>
 

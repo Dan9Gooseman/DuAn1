@@ -41,7 +41,7 @@
     }
     ?>
 
-
+   
 </head>
 
 <body>
@@ -55,9 +55,8 @@
             </a>
             <div class="header-search-bar">
                 <div class="input-group relative">
-                    <input name="search-bar" type="text" class="form-control shadow-none padding-left radius-1" placeholder="Nhập từ khóa tìm kiếm" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary background radius-2" type="button" id="button-addon2">Tìm
-                        kiếm</button>
+                    <input name="search-bar" type="text" class="form-control shadow-none padding-left radius-1" id="timkiem" placeholder="Nhập từ khóa tìm kiếm" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary background radius-2" type="button" id="button-addon2">Tìm kiếm</button>
                 </div>
             </div>
             <div class="header-user-cart">
@@ -111,3 +110,9 @@
             </div>
         </nav>
     </div>
+    <script>
+        var timkiem = document.getElementById('timkiem');
+        timkiem.addEventListener('input', () => {
+            // console.log(timkiem.value);
+        })
+    </script>

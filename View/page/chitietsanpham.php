@@ -1,88 +1,57 @@
+  <div id="result"></div>
   <div class="container-fluid my-3">
     <div class="row">
       <div class="col-md-4">
         <div class="">
-          <img class="img-fluid" src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64" alt="ProductS" />
-          <!-- <div class="row my-3">
-            <div class="col">
-              <img class="w-100" src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
-                alt="preview" />
-            </div>
-            <div class="col">
-              <img class="w-100" src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
-                alt="preview" />
-            </div>
-            <div class="col">
-              <img class="w-100" src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
-                alt="preview" />
-            </div>
-            <div class="col">
-              <img class="w-100" src="https://down-vn.img.susercontent.com/file/sg-11134201-22110-8z55xgq0c6jv64"
-                alt="preview" />
-            </div>
-          </div> -->
+          <img class="img-fluid" src="<?php echo 'assets/uploads/'. $chitietsanpham[0]['sp_img'] ;?>" alt="Ảnh sản phẩm" style="width:60%;" />
         </div>
       </div>
       <div class="col-md-5">
-        <div class="">
-          <h3 class="display-7 word-wrap">tên sản phẩm</h3>
+        <form action="" medthod="post" class="">
+          <input type="text" name="sp_id" hidden value="<?php echo $sp_id?>">
+          <h3 class="display-7 word-wrap" id="tensanpham"><?php echo $chitietsanpham[0]['sp_ten'] ;?></h3>
           <div class="flex item-padding item-center-horizontal">
-            <div class="price">69.000.000đ</div>
+            <div class="price" id="giatien"><?php echo number_format($chitietsanpham[0]['min_giatien']) . '-' . number_format($chitietsanpham[0]['max_giatien']) . ' đ' ;?></div>
           </div>
           <div>
-            <div>Thương hiệu :</div>
+            <div>Thương hiệu : <?php echo $chitietsanpham[0]['th_thuonghieu'] ;?></div>
           </div>
           <div class="flex flex-column">
             <div class="flex item-center-horizontal margin-top-2">
               <div style="margin: 0 2rem 0.5rem 0">Dung Tích</div>
               <div class="" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check custom-radio" name="btnradio" id="btnradio1" autocomplete="off" checked />
-                <label class="btn btn-outline-primary btn-style" for="btnradio1">330ml</label>
-                <input type="radio" class="btn-check custom-radio" name="btnradio" id="btnradio4" autocomplete="off" />
-                <label class="btn btn-outline-primary btn-style" for="btnradio4">690ml</label>
-
-                <input type="radio" class="btn-check custom-radio" name="btnradio" id="btnradio5" autocomplete="off" />
-                <label class="btn btn-outline-primary btn-style" for="btnradio5">1000ml</label>
+                <?php
+                  foreach($dungtich as $dt){
+                    extract($dt);
+                    echo '<input type="radio" class="btn-check custom-radio" name="btnradio" id="btnradio'.$dt_id.'" autocomplete="off" value="'.$dt_dungtich.'" />
+                          <label class="btn btn-outline-primary btn-style" for="btnradio'.$dt_id.'">'.$dt_dungtich.'</label>';
+                  }
+                ?>
               </div>
             </div>
             <div class="flex item-center-horizontal margin-top-2">
               <div style="margin: 0 2rem 0.5rem 0">Số lượng</div>
               <div class="flex">
-                <button class="btn btn-primary btn-light btn-outline-dark customBtn" id="minus" type="submit">
+                <div class="btn btn-primary btn-light btn-outline-dark customBtn" id="minus">
                   <i class="fa-solid fa-minus"></i>
-                </button>
+                </div>
                 <input class="customInput" id="num" type="text" min="1" max="100" step="1" value="1" />
-                <button class="btn btn-primary btn-light btn-outline-dark customBtn" id="plus" type="submit">
+                <div class="btn btn-primary btn-light btn-outline-dark customBtn" id="plus">
                   <i class="fa-solid fa-plus"></i>
-                </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="flex margin-top-2">
             <button class="btn btn-primary btn-style-2">Mua ngay</button>
-            <button class="btn btn-primary btn-style-2">
-              Thêm vào giỏ hàng
-            </button>
+            <button class="btn btn-primary btn-style-2">Thêm vào giỏ hàng</button>
           </div>
 
           <div class="detail-box">
             <h4 class="mota">mô tả sản phẩm</h4>
-            <p class="chitiet">Câu “The quick brown fox jumps over the lazy dog.”
-
-              (Tạm dịch là Con cáo nâu nhanh nhẹn nhảy qua con một con chó
-              lười bi
-              có quen thuộc với bạn không? Trước đây khi sử dụng công thức
-              rand,
-
-              Word sẽ tạo câu pangram này (một câu hoặc cụm từ chứa tất cả các
-              chữ
-              tiếng Anh). Tuy nhiên, nó đã được thay thế bằng đoạn văn bản
-              hiện tại
-              Office 2007 ra đời.Tuy nhiên nó không biến mất hoàn toàn, bạn có
-              thể
-              lại câu này bằng cách gõ lệnh sau và nhấn Enter.)</p>
+            <p class="chitiet"><?php echo $chitietsanpham[0]['sp_mota'] ;?></p>
           </div>
-        </div>
+        </form>
       </div>
       <div class="col-md-3">
         <img src="assets/banner/aside.jpg" style="margin-top:6rem;">
@@ -94,33 +63,16 @@
       <h4>Bình luận</h4>
     </div>
     <div class="comment-box">
-      <div class="comment">
-        <strong>Phạm Văn A</strong>
-        <p class="comment-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, nesciunt dicta.
-          Expedita velit minima distinctio, qui dolor aut laborum doloremque autem tempore dolores magnam iste. Odit
-          dolores recusandae consectetur similique?</p>
-        <span>thgian</span>
-      </div>
-      <div class="comment">
-        <strong>Phạm Văn A</strong>
-        <p class="comment-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, nesciunt dicta.
-          Expedita velit minima distinctio, qui dolor aut laborum doloremque autem tempore dolores magnam iste. Odit
-          dolores recusandae consectetur similique?</p>
-        <span>thgian</span>
-      </div>
-      <div class="comment">
-        <strong>Phạm Văn A</strong>
-        <p class="comment-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, nesciunt dicta.
-          Expedita velit minima distinctio, qui dolor aut laborum doloremque autem tempore dolores magnam iste. Odit
-          dolores recusandae consectetur similique?</p>
-        <span>thgian</span>
-      </div>
-      <div class="comment">
-        <strong>Phạm Văn A</strong>
-        <p class="comment-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, nesciunt dicta.
-          Expedita velit minima distinctio, qui dolor aut laborum doloremque autem tempore dolores magnam iste. Odit
-          dolores recusandae consectetur similique?</p>
-        <span>thgian</span>
-      </div>
+      <?php
+        foreach($binhluansanpham as $binhluan){
+          extract($binhluan);
+          echo '<div class="comment">
+                  <strong>'. $user_hovaten .'</strong>
+                  <p class="comment-content">'. $bl_noidung .'</p>
+                  <span>'. $bl_ngaytao .'</span>
+                </div>';
+        }
+      ?>
     </div>
   </div>
+  <script src="assets/js/chitietsanpham.js"></script>

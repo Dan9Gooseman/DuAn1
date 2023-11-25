@@ -3,6 +3,7 @@
 require_once "model/pdo.php";
 require_once "model/sanpham.php";
 require_once "model/danhmuc.php";
+require "model/getvariant.php";
 //preload
 $top10_new = pdo_top10_new();
 $top10_buy = pdo_top10_buy();
@@ -30,11 +31,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case "chitietsanpham":
             if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
-                $sp_id = $_GET['sp_id'];
-                // $onesp = loadone_sanpham($sp_id);
-                // extract($onesp);
-                // $sp_cungloai = load_sanpham_cungloai($sp_id, $dm_id);
-                // $updateluotxem = update_luotxem($sp_id, $sp_luotxem);
+                $sp_id = (int)$_GET['sp_id'] ;
+                $chitietsanpham = pdo_chitietsanpham($sp_id);
+                $binhluansanpham = pdo_binhluansanpham($sp_id);
+                $dungtich = pdo_dungtich($sp_id);
                 include "view/page/chitietsanpham.php";
             } else {
                 include "view/page/notfound404.php";

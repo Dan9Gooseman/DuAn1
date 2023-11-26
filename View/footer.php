@@ -45,9 +45,9 @@
                 echo '<link rel="stylesheet" href="assets/js/dangkydangnhap.js">';
                 break;
         }
-    } else {
-        echo '<link rel="stylesheet" href="assets/js/home.js">';
     }
+    echo '<script src="Global\js\header.js"></script>';
+    echo '<script src="assets/js/home.js"></script>';
     ?>
     
 </body>

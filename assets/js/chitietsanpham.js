@@ -40,15 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		radio.addEventListener('input', function () {
 			var dungtich = document.querySelector('input[name="btnradio"]:checked').value;
 			var sp_id = document.querySelector('input[name="sp_id"]').value;
-			// console.log(dungtich);
 			var xhr = new XMLHttpRequest();
 			xhr.open('GET', `Model/getvariant.php?sp_id=${sp_id}&dungtich=${dungtich}`, true);
-			// console.log(xhr.open('GET', "Model/sanpham.php?sp_id=" + sp_id + "&dungtich=" + dungtich, true));
 			xhr.onreadystatechange = function () {
 				if (xhr.readyState == 4 && xhr.status == 200) {
-					// console.log(this.responseText);
 					var responseData = JSON.parse(xhr.responseText);
-					console.log(responseData);
+					// console.log(responseData);
 					document.getElementById('tensanpham').innerText = responseData['btsp_ten'];		
 					document.getElementById('giatien').innerText = numberFormat(responseData['btsp_giatien'])+' đ';			
 				}

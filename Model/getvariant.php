@@ -31,7 +31,8 @@ if ($row) {
     $response['btsp_giatien'] = $row['btsp_giatien'];
     $response['dt_dungtich'] = $row['dt_dungtich'];
     echo json_encode($response);
-} else {
-    echo json_encode(new stdClass());
-}
+} 
+// else {
+//     echo json_encode(new stdClass());
+// }
 ?>

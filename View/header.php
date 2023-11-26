@@ -41,7 +41,7 @@
     }
     ?>
 
-   
+
 </head>
 
 <body>
@@ -57,6 +57,14 @@
                 <div class="input-group relative">
                     <input name="search-bar" type="text" class="form-control shadow-none padding-left radius-1" id="timkiem" placeholder="Nhập từ khóa tìm kiếm" aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary background radius-2" type="button" id="button-addon2">Tìm kiếm</button>
+                </div>
+                <div class="search-result" id="search-result">
+                    <!-- <a href="" title="Initio Addictive Vibration Eau de Parfum | 5ml - 10ml - 90ml" class="quicksearch_item ">
+                        <img src="" alt="a" class="search-img">
+                        <span class="search-info">
+                            <strong class="search-title">Initio Addict</strong>
+                            <span class="search-price">12355</span>
+                    </a> -->
                 </div>
             </div>
             <div class="header-user-cart">
@@ -110,9 +118,3 @@
             </div>
         </nav>
     </div>
-    <script>
-        var timkiem = document.getElementById('timkiem');
-        timkiem.addEventListener('input', () => {
-            // console.log(timkiem.value);
-        })
-    </script>

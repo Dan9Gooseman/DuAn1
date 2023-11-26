@@ -4,6 +4,7 @@ require_once "model/pdo.php";
 require_once "model/sanpham.php";
 require_once "model/danhmuc.php";
 require "model/getvariant.php";
+require "global/search.php";
 //preload
 $top10_new = pdo_top10_new();
 $top10_buy = pdo_top10_buy();

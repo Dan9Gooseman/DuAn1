@@ -7,7 +7,8 @@
         </div>
       </div>
       <div class="col-md-5">
-        <form action="" medthod="post" class="">
+        
+        <form action="" medthod="post">
           <input type="text" name="sp_id" hidden value="<?php echo $sp_id?>">
           <h3 class="display-7 word-wrap" id="tensanpham"><?php echo $chitietsanpham[0]['sp_ten'] ;?></h3>
           <div class="flex item-padding item-center-horizontal">
@@ -43,8 +44,7 @@
             </div>
           </div>
           <div class="flex margin-top-2">
-            <button class="btn btn-primary btn-style-2">Mua ngay</button>
-            <button class="btn btn-primary btn-style-2">Thêm vào giỏ hàng</button>
+            <button type="submit" class="btn btn-primary btn-style-2">Thêm vào giỏ hàng</button>
           </div>
 
           <div class="detail-box">
@@ -52,6 +52,7 @@
             <p class="chitiet"><?php echo $chitietsanpham[0]['sp_mota'] ;?></p>
           </div>
         </form>
+
       </div>
       <div class="col-md-3">
         <img src="assets/banner/aside.jpg" style="margin-top:6rem;">

@@ -44,6 +44,9 @@
             case "dangnhap":
                 echo '<link rel="stylesheet" href="assets/js/dangkydangnhap.js">';
                 break;
+            case "giohang":
+                echo '<link rel="stylesheet" href="assets/js/giohang.js">';
+                break;
         }
     }
     echo '<script src="Global\js\header.js"></script>';

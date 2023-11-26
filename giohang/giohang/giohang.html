@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="giohang.css" />
+</head>
+
+<body>
+  <div class="container-giohang">
+    <div class="content-giohang">
+      <div class="giohang">
+        <table border="1" cellspacing="0">
+          <thead>
+            <tr>
+              <th>SẢN PHẨM</th>
+              <th>GIÁ</th>
+              <th>SỐ LƯỢNG</th>
+              <th>TẠM TÍNH</th>
+            </tr>
+          </thead>
+          <tbody>
+            <td>
+              <button class="delete-button">X</button>
+              Tên sản phẩm
+            </td>
+            <td>giá cả</td>
+            <td class="nut-giohang">
+              <form id="quantityForm">
+                <button type="button" onclick="decrement()">-</button>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" />
+                <button type="button" onclick="increment()">+</button>
+              </form>
+            </td>
+            <td>Số tiền phải trả</td>
+          </tbody>
+        </table>
+        <input type="button" value="Tiếp tục xem sản phẩm" />
+      </div>
+      <div class="giohang">
+        <table cellspacing="0">
+          <thead>
+            <th>CỘNG GIỎ HÀNG</th>
+          </thead>
+        </table>
+        <table cellspacing="0">
+          <tr>
+            <th>Tạm tính</th>
+            <td><span>ABC</span></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th>Giao hàng</th>
+            <td><span>Địa chỉ giao hàng</span></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th>Tổng</th>
+            <td>1000$</td>
+          </tr>
+        </table>
+        <button>TIẾN HÀNH THANH TOÁN</button>
+      </div>
+      <div class="giohang-sanpham">
+        <h2>CÓ THỂ BẠN QUAN TÂM</h2>
+        <div class="product-container">
+          <div class="product">
+            <div class="product-box">
+              <img class="product-image a" src="../giohang/img/9.jpg" alt="Hình ảnh sản phẩm" />
+              <h3 class="product-name"></h3>
+              <p class="product-price">Giá</p>
+              <a href="">Lựa cọn các tùy chọn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="giohang.js"></script>
+</body>
+
+</html>

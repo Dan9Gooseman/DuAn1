@@ -44,7 +44,7 @@
     }
 //lấy chi tiết sản phẩm 
     function pdo_chitietsanpham($sp_id){
-        $sql = "select sp.sp_id, sp.sp_ten, sp.sp_mota, sp.sp_img, MIN(btsp.btsp_giatien) AS min_giatien, MAX(btsp.btsp_giatien) AS max_giatien, th.th_thuonghieu
+        $sql = "SELECT sp.sp_id, sp.sp_ten, sp.sp_mota, sp.sp_img, MIN(btsp.btsp_giatien) AS min_giatien, MAX(btsp.btsp_giatien) AS max_giatien, th.th_thuonghieu
                 FROM sanpham sp
                 inner JOIN bienthesanpham btsp ON sp.sp_id = btsp.sp_id
                 inner JOIN danhmuc dm ON btsp.dm_id = dm.dm_id

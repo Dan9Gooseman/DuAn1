@@ -51,6 +51,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 include "view/page/notfound404.php";
             }
             break;
+        case "giohang":
+            include "view/page/giohang.php";
     }
 } else {
     include "View/home.php";

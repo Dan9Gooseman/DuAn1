@@ -35,6 +35,9 @@
                     echo '<link rel="stylesheet" href="assets/css/notfound404.css">';
                 }
                 break;
+            case "giohang":
+                    echo '<link rel="stylesheet" href="assets/css/giohang.css">';
+                break;
         }
     } else {
         echo '<link rel="stylesheet" href="assets/css/home.css">';
@@ -72,7 +75,7 @@
                     <a id="custom-btn" class="btn btn-primary" href="index.php?act=dangnhap" role="button">Đăng nhập</a>
                 </div>
                 <div class="cart">
-                    <a href="#">
+                    <a href="index.php?act=giohang">
                         <i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i>
                     </a>
                 </div>

@@ -7,6 +7,11 @@
             <div class="dulieu">
                 Danh Mục :
                 <input type="text" name="danhmuc_dm" required>
+                Trạng Thái:
+                <select name="on_off" id="">
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select>
 
             </div>
             <div class="nut_cn">

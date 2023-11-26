@@ -15,3 +15,14 @@ function delete_sanpham($id)
     $sql = "delete from sanpham where sp_id=" . $id;
     pdo_execute($sql);
 }
+function loadone_sanpham($id)
+{
+    $sql = "select * from sanpham where sp_id=" . $id;
+    $sp = pdo_query_one($sql);
+    return $sp;
+}
+function update_sanpham($id, $name, $mota)
+{
+    $sql = "update sanpham set sp_ten='" . $name . "', sp_mota='" . $mota . "' where sp_id=" . $id;
+    pdo_execute($sql);
+}

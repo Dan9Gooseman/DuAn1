@@ -32,8 +32,8 @@
 
         </div>
         <div class="nut_cn">
-            <input class="mr" type="button" value="chọn tât cả">
-            <input class="mr" type="button" value="bỏ chọn tất cả">
+        <input class="mr" type="button" value="chọn tât cả"  onclick="toggleCheckbox()">
+            <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
             <input class="mr" type="button" value="xóa mục đã chọn">
         </div>
     </div>

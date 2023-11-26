@@ -15,7 +15,7 @@
                 foreach ($listthuonghieu as $th) {
                     extract($th);
                     $xoath = "index.php?act=xoath&id=" . $th_id;
-                    $suath = "index.php?act=xoath&id=" . $th_id;
+                    $suath = "index.php?act=suath&id=" . $th_id;
                     echo '<tr>
                         <th><input type="checkbox"></th>
                         <th>' . $th_id . '</th>
@@ -29,9 +29,9 @@
 
         </div>
         <div class="nut_cn">
-            <input class="mr" type="button" value="chọn tât cả">
-            <input class="mr" type="button" value="bỏ chọn tất cả">
-            <input class="mr" type="button" value="xóa mục đã chọn">
+        <input class="mr" type="button" value="chọn tât cả"  onclick="toggleCheckbox()">
+            <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
+            <input class="mr" type="button" value="xóa mục đã chọn" >
             <a href="index.php?act=addth"><input type="button" value="nhập thêm"></a>
         </div>
     </div>

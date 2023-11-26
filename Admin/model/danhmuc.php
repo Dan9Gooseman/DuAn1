@@ -1,7 +1,7 @@
 <?php
-function add_danhmuc($danhmuc_dm)
+function add_danhmuc($danhmuc_dm,$on_off)
 {
-    $sql = "insert into danhmuc(dm_danhmuc) value('$danhmuc_dm') ";
+    $sql = "insert into danhmuc(dm_danhmuc,is_active) value('$danhmuc_dm','$on_off') ";
     pdo_execute($sql);
 }
 
@@ -23,8 +23,8 @@ function loadone_danhmuc($id)
     $dm = pdo_query_one($sql);
     return $dm;
 }
-function update_danhmuc($id, $dm_danhmuc)
+function update_danhmuc($dm_id, $dm_danhmuc)
 {
-    $sql = "update danhmuc set dm_danhmuc='" . $dm_danhmuc . "' where dm_id=" . $id;
+    $sql = "update danhmuc set dm_danhmuc='" . $dm_danhmuc . "' where dm_id=" . $dm_id;
     pdo_execute($sql);
 }

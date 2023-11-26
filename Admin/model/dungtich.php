@@ -15,3 +15,14 @@ function delete_dungtich($id)
     $sql = "delete from dungtich where dt_id=" . $id;
     pdo_execute($sql);
 }
+function loadone_dungtich($id)
+{
+    $sql = "select * from dungtich where dt_id=" . $id;
+    $dt = pdo_query_one($sql);
+    return $dt;
+}
+function update_dungtich($id, $dt_dungtich)
+{
+    $sql = "update dungtich set dt_dungtich='" . $dt_dungtich . "'where dt_id=" . $id;
+    pdo_execute($sql);
+}

@@ -5,7 +5,7 @@ if (is_array($dm)) {
 ?>
 <div class="row">
     <div class="row formtile mb10">
-        <h1 style="text-align: center;">THÊM MỚI DANH MỤC</h1>
+        <h1 style="text-align: center;">CẬP NHẬT DANH MỤC</h1>
     </div>
     <div>
         <form action="index.php?act=updatedm" method="post">
@@ -14,7 +14,12 @@ if (is_array($dm)) {
                 <input type="text" name="id_dm" value="<?php if (isset($dm_id) && ($dm_id != "")) echo $dm_id; ?>" disabled>
                 DANH MỤC :
                 <input type="text" name="danhmuc_dm" value="<?php if (isset($dm_danhmuc) && ($dm_danhmuc != "")) echo $dm_danhmuc; ?>">
-
+                 TRẠNG THÁI :
+                <select name="on_off">
+              >
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select>
 
             </div>
             <div class="nut_cn">

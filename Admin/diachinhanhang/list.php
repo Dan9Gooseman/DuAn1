@@ -1,9 +1,13 @@
 <div class="row">
     <div>
-        <h1 style="text-align: center; margin: 30px;">DANH SÁCH TÀI KHOẢN KHÁCH HÀNG</h1>
+        <h1 style="text-align: center; margin: 30px;">DANH SÁCH ĐỊA CHỈ NHẬN HÀNG</h1>
     </div>
     <div class="">
         <div class="">
+            <div class="dulieu2">
+        <input type="text" id="searchInput" placeholder="Nhập ký tự cần tìm kiếm">
+        <button onclick="searchCharacter()">Tìm kiếm</button></div>
+        <p id="result"></p>
             <table>
                 <tr class="a">
                     <th class="b"></th>

@@ -15,7 +15,12 @@ if (is_array($th)) {
 
                 THƯƠNG HIỆU :
                 <input type="text" name="name" value="<?php if (isset($th_thuonghieu) && ($th_thuonghieu != "")) echo $th_thuonghieu; ?>">
-
+                TRẠNG THÁI :
+                <select name="on_off">
+              >
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select>
             </div>
             <div class="nut_cn">
                 <input type="hidden" name="id" value="<?php if (isset($th_id) && ($th_id > 0)) echo $th_id; ?>">

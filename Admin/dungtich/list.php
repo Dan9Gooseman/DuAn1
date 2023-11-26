@@ -4,24 +4,30 @@
     </div>
     <div class="">
         <div class="">
+        <div class="dulieu2">
+        <input type="text" id="searchInput" placeholder="Nhập ký tự cần tìm kiếm">
+        <button onclick="searchCharacter()">Tìm kiếm</button>
+        <p id="result"></p></div>
             <table>
                 <tr class="a">
                     <th class="b"></th>
                     <th class="b">MÃ DUNG TÍCH</th>
                     <th class="b">DUNG TÍCH</th>
+                    <th class="b">TRẠNG THÁI</th>
                     <th class="b"></th>
                 </tr>
                 <?php
                 foreach ($listdungtich as $dt) {
                     extract($dt);
-                    $xoadt = "index.php?act=xoadt&id=" . $dt_id;
+                    // $xoadt = "index.php?act=xoadt&id=" . $dt_id;<th><a href="' . $xoadt . '"><input class="c" type="button" value="xóa"></a>
                     $suadt = "index.php?act=suadt&id=" . $dt_id;
                     echo '<tr>
                     <th><input type="checkbox"></th>
                     <th>' . $dt_id . '</th>
                     <th>' . $dt_dungtich . '</th>
+                    <th>' . $is_active . '</th>
+                    <th class="center">
                     
-                    <th><a href="' . $xoadt . '"><input class="c" type="button" value="xóa"></a>
                     <a href="' . $suadt . '"><input class="c" type="button" value="sửa"></a></th>
                 </tr>';
                 }
@@ -32,7 +38,7 @@
         <div class="nut_cn">
             <input class="mr" type="button" value="chọn tât cả"  onclick="toggleCheckbox()">
             <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
-            <input class="mr" type="button" value="xóa mục đã chọn">
+            <!-- <input class="mr" type="button" value="xóa mục đã chọn"> -->
             <a href="index.php?act=adddt"><input type="button" value="nhập thêm"></a>
         </div>
     </div>

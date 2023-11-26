@@ -1,7 +1,7 @@
 <?php
-function add_sanpham($sanpham_sp, $mota_sp, $img)
+function add_sanpham($sanpham_sp, $mota_sp, $img,$on_off)
 {
-    $sql = "insert into sanpham(sp_ten,sp_mota,sp_img) value('$sanpham_sp','$mota_sp','$img') ";
+    $sql = "insert into sanpham(sp_ten,sp_mota,sp_img,is_active) value('$sanpham_sp','$mota_sp','$img','$on_off') ";
     pdo_execute($sql);
 }
 function loadall_sanpham()
@@ -21,8 +21,8 @@ function loadone_sanpham($id)
     $sp = pdo_query_one($sql);
     return $sp;
 }
-function update_sanpham($id, $name, $mota)
+function update_sanpham($id, $name, $mota,$on_off)
 {
-    $sql = "update sanpham set sp_ten='" . $name . "', sp_mota='" . $mota . "' where sp_id=" . $id;
+    $sql = "update sanpham set sp_ten='" . $name . "', sp_mota='" . $mota . "',is_active='".$on_off."' where sp_id=" . $id;
     pdo_execute($sql);
 }

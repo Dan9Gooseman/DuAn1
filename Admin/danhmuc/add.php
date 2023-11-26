@@ -6,7 +6,12 @@
         <form action="index.php?act=adddm" method="post">
             <div class="dulieu">
                 Danh Mục :
-                <input type="text" name="danhmuc_dm" required>
+                <input type="text" name="dm_danhmuc" required>
+                Trạng Thái :
+                <select name="on_off">
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select>
 
             </div>
             <div class="nut_cn">

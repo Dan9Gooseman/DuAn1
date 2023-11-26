@@ -9,6 +9,11 @@
                 <input type="text" name="sanpham_sp" required>
                 MÔ TẢ SẢN PHẨM :
                 <input type="text" name="mota_sp" required>
+                TRẠNG THÁI :
+                <select name="on_off">
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select><br><br>
                 ẢNH SẢN PHẨM :
                 <input type="file" name="img_sp">
             </div>

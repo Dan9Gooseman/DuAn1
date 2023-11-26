@@ -1,9 +1,12 @@
 <div class="row">
     <div>
-        <h1 style="text-align: center; margin: 30px;">DANH SÁCH TÀI KHOẢN KHÁCH HÀNG</h1>
+        <h1 style="text-align: center; margin: 30px;">DANH SÁCH ĐƠN HÀNG</h1>
     </div>
     <div class="">
         <div class="">
+        <input type="text" id="searchInput" placeholder="Nhập ký tự cần tìm kiếm">
+        <button onclick="searchCharacter()">Tìm kiếm</button>
+        <p id="result"></p>
             <table>
                 <tr class="a">
                     <th class="b"></th>
@@ -12,7 +15,6 @@
                     <th class="b">TỔNG TIỀN</th>
                     <th class="b">TRẠNG THÁI ĐƠN HÀNG</th>
                     <th class="b">ID NGƯỜI DÙNG</th>
-                    <th class="b"> </th>
                 </tr>
                 <?php
                 foreach ($listdonhang as $donhang) {
@@ -24,7 +26,6 @@
                     <th>' . $dh_tongtien . '</th>
                     <th>' . $dh_trangthaidonhang . '</th>
                     <th>' . $user_id . '</th>
-                    <th></th>
                 </tr>';
                 }
                 ?>

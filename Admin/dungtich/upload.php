@@ -14,7 +14,12 @@ if (is_array($dt)) {
                 <input type="text" name="dt_id" value="<?php if (isset($dt_id) && ($dt_id != "")) echo $dt_id; ?>" disabled>
                 DUNG TÍCH :
                 <input type="text" name="dt_dungtich" value="<?php if (isset($dt_dungtich) && ($dt_dungtich != "")) echo $dt_dungtich; ?>">
-
+                TRẠNG THÁI :
+                <select name="on_off">
+              >
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select>
             </div>
             <div class="nut_cn">
                 <input type="hidden" name="id" value="<?php if (isset($dt_id) && ($dt_id > 0)) echo $dt_id; ?>">

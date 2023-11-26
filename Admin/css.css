@@ -66,3 +66,49 @@ tr th {
   background-color: #255c45;
   margin-top: 30px;
 }
+select {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #255c45;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+select option {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 30px;
+  text-align: center;
+  background-color: #ffffff;
+}
+.dulieu2 input {
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid #255c45;
+  height: 40px;
+  margin-left: 20%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.dulieu2 button {
+  width: auto;
+  height: 40px;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #255c45;
+}
+.center {
+  text-align: center;
+}
+h1 {
+  color: #255c45;
+}

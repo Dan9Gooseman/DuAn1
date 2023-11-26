@@ -7,6 +7,12 @@
             <div class="dulieu">
                 THƯƠNG HIỆU :
                 <input type="text" name="thuonghieu_th" required>
+                TRẠNG THÁI :
+                <select name="on_off">
+              >
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select>
             </div>
             <div class="nut_cn">
                 <input type="submit" name="themmoi" value="thêm mới">

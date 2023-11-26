@@ -4,6 +4,10 @@
     </div>
     <div class="">
         <div class="">
+            <div class="dulieu2">
+        <input type="text" id="searchInput" placeholder="Nhập ký tự cần tìm kiếm">
+        <button onclick="searchCharacter()">Tìm kiếm</button>
+        <p id="result"></p></div>
             <table>
                 <tr class="a">
                     <th class="b"></th>

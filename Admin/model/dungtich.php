@@ -1,7 +1,7 @@
 <?php
-function add_dungtich($dungtich_dt)
+function add_dungtich($dungtich_dt,$on_off)
 {
-    $sql = "insert into dungtich(dt_dungtich) value('$dungtich_dt') ";
+    $sql = "insert into dungtich(dt_dungtich, is_active) value('$dungtich_dt','$on_off') ";
     pdo_execute($sql);
 }
 function loadall_dungtich()
@@ -21,8 +21,8 @@ function loadone_dungtich($id)
     $dt = pdo_query_one($sql);
     return $dt;
 }
-function update_dungtich($id, $dt_dungtich)
+function update_dungtich($id, $dt_dungtich,$on_off)
 {
-    $sql = "update dungtich set dt_dungtich='" . $dt_dungtich . "'where dt_id=" . $id;
+    $sql = "update dungtich set dt_dungtich='" . $dt_dungtich . "', is_active='". $on_off ."' where dt_id=" . $id;
     pdo_execute($sql);
 }

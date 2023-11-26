@@ -15,6 +15,11 @@ if (is_array($sp)) {
                 <input type="text" name="name" value="<?php if (isset($sp_ten) && ($sp_ten != "")) echo $sp_ten; ?>">
                 MÔ TẢ SẢN PHẨM :
                 <input type="text" name="mota" value="<?php if (isset($sp_mota) && ($sp_mota != "")) echo $sp_mota; ?>">
+                Trạng Thái :
+                <select name="on_off">
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select><br><br><br>
                 ẢNH SẢN PHẨM :
                 <input type="file" name="img_sp">
             </div>

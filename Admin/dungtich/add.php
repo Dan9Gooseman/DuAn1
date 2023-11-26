@@ -7,6 +7,12 @@
             <div class="dulieu">
                 DUNG TÍCH :
                 <input type="text" name="dungtich_dt" required>
+                Trạng Thái :
+                <select name="on_off">
+                    <option value="1">Bật</option>
+                    <option value="0">Tắt</option>
+                </select>
+
 
             </div>
             <div class="nut_cn">

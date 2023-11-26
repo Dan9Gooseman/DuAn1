@@ -49,6 +49,33 @@
             }
         }
     }
+        function searchCharacter() {
+        // Lấy giá trị từ ô nhập
+        var inputText = document.getElementById('searchInput').value.toLowerCase(); // Chuyển đổi thành chữ thường để tìm kiếm không phân biệt chữ hoa/chữ thường
+
+        // Lặp qua từng dòng trong bảng
+        var table = document.querySelector('table');
+        var rows = table.getElementsByTagName('tr');
+    for (var i = 1; i < rows.length; i++) {
+        var cells = rows[i].getElementsByTagName('th');
+
+        // Lấy giá trị cột MÃ DANH MỤC và chuyển đổi thành chữ thường
+        var categoryID = cells[1].innerText.toLowerCase();
+
+        // Lấy giá trị cột TÊN DANH MỤC và chuyển đổi thành chữ thường
+        var categoryName = cells[2].innerText.toLowerCase();
+
+        // Lấy giá trị cột TRẠNG THÁI và chuyển đổi thành chữ thường
+        var status = cells[3].innerText.toLowerCase();
+
+        // Kiểm tra xem giá trị nhập vào có xuất hiện trong MÃ DANH MỤC, TÊN DANH MỤC hoặc TRẠNG THÁI không
+        if (categoryID.includes(inputText) || categoryName.includes(inputText) || status.includes(inputText)) {
+            rows[i].style.display = '';
+        } else {
+            rows[i].style.display = 'none';
+        }
+    }
+}
 </script>
 
 
@@ -119,6 +146,9 @@
                         </li>
                         <li class="nav-item" id="custom-padding-sm">
                             <a class="nav-link" id="clr-white" href="index.php?act=listbl">BÌNH LUẬN</a>
+                        </li>
+                        <li class="nav-item" id="custom-padding-sm">
+                            <a class="nav-link" id="clr-white" href="index.php?act=thongke">THỐNG KÊ</a>
                         </li>
                     </ul>
 

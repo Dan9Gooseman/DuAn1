@@ -1,6 +1,7 @@
 <?php
 if (is_array($btsp)) {
     extract($btsp);
+    var_dump($btsp);
 }
 ?>
 <div class="row">

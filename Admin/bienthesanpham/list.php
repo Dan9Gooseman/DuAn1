@@ -4,6 +4,11 @@
     </div>
     <div class="">
         <div class="">
+            <div class="dulieu2">
+                <input type="text" id="searchInput" placeholder="Nhập ký tự cần tìm kiếm">
+                <button onclick="searchCharacter()">Tìm kiếm</button>
+                <p id="result"></p>
+            </div>
             <table>
                 <tr class="a">
                     <th class="b"></th>
@@ -32,7 +37,7 @@
                         <th>' . $dm_id . '</th>
                         <th>' . $th_id . '</th>
                         <th>' . $dt_id . '</th>
-                        <th><a href="' . $xoabtsp . '"><input class="c" type="button" value="xóa"></a>
+                        <th class="center"><a href="' . $xoabtsp . '"><input class="c" type="button" value="xóa"></a>
                         <a href="' . $suabtsp . '"><input class="c" type="button" value="sửa"></a></th>
                     </tr>';
                 }

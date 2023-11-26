@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row ">
     <div class="row formtile mb10">
         <h1 style="text-align: center;">THÊM MỚI BIẾN THỂ SẢN PHẨM</h1>
     </div>

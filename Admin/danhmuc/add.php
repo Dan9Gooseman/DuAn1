@@ -8,7 +8,7 @@
                 Danh Mục :
                 <input type="text" name="dm_danhmuc" required>
                 Trạng Thái :
-                <select name="on_off">
+                <select name="on_off" class="onoff">
                     <option value="1">Bật</option>
                     <option value="0">Tắt</option>
                 </select>

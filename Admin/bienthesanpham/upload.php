@@ -16,29 +16,61 @@ if (is_array($btsp)) {
             <div class="dulieu">
                 ID BTSP :
                 <input type="text" name="ma" value="<?php if (isset($btsp_id) && ($btsp_id > 0)) echo $btsp_id; ?>" disabled>
-           
-            </div>
-            <div class="dulieu_fix">
-                ID  SẢN PHẨM :
-                <input type="text" name="sp1_id" value="<?php if (isset($sp_id) && ($sp_id != "")) echo $sp_id; ?>" required>
-                ID THƯƠNG HIỆU :
-                <input type="text" name="th1_id" value="<?php if (isset($th_id) && ($th_id != "")) echo $th_id; ?>"  required>
-                ID DUNG TÍCH :
-                <input type="text" name="dt1_id" value="<?php if (isset($dt_id) && ($dt_id != "")) echo $dt_id; ?>" required>
-                ID DANH MỤC :
-                <input type="text" name="dm1_id" value="<?php if (isset($dm_id) && ($dm_id != "")) echo $dm_id; ?>" required>
-            </div>
+                SẢN PHẨM :
+                <select name="sp_id" id="">
+                    <?php 
+                    foreach ($listsanpham as $sp) {
+                        extract($sp);
+                        if($sp_id==$sp_id) $s="selected"; else $s="";
+                        echo '<option value="'.$sp_id.'" '.$s.'>'.$sp_ten.'</option>';
+                    }
+                    ?>
+                    
+                </select><br>
+                THƯƠNG HIỆU :
+                <select name="th_id" id="">
+                    <?php 
+                    foreach ($listthuonghieu as $th) {
+                        extract($th);
+                        if($th_id==$th_id) $s="selected"; else $s="";
+                        echo '<option value="'.$th_id.'" '.$s.'>'.$th_thuonghieu.'</option>';
+                    }
+                    ?>
+                    
+                </select><br>
+                DUNG TÍCH :
+                <select name="dt_id" id="">
+                    <?php 
+                    foreach ($listdungtich as $dt) {
+                        extract($dt);
+                        if($dt_id==$dt_id) $s="selected"; else $s="";
+                        echo '<option value="'.$dt_id.'" '.$s.'>'.$dt_dungtich.'</option>';
+                    }
+                    ?>
+                    
+                </select><br>
+                DANH MỤC :
+                <select name="dm_id" id="">
+                    <?php 
+                    foreach ($listdanhmuc as $dm) {
+                        extract($dm);
+                        if($dm_id==$dm_id) $s="selected"; else $s="";
+                        echo '<option value="'.$dm_id.'" '.$s.'>'.$dm_danhmuc.'</option>';
+                    }
+                    ?>
+                    
+                </select><br>
             <div class="dulieu">
                 TÊN BIẾN THỂ SẢN PHẨM :
-                <input type="text" name="name_btsp" value="<?php if (isset($btsp_ten) && ($btsp_ten != "")) echo $btsp_ten; ?>" required>
+                <input type="text" name="btsp_ten" value="<?=$btsp_ten ?>" required>
                 GIÁ TIỀN :
-                <input type="text" name="price_btsp" value="<?php if (isset($btsp_giatien) && ($btsp_giatien != "")) echo $btsp_giatien; ?>" required>
+                <input type="text" name="btsp_gia" value="<?=$btsp_giatien ?>" required>
                 SỐ LƯỢNG :
-                <input type="text" name="sl_btsp" value="<?php if (isset($btsp_soluongconlai) && ($btsp_soluongconlai != "")) echo $btsp_soluongconlai; ?>" required>
+                <input type="text" name="btsp_soluong" value="<?=$btsp_soluongconlai ?>" required>
             </div>
             <div class="nut_cn">
             <input type="hidden" name="id" value="<?php if (isset($btsp_id) && ($btsp_id > 0)) echo $btsp_id; ?>">
-                <input type="submit" name="capnhap" value="cập nhật">
+                <input type="submit" name="thaydoi" value="cập nhật">
                 <input type="reset" value="nhập lại">
                 <a href="index.php?act=listbtsp"><input type="button" value="danh sách"></a>
             </div>

@@ -10,16 +10,16 @@ if (is_array($sp)) {
         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
             <div class="dulieu">
                 ID SẢN PHẨM :
-                <input type="text" name="id" value="<?php if (isset($sp_id) && ($sp_id != "")) echo $sp_id; ?>" disabled>
+                <input type="text" name="id" value="<?=$sp_id ?>" disabled>
                 TÊN SẢN PHẨM :
-                <input type="text" name="name" value="<?php if (isset($sp_ten) && ($sp_ten != "")) echo $sp_ten; ?>">
+                <input type="text" name="name" value="<?=$sp_ten?>">
                 MÔ TẢ SẢN PHẨM :
-                <input type="text" name="mota" value="<?php if (isset($sp_mota) && ($sp_mota != "")) echo $sp_mota; ?>">
+                <input type="text" name="mota" value="<?=$sp_mota ?>">
                 Trạng Thái :
-                <select name="on_off">
+                <select name="on_off"  class="onoff">
                     <option value="1">Bật</option>
                     <option value="0">Tắt</option>
-                </select><br><br><br>
+                </select><br><br>
                 ẢNH SẢN PHẨM :
                 <input type="file" name="img_sp">
             </div>

@@ -11,11 +11,11 @@ if (is_array($dm)) {
         <form action="index.php?act=updatedm" method="post">
             <div class="dulieu">
                 ID DANH MỤC :
-                <input type="text" name="id_dm" value="<?php if (isset($dm_id) && ($dm_id != "")) echo $dm_id; ?>" disabled>
+                <input type="text" name="id_dm" value="<?=$dm_id ?>" disabled>
                 DANH MỤC :
-                <input type="text" name="danhmuc_dm" value="<?php if (isset($dm_danhmuc) && ($dm_danhmuc != "")) echo $dm_danhmuc; ?>">
+                <input type="text" name="danhmuc_dm" value="<?=$dm_danhmuc?>">
                  TRẠNG THÁI :
-                <select name="on_off">
+                <select name="on_off" class="onoff">
               >
                     <option value="1">Bật</option>
                     <option value="0">Tắt</option>

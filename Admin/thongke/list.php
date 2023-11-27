@@ -5,7 +5,7 @@
     <div class="">
         <div class="">
         <div class="dulieu2">
-        <input type="text" id="searchInput" placeholder="Nhập ký tự cần tìm kiếm">
+        <input type="text" id="searchInput" placeholder="Nhập tên cần tìm kiếm">
         <button onclick="searchCharacter()">Tìm kiếm</button>
         <p id="result"></p></div>
             <table>
@@ -33,7 +33,6 @@
                 }
                 ?>
             </table>
-
         </div>
         <div class="nut_cn">
             <a href="index.php?act=bieudo"><input type="button" value="XEM BIỂU ĐỒ"></a>

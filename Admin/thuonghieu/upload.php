@@ -11,12 +11,12 @@ if (is_array($th)) {
         <form action="index.php?act=updateth" method="post">
             <div class="dulieu">
                 MÃ THƯƠNG HIỆU :
-                <input type="text" name="ma" value="<?php if (isset($th_id) && ($th_id != "")) echo $th_id; ?>">
+                <input type="text" name="ma" value="<?=$th_id?>">
 
                 THƯƠNG HIỆU :
-                <input type="text" name="name" value="<?php if (isset($th_thuonghieu) && ($th_thuonghieu != "")) echo $th_thuonghieu; ?>">
+                <input type="text" name="name" value="<?=$th_thuonghieu?>">
                 TRẠNG THÁI :
-                <select name="on_off">
+                <select name="on_off" class="onoff">
               >
                     <option value="1">Bật</option>
                     <option value="0">Tắt</option>

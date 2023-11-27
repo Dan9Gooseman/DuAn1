@@ -8,14 +8,14 @@
                 DUNG TÍCH :
                 <input type="text" name="dungtich_dt" required>
                 Trạng Thái :
-                <select name="on_off">
+                <select name="on_off" class="onoff">
                     <option value="1">Bật</option>
                     <option value="0">Tắt</option>
                 </select>
 
 
             </div>
-            <div class="nut_cn">
+            <div class="nut_cn" class="onoff">
                 <input type="submit" name="themmoi" value="thêm mới">
                 <input type="reset" value="nhập lại">
                 <a href="index.php?act=listdt"><input type="button" value="danh sách"></a>

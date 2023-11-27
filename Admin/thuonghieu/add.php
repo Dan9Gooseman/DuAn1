@@ -8,7 +8,7 @@
                 THƯƠNG HIỆU :
                 <input type="text" name="thuonghieu_th" required>
                 TRẠNG THÁI :
-                <select name="on_off">
+                <select name="on_off" class="onoff">
               >
                     <option value="1">Bật</option>
                     <option value="0">Tắt</option>

@@ -23,8 +23,7 @@ function loadone_bienthesanpham($id)
     $btsp = pdo_query_one($sql);
     return $btsp;
 }
-function update_bienthesanpham($id,$name_btsp, $sl_btsp, $price_btsp, $sp1_id, $th1_id, $dt1_id, $dm1_id)
-{
-    $sql = "update bienthesanpham set btsp_ten='" . $name_btsp . "',btsp_soluongconlai='".$sl_btsp."',btsp_giatien='".$price_btsp."',sp_id='".$sp1_id."',th_id='".$th1_id."',dt_id='".$dt1_id."',dm_id='".$dm1_id."' where btsp_id=" . $id;
+function  update_bienthesanpham($id,$btsp_ten, $btsp_gia, $btsp_soluong, $sp_id, $th_id, $dt_id, $dm_id){
+    $sql = "update bienthesanpham set btsp_ten='" . $btsp_ten . "',btsp_soluongconlai='".$btsp_soluong."',btsp_giatien='".$btsp_gia."',sp_id='".$sp_id."',th_id='".$th_id."',dt_id='".$dt_id."',dm_id='".$dm_id."' where btsp_id=" . $id;
     pdo_execute($sql);
 }

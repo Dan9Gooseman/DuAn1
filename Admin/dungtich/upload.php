@@ -11,11 +11,11 @@ if (is_array($dt)) {
         <form action="index.php?act=updatedt" method="post">
             <div class="dulieu">
                 ID DUNG TÍCH :
-                <input type="text" name="dt_id" value="<?php if (isset($dt_id) && ($dt_id != "")) echo $dt_id; ?>" disabled>
+                <input type="text" name="dt_id" value="<?=$dt_id?>" disabled>
                 DUNG TÍCH :
-                <input type="text" name="dt_dungtich" value="<?php if (isset($dt_dungtich) && ($dt_dungtich != "")) echo $dt_dungtich; ?>">
+                <input type="text" name="dt_dungtich" value="<?=$dt_dungtich?>">
                 TRẠNG THÁI :
-                <select name="on_off">
+                <select name="on_off" class="onoff">
               >
                     <option value="1">Bật</option>
                     <option value="0">Tắt</option>

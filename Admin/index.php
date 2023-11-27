@@ -218,6 +218,10 @@ if (isset($_GET['act'])) {
                 add_btsp($name_btsp, $sl_btsp, $price_btsp, $sp_id, $th_id, $dt_id, $dm_id);
                 $thongbao = "THêm thành công";
             }
+            $listdanhmuc = loadall_danhmuc();
+            $listdungtich = loadall_dungtich();
+            $listsanpham = loadall_sanpham(0);
+            $listthuonghieu = loadall_thuonghieu();
             include "bienthesanpham/add.php";
             break;
         case 'listbtsp':
@@ -235,21 +239,29 @@ if (isset($_GET['act'])) {
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 $btsp = loadone_bienthesanpham($_GET['id']);
             }
+            $listdanhmuc = loadall_danhmuc();
+            $listdungtich = loadall_dungtich();
+            $listsanpham = loadall_sanpham(0);
+            $listthuonghieu = loadall_thuonghieu();
             $listbienthesanpham = loadall_bienthesanpham(0);
             include "bienthesanpham/upload.php";
             break;
         case 'updatebtsp':
-            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+            if (isset($_POST['thaydoi']) && ($_POST['thaydoi'])) {
                 $id = $_POST['id'];
-                $sp1_id = $_POST['sp1_id'];
-                $th1_id = $_POST['th1_id'];
-                $dt1_id = $_POST['dt1_id'];
-                $dm1_id = $_POST['dm1_id'];
-                $name_btsp = $_POST['name_btsp'];
-                $price_btsp = $_POST['price_btsp'];
-                $sl_btsp = $_POST['sl_btsp'];
-                update_bienthesanpham($id,$name_btsp, $sl_btsp, $price_btsp, $sp1_id, $th1_id, $dt1_id, $dm1_id);
+                $btsp_ten = $_POST['btsp_ten'];
+                $btsp_gia = $_POST['btsp_gia'];
+                $btsp_soluong = $_POST['btsp_soluong'];
+                $sp_id = $_POST['sp_id'];
+                $th_id = $_POST['th_id'];
+                $dt_id = $_POST['dt_id'];
+                $dm_id = $_POST['dm_id'];
+                update_bienthesanpham($id,$btsp_ten, $btsp_gia, $btsp_soluong, $sp_id, $th_id, $dt_id, $dm_id);
             }
+            $listdanhmuc = loadall_danhmuc();
+            $listdungtich = loadall_dungtich();
+            $listsanpham = loadall_sanpham(0);
+            $listthuonghieu = loadall_thuonghieu();
             $listbienthesanpham = loadall_bienthesanpham(0);
             include 'bienthesanpham/list.php';
             break;

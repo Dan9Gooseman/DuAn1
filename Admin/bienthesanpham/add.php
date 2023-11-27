@@ -8,18 +8,51 @@
             if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
             ?>
             <div class="dulieu_fix">
-            ID  SẢN PHẨM :
-                <input type="text" name="sp_id" required>
-                ID THƯƠNG HIỆU :
-                <input type="text" name="th_id" required>
-                ID DUNG TÍCH :
-                <input type="text" name="dt_id" required>
-                ID DANH MỤC :
-                <input type="text" name="dm_id" required>
+               
             </div>
             
             <div class="dulieu">
-                TÊN BIẾN THỂ SẢN PHẨM :
+            ID  SẢN PHẨM :<br>
+                <select name="sp_id" id="">
+                    <?php 
+                    foreach ($listsanpham as $sp) {
+                        extract($sp);
+                        echo '<option value="'.$sp_id.'">'.$sp_ten.'</option>';
+                    }
+                    ?>
+                    
+                </select><br>
+                ID THƯƠNG HIỆU :<br>
+                <select name="th_id" id="">
+                    <?php 
+                    foreach ($listthuonghieu as $th) {
+                        extract($th);
+                        echo '<option value="'.$th_id.'">'.$th_thuonghieu.'</option>';
+                    }
+                    ?>
+                    
+                </select><br>
+                ID DUNG TÍCH :<br>
+                <select name="dt_id" id="">
+                    <?php 
+                    foreach ($listdungtich as $dt) {
+                        extract($dt);
+                        echo '<option value="'.$dt_id.'">'.$dt_dungtich.'</option>';
+                    }
+                    ?>
+                    
+                </select><br>
+                ID DANH MỤC : <br>
+                <select name="dm_id" id="">
+                    <?php 
+                    foreach ($listdanhmuc as $dm) {
+                        extract($dm);
+                        echo '<option value="'.$dm_id.'">'.$dm_danhmuc.'</option>';
+                    }
+                    ?>
+                    
+                </select><br>
+                TÊN BIẾN THỂ SẢN PHẨM : <br>
                 <input type="text" name="name_btsp" required>
                 GIÁ TIỀN :
                 <input type="text" name="price_btsp" required>

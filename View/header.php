@@ -8,17 +8,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="Global/css/header&footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma/bulma.css" rel="stylesheet">
 
     <?php
 
     if (isset($_GET['act']) && ($_GET['act'] != "")) {
         $act = $_GET['act'];
         switch ($act) {
+                //css-Hoang The Nguyen update
+            case "dangky":
+            case "luutk":
+                echo '<link rel="stylesheet" href="assets/css/dangkydangnhap.css">';
+                break;
             case "dangnhap":
                 echo '<link rel="stylesheet" href="assets/css/dangkydangnhap.css">';
                 break;
             case "quenmk":
                 echo '<link rel="stylesheet" href="assets/css/quenmk.css">';
+                break;
+            case "hoso":
+                echo '<link rel="stylesheet" href="assets/css/trangcanhan.css">';
+                break;
+            case "edit_tk":
+            case "capnhattk":
+            case "capnhatmk":
+            case "edit_mk":
+                echo '<link rel="stylesheet" href="assets/css/thaydoithongtin.css">';
                 break;
             case "chitietsanpham":
                 if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
@@ -36,7 +51,7 @@
                 }
                 break;
             case "giohang":
-                    echo '<link rel="stylesheet" href="assets/css/giohang.css">';
+                echo '<link rel="stylesheet" href="assets/css/giohang.css">';
                 break;
         }
     } else {
@@ -59,7 +74,8 @@
             <div class="header-search-bar">
                 <div class="input-group relative">
                     <input name="search-bar" type="text" class="form-control shadow-none padding-left radius-1" id="timkiem" placeholder="Nhập từ khóa tìm kiếm" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary background radius-2" type="button" id="button-addon2">Tìm kiếm</button>
+                    <button class="btn btn-outline-secondary background radius-2" type="button" id="button-addon2">Tìm
+                        kiếm</button>
                 </div>
                 <div class="search-result" id="search-result">
                     <!-- <a href="" title="Initio Addictive Vibration Eau de Parfum | 5ml - 10ml - 90ml" class="quicksearch_item ">
@@ -72,8 +88,38 @@
             </div>
             <div class="header-user-cart">
                 <div class="user">
-                    <a id="custom-btn" class="btn btn-primary" href="index.php?act=dangnhap" role="button">Đăng nhập</a>
+                    <div class="dropdown">
+                        <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false"> -->
+                        <!-- Hoang The Nguyen update user -->
+                        <?php
+                        if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']) {
+                            // var_dump($_SESSION['nguoidung']);
+                            echo '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">Xin chào ' . $_SESSION['nguoidung']['user_hovaten'] . '</button>';
+                            // echo 'Xin chào ' . $_SESSION['nguoidung']['user_hovaten'];
+                        } else {
+                            echo '<a id="custom-btn" class="btn btn-primary" href="index.php?act=dangnhap" role="button">Đăng nhập</a>
+                                <a id="custom-btn" class="btn btn-primary" href="index.php?act=dangky" role="button">Đăng ký</a>';
+                        }
+                        ?>
+                        <!-- </button> -->
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <?php
+                            if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['user_hovaten']) {
+                            ?>
+                                <li><a class="dropdown-item" href="index.php?act=hoso">Hồ sơ</a></li>
+                                <li><a class="dropdown-item" href="index.php?act=dangxuat">Đăng xuất</a></li>
+                            <?php
+                            } else {
+                                echo "";
+                            }
+                            ?>
+                        </ul>
+                    </div>
                 </div>
+                <!-- <a id="custom-btn" class="btn btn-primary" href="index.php?act=dangnhap" role="button">Đăng nhập</a>
+                <a id="custom-btn" class="btn btn-primary" href="index.php?act=dangky" role="button">Đăng ký</a> -->
                 <div class="cart">
                     <a href="index.php?act=giohang">
                         <i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i>

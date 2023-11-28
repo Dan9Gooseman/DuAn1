@@ -1,4 +1,4 @@
-    <footer>
+    <footer style="margin-top: 30px;">
         <div class="holder-row">
             <div class="holder-col">
                 <p class="p-text">MenHair là hệ thống cửa hàng chuyên về các sản phẩm chăm sóc tóc nam hàng đầu tại Châu Âu. Đảm bảo mái tóc đẹp là nhiệm vụ của chúng tôi.</p>
@@ -34,7 +34,6 @@
     </footer>
     <script src="https://kit.fontawesome.com/01804f5b6a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <?php
 
     if (isset($_GET['act']) && ($_GET['act'] != "")) {
@@ -43,13 +42,14 @@
             case "dangnhap":
                 echo '<link rel="stylesheet" href="assets/js/dangkydangnhap.js">';
                 break;
-            case "giohang":
-                echo '<link rel="stylesheet" href="assets/js/giohang.js">';
-                break;
+            case "chitietsanpham":
+                if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
+                    echo '<Script src="assets/js/dangkydangnhap.js"></Script>';
+                }
         }
+    } else {
+        echo '<link rel="stylesheet" href="assets/js/home.js">';
     }
-    echo '<script src="Global\js\header.js"></script>';
-    echo '<script src="assets/js/home.js"></script>';
     ?>
 
     </body>

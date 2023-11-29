@@ -20,10 +20,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
 
-            // case 'taikhoan':
-            //     include "view/user/taikhoan.php";
-            //     break;
-
+        case 'giohang':
+            include "view/page/giohang.php";
+                break;
         case 'dangky':
             include "view/user/dangky.php";
 
@@ -48,7 +47,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $checkuser = checkuser($user_email, $user_password);
                 if (is_array($checkuser)) {
                     $_SESSION['nguoidung'] = $checkuser;
-                    header('location: index.php');
+                    if($_SESSION['nguoidung']['user_vaitro'] == 'khachhang'){
+                        header('location: index.php');
+                    }
+                    else{
+                        header('location: admin/index.php');
+                    }
                 } else {
                     $thongbao = "Tài khoản không tồn tại";
                 }
@@ -114,29 +118,27 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             header('location: index.php?act=');
             break;
 
-            case "chitietsanpham":
-                if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
-                    $sp_id = (int)$_GET['sp_id'] ;
-                    $chitietsanpham = pdo_chitietsanpham($sp_id);
-                    $binhluansanpham = pdo_binhluansanpham($sp_id);
-                    $dungtich = pdo_dungtich($sp_id);
-                    include "view/page/chitietsanpham.php";
-                } else {
-                    include "view/page/notfound404.php";
-                }
-                break;
-            case "sanpham":
-                if (isset($_GET['dm_id']) && ($_GET['dm_id'] > 0)) {
-                    $dm_id = $_GET['dm_id'];
-                    $sp_dm = pdo_sanpham_theo_danhmuc($dm_id);
-                    // var_dump($sp_dm);
-                    include "view/page/sanpham.php";
-                } else {
-                    include "view/page/notfound404.php";
-                }
-                break;
-        case "giohang":
-            include "view/page/giohang.php";
+        case "chitietsanpham":
+            if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
+                $sp_id = (int)$_GET['sp_id'];
+                $chitietsanpham = pdo_chitietsanpham($sp_id);
+                $binhluansanpham = pdo_binhluansanpham($sp_id);
+                $dungtich = pdo_dungtich($sp_id);
+                include "view/page/chitietsanpham.php";
+            } else {
+                include "view/page/notfound404.php";
+            }
+            break;
+        case "sanpham":
+            if (isset($_GET['dm_id']) && ($_GET['dm_id'] > 0)) {
+                $dm_id = $_GET['dm_id'];
+                $sp_dm = pdo_sanpham_theo_danhmuc($dm_id);
+                // var_dump($sp_dm);
+                include "view/page/sanpham.php";
+            } else {
+                include "view/page/notfound404.php";
+            }
+            break;
     }
 } else {
     include "View/home.php";

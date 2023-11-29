@@ -1,4 +1,13 @@
 <?php
+session_start();
+if(!empty($_SESSION['nguoidung'])){
+    // echo $_SESSION['nguoidung']['user_vaitro'];
+    if($_SESSION['nguoidung']['user_vaitro'] == 'khachhang'){
+        header('location: ../index.php');
+    }
+}else{
+    header('location: ../index.php');
+}
 include "header.php";
 
 include "model/pdo.php";

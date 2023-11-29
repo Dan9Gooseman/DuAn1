@@ -27,7 +27,8 @@
                     <th>' . $bl_id . '</th>
                     <th>' . $bl_noidung . '</th>
                     <th' . $user_id . '</th>
-                    <th>' . $btsp_id . '</th>
+                    <th>' . $sp_id. '</th>
+                    <th>'.$sp_id.'</th>
                     <th>' . $bl_ngaytao . '</th>
                     <th><a href="' . $xoabl . '"><input class="c" type="button" value="xóa"></a>
                   </th>

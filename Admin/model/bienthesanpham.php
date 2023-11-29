@@ -1,7 +1,7 @@
 <?php
 function loadall_bienthesanpham()
 {
-    $sql = "select * from bienthesanpham order by btsp_id";
+    $sql = "select * from bienthesanpham order by btsp_id desc ";
 
     $listbienthesanpham = pdo_query($sql);
     return $listbienthesanpham;

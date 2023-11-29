@@ -46,7 +46,7 @@
         <div class="sp">
             <div class="sp1" id="donhang">
                 <img src="../taikhoan/img/5.jpg" alt="" />
-                <h3>Đơn hàng của bạn</h3>
+                <h3>Lịch sử mua hàng</h3>
                 <p>Kiểm tra các đơn hàng mà bạn đã từng đặt tại Website</p>
             </div>
             <div class="sp1" id="thongtin">

@@ -1,3 +1,6 @@
+<!-- <?php
+echo $_SESSION['nguoidung']['dcnh_id'];
+?> -->
 <div class="content-trangchu">
     <div class="banner">
         <div class="bn1">

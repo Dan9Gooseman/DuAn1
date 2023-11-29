@@ -173,7 +173,7 @@ if (isset($_GET['act'])) {
                 $on_off=$_POST['on_off'];
                 $mota_sp = $_POST['mota_sp'];
                 $img = $_FILES['img_sp']['name'];
-                $target_dir = "1/";
+                $target_dir = "../assets/uploads/";
                 $target_file = $target_dir . basename($_FILES["img_sp"]["name"]);
                 if (move_uploaded_file($_FILES["img_sp"]["tmp_name"], $target_file)) {
                     // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
@@ -279,15 +279,42 @@ if (isset($_GET['act'])) {
             $listdonhang = loadall_donhang();
             include "donhang/list.php";
             break;
-            //CN TRANG DON HANG
+        case 'suatrangthai':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $dh = loadone_donhang($_GET['id']);
+            }
+            $listdonhang = loadall_donhang(0);
+            include "donhang/update.php";
+            break;
+            case 'updatetrangthai':
+                if (isset($_POST['thaydoi']) && ($_POST['thaydoi'])) {
+                    $id = $_POST['id'];
+                    $trangthai=$_POST['trangthai'];
+                    update_trangthai($id,$trangthai);
+                }
+                $listdonhang = loadall_donhang();
+                include "donhang/list.php";
+                break;
+
         case 'listdcnh':
             $listdcnh = loadall_dcnh();
             include "diachinhanhang/list.php";
             break;
+             //CN TRANG DON HANG CHI TIET
         case 'listdhct':
             $listdhct = loadall_dhct();
             include "donhangchitiet/list.php";
             break;
+        case 'list_one':
+            if (isset($_GET['iddh']) && ($_GET['iddh'] > 0)) {
+                $id=$_GET['iddh'];
+                $one=list_one($id);
+                include  "donhangchitiet/list_one.php";
+            } else{
+            include  "home.php";
+            }
+            break;
+        //CN TRANG THONG KE
         case 'thongke':
             $listthongke = loadall_thongke();
             include "thongke/list.php";

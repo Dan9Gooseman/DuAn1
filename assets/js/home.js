@@ -5,7 +5,11 @@ for (var i = 1; i <= numberOfImages; i++) {
 }
 var currentIndex = 0;
 function changeImage() {
-    document.getElementById("loop-banner").src = "assets/banner/" + images[currentIndex];
-    currentIndex = (currentIndex + 1) % images.length;
+    var loopbanner = document.getElementById("loop-banner");
+    if(loopbanner != null){
+    loopbanner.src = "assets/banner/" + images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;     
+    }
+
 }
 setInterval(changeImage, 2000);

@@ -135,9 +135,9 @@
                         <li class="nav-item" id="custom-padding-sm">
                             <a class="nav-link" id="clr-white" href="index.php?act=listdonhang">ĐƠN HÀNG</a>
                         </li>
-                        <li class="nav-item" id="custom-padding-sm">
+                        <!-- <li class="nav-item" id="custom-padding-sm">
                             <a class="nav-link" id="clr-white" href="index.php?act=listdhct">ĐƠN HÀNG CHI TIẾT</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item" id="custom-padding-sm">
                             <a class="nav-link" id="clr-white" href="index.php?act=listdcnh">ĐỊA CHỈ NHẬN HÀNG</a>
                         </li>

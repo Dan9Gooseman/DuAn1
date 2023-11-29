@@ -25,39 +25,46 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 })
 
+////////////////////////////////////////
 function numberFormat(number) {
 	return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 ////////////////////////////////////////
 
-var submit = document.getElementById('submit');
+var submit = document.getElementById('submit1');
 submit.addEventListener('click', (e) => {
-	e.preventDefault();
-	var radioBtns = document.querySelectorAll('input[name="btnradio"]');
-	for (const radioBtn of radioBtns) {
-		if (radioBtn.checked) {
-			
-			break;
+    e.preventDefault();
+    const btsp_id = document.querySelector('#btspID').value;
+    const soluong = document.querySelector('#num').value;
+
+    // Check if btsp_id is not blank or null
+    if (btsp_id !== null && btsp_id.trim() !== "") {
+		var xhr1 = new XMLHttpRequest();
+		xhr1.onreadystatechange = function(){
+			if(xhr1.readyState == 4 && xhr1.status == 200){
+				// console.log(xhr1.responseText);
+				var responseData1 = JSON.parse(xhr1.responseText);
+        		console.log(responseData1);
+
+			}
 		}
-		else {
-			Swal.fire({
-				icon: 'warning',
-				title: 'Bạn hãy chọn biến thể',
-				confirmButtonText: 'Quay lại',
-			})
-			// .then(
-			// 	(result) => {
-			// 	if (result.isConfirmed) {
-			// 		console.log("abc");
-			// 	} else {
-			// 		///làm gì đó
-			// 	}
-			// });
-		}
-	}
-})
+		xhr1.open('GET', `Model/themvaogiohang.php?btsp_id=${btsp_id}&soluong=${soluong}`,true);
+		xhr1.send();
+        // const url = `?act=giohang&btsp_id=${btsp_id}&soluong=${soluong}`;
+        // window.location.href = url;
+    } else {
+        Swal.fire({
+			title: 'Error!',
+			text: 'Hãy chọn dung tích sản phẩm',
+			icon: 'error',
+			confirmButtonText: 'OK'
+		  })
+    }
+});
+
 ////////////////////////////////////////////////////////
+
 var num = document.querySelector('#num');
 var minus = document.querySelector('#minus');
 var plus = document.querySelector('#plus');

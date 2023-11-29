@@ -15,7 +15,6 @@
     if (isset($_GET['act']) && ($_GET['act'] != "")) {
         $act = $_GET['act'];
         switch ($act) {
-                //css-Hoang The Nguyen update
             case "dangky":
             case "luutk":
                 echo '<link rel="stylesheet" href="assets/css/dangkydangnhap.css">';
@@ -94,10 +93,8 @@
                         <!-- Hoang The Nguyen update user -->
                         <?php
                         if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']) {
-                            // var_dump($_SESSION['nguoidung']);
                             echo '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false">Xin chào ' . $_SESSION['nguoidung']['user_hovaten'] . '</button>';
-                            // echo 'Xin chào ' . $_SESSION['nguoidung']['user_hovaten'];
                         } else {
                             echo '<a id="custom-btn" class="btn btn-primary" href="index.php?act=dangnhap" role="button">Đăng nhập</a>
                                 <a id="custom-btn" class="btn btn-primary" href="index.php?act=dangky" role="button">Đăng ký</a>';

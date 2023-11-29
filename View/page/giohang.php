@@ -20,3 +20,7 @@
         </div>
     </div>
 </div>
+<?php
+    if(isset($_SESSION['cart'])){var_dump($_SESSION['cart']);}
+    else{echo "lỗi";} 
+?>

@@ -11,6 +11,12 @@ function loadall_danhmuc()
     $listdanhmuc = pdo_query($sql);
     return $listdanhmuc;
 }
+function loadall_danhmuc_active()
+{
+    $sql = "select * from danhmuc where is_active = 1 order by dm_id";
+    $listdanhmuc = pdo_query($sql);
+    return $listdanhmuc;
+}
 function delete_danhmuc($id)
 {
     $sql = "delete from danhmuc where dm_id=" . $id;

@@ -1,12 +1,18 @@
 <?php
 function add_sanpham($sanpham_sp, $mota_sp, $img,$on_off)
 {
-    $sql = "insert into sanpham(sp_ten,sp_mota,sp_img,is_active) value('$sanpham_sp','$mota_sp','$img','$on_off') ";
+    $sql = "insert into sanpham(sp_ten,sp_mota,sp_img,sp_luotmua,is_active) value('$sanpham_sp','$mota_sp','$img',0,'$on_off') ";
     pdo_execute($sql);
 }
 function loadall_sanpham()
 {
     $sql = "select * from sanpham order by sp_id";
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
+function loadall_sanpham_active()
+{
+    $sql = "select * from sanpham where is_active = 1 order by sp_id";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }

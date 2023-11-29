@@ -10,6 +10,12 @@ function loadall_dungtich()
     $listdungtich = pdo_query($sql);
     return  $listdungtich;
 }
+function loadall_dungtich_active()
+{
+    $sql = "select * from dungtich where is_active = 1 order by dt_id";
+    $listdungtich = pdo_query($sql);
+    return  $listdungtich;
+}
 function delete_dungtich($id)
 {
     $sql = "delete from dungtich where dt_id=" . $id;

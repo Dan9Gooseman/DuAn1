@@ -10,6 +10,12 @@ function loadall_thuonghieu()
     $listthuonghieu = pdo_query($sql);
     return $listthuonghieu;
 }
+function loadall_thuonghieu_active()
+{
+    $sql = "select * from thuonghieu where is_active = 1 order by th_id";
+    $listthuonghieu = pdo_query($sql);
+    return $listthuonghieu;
+}
 function delete_thuonghieu($id)
 {
     $sql = "delete from thuonghieu where th_id=" . $id;

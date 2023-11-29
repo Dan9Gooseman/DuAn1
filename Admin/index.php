@@ -227,10 +227,10 @@ if (isset($_GET['act'])) {
                 add_btsp($name_btsp, $sl_btsp, $price_btsp, $sp_id, $th_id, $dt_id, $dm_id);
                 $thongbao = "THêm thành công";
             }
-            $listdanhmuc = loadall_danhmuc();
-            $listdungtich = loadall_dungtich();
-            $listsanpham = loadall_sanpham(0);
-            $listthuonghieu = loadall_thuonghieu();
+            $listdanhmuc = loadall_danhmuc_active();
+            $listdungtich = loadall_dungtich_active();
+            $listsanpham = loadall_sanpham_active();
+            $listthuonghieu = loadall_thuonghieu_active();
             include "bienthesanpham/add.php";
             break;
         case 'listbtsp':

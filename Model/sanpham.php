@@ -7,6 +7,7 @@
                     MAX(b.btsp_giatien) AS max_giatien
                 FROM sanpham s
                 JOIN bienthesanpham b ON s.sp_id = b.sp_id
+                where s.is_active = 1
                 GROUP BY s.sp_id
                 ORDER BY s.sp_id DESC
                 LIMIT 0, 8;";
@@ -22,6 +23,7 @@
                     MAX(b.btsp_giatien) AS max_giatien
                 FROM sanpham s
                 JOIN bienthesanpham b ON s.sp_id = b.sp_id
+                where s.is_active = 1
                 GROUP BY s.sp_luotmua
                 ORDER BY s.sp_luotmua DESC
                 LIMIT 0, 8;";

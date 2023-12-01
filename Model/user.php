@@ -26,3 +26,13 @@ function checkemail($user_email)
     $sp = pdo_query_one($sql);
     return  $sp;
 }
+function diachinhanhang(){
+    $user_id = $_SESSION['nguoidung']['user_id'];
+    $sql = "select d.*, u.user_id,u.user_email 
+            from diachinhanhang d
+            join user u on d.dcnh_id = u.dcnh_id
+            where u.user_id = '$user_id'";
+    $diachinhanhang = pdo_query_one($sql);
+    return $diachinhanhang;
+    
+}

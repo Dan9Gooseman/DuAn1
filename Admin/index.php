@@ -10,7 +10,7 @@ if(!empty($_SESSION['nguoidung'])){
 }
 include "header.php";
 
-include "model/pdo.php";
+include "../Model/pdo.php";
 
 include "model/thuonghieu.php";
 include "model/danhmuc.php";
@@ -31,8 +31,8 @@ if (isset($_GET['act'])) {
         case 'adddm':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $dm_danhmuc = $_POST['dm_danhmuc'];
-                $on_off=$_POST['on_off'];
-                add_danhmuc($dm_danhmuc,$on_off);
+                $on_off = $_POST['on_off'];
+                add_danhmuc($dm_danhmuc, $on_off);
                 $thongbao = "THêm thành công";
             }
             include 'danhmuc/add.php';
@@ -57,10 +57,10 @@ if (isset($_GET['act'])) {
             break;
         case 'updatedm':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                $on_off=$_POST['on_off'];
+                $on_off = $_POST['on_off'];
                 $danhmuc_dm = $_POST['danhmuc_dm'];
                 $id = $_POST['id'];
-                update_danhmuc($id, $danhmuc_dm,$on_off);
+                update_danhmuc($id, $danhmuc_dm, $on_off);
             }
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
@@ -69,8 +69,8 @@ if (isset($_GET['act'])) {
         case 'adddt':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $dungtich_dt = $_POST['dungtich_dt'];
-                $on_off=$_POST['on_off'];
-                add_dungtich($dungtich_dt,$on_off);
+                $on_off = $_POST['on_off'];
+                add_dungtich($dungtich_dt, $on_off);
                 $thongbao = "THêm thành công";
             }
             include "dungtich/add.php";
@@ -90,8 +90,8 @@ if (isset($_GET['act'])) {
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $dt_dungtich = $_POST['dt_dungtich'];
                 $id = $_POST['id'];
-                $on_off=$_POST['on_off'];
-                update_dungtich($id, $dt_dungtich,$on_off);
+                $on_off = $_POST['on_off'];
+                update_dungtich($id, $dt_dungtich, $on_off);
             }
             $listdungtich = loadall_dungtich();
             include "dungtich/list.php";
@@ -107,8 +107,8 @@ if (isset($_GET['act'])) {
         case 'addth':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $thuonghieu_th = $_POST['thuonghieu_th'];
-                $on_off=$_POST['on_off'];
-                add_thuonghieu($thuonghieu_th,$on_off);
+                $on_off = $_POST['on_off'];
+                add_thuonghieu($thuonghieu_th, $on_off);
                 $thongbao = "THêm thành công";
             }
             include "thuonghieu/add.php";
@@ -135,9 +135,9 @@ if (isset($_GET['act'])) {
         case 'updateth':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $name = $_POST['name'];
-                $on_off=$_POST['on_off'];
+                $on_off = $_POST['on_off'];
                 $id = $_POST['id'];
-                update_thuonghieu($id, $name,$on_off);
+                update_thuonghieu($id, $name, $on_off);
             }
             $listthuonghieu = loadall_thuonghieu();
             include 'thuonghieu/list.php';
@@ -170,7 +170,7 @@ if (isset($_GET['act'])) {
         case 'addsp':
             if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                 $sanpham_sp = $_POST['sanpham_sp'];
-                $on_off=$_POST['on_off'];
+                $on_off = $_POST['on_off'];
                 $mota_sp = $_POST['mota_sp'];
                 $img = $_FILES['img_sp']['name'];
                 $target_dir = "../assets/uploads/";
@@ -180,7 +180,7 @@ if (isset($_GET['act'])) {
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                add_sanpham($sanpham_sp, $mota_sp, $img,$on_off);
+                add_sanpham($sanpham_sp, $mota_sp, $img, $on_off);
                 $thongbao = "THêm thành công";
             }
             include "sanpham/add.php";
@@ -208,8 +208,8 @@ if (isset($_GET['act'])) {
                 $id = $_POST['id'];
                 $name = $_POST['name'];
                 $mota = $_POST['mota'];
-                $on_off=$_POST['on_off'];
-                update_sanpham($id, $name, $mota,$on_off);
+                $on_off = $_POST['on_off'];
+                update_sanpham($id, $name, $mota, $on_off);
             }
             $listsanpham = loadall_sanpham(0);
             include 'sanpham/list.php';
@@ -265,7 +265,7 @@ if (isset($_GET['act'])) {
                 $th_id = $_POST['th_id'];
                 $dt_id = $_POST['dt_id'];
                 $dm_id = $_POST['dm_id'];
-                update_bienthesanpham($id,$btsp_ten, $btsp_gia, $btsp_soluong, $sp_id, $th_id, $dt_id, $dm_id);
+                update_bienthesanpham($id, $btsp_ten, $btsp_gia, $btsp_soluong, $sp_id, $th_id, $dt_id, $dm_id);
             }
             $listdanhmuc = loadall_danhmuc();
             $listdungtich = loadall_dungtich();
@@ -286,35 +286,35 @@ if (isset($_GET['act'])) {
             $listdonhang = loadall_donhang(0);
             include "donhang/update.php";
             break;
-            case 'updatetrangthai':
-                if (isset($_POST['thaydoi']) && ($_POST['thaydoi'])) {
-                    $id = $_POST['id'];
-                    $trangthai=$_POST['trangthai'];
-                    update_trangthai($id,$trangthai);
-                }
-                $listdonhang = loadall_donhang();
-                include "donhang/list.php";
-                break;
+        case 'updatetrangthai':
+            if (isset($_POST['thaydoi']) && ($_POST['thaydoi'])) {
+                $id = $_POST['id'];
+                $trangthai = $_POST['trangthai'];
+                update_trangthai($id, $trangthai);
+            }
+            $listdonhang = loadall_donhang();
+            include "donhang/list.php";
+            break;
 
         case 'listdcnh':
             $listdcnh = loadall_dcnh();
             include "diachinhanhang/list.php";
             break;
-             //CN TRANG DON HANG CHI TIET
+            //CN TRANG DON HANG CHI TIET
         case 'listdhct':
             $listdhct = loadall_dhct();
             include "donhangchitiet/list.php";
             break;
         case 'list_one':
             if (isset($_GET['iddh']) && ($_GET['iddh'] > 0)) {
-                $id=$_GET['iddh'];
-                $one=list_one($id);
+                $id = $_GET['iddh'];
+                $one = list_one($id);
                 include  "donhangchitiet/list_one.php";
-            } else{
-            include  "home.php";
+            } else {
+                include  "home.php";
             }
             break;
-        //CN TRANG THONG KE
+            //CN TRANG THONG KE
         case 'thongke':
             $listthongke = loadall_thongke();
             include "thongke/list.php";

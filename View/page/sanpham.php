@@ -2,7 +2,15 @@
     <div class="container-fluid margin">
         <h3 class="section-title-center">
             <b></b>
-            <span>Dầu gội</span>
+            <span>
+                <?php
+                foreach($all_danhmuc as $dm){
+                    if($dm_id == $dm['dm_id']){
+                        echo $dm['dm_danhmuc'];
+                    } 
+                }
+                ?>
+            </span>
             <b></b>
         </h3>
     </div>

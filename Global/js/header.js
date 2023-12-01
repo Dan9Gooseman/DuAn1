@@ -25,17 +25,3 @@
         };
         xhr.send();
     })
-        //  var tukhoa = document.querySelector('input[name="timkiem"]').value;
-		// 	var xhr = new XMLHttpRequest();
-		// 	xhr.open('GET', `Global/search.php?tukhoa=${tukhoa}`, true);
-		// 	xhr.onreadystatechange = function () {
-		// 		if (xhr.readyState == 4 && xhr.status == 200) {
-		// 			var responseData = JSON.parse(xhr.responseText);
-		// 			// console.log(responseData);
-		// 			document.getElementById('tensanpham').innerText = responseData['btsp_ten'];		
-		// 			document.getElementById('giatien').innerText = numberFormat(responseData['btsp_giatien'])+' đ';			
-		// 		}
-		// 	};
-		// 	xhr.send();
-    // })
-// })

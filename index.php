@@ -19,10 +19,23 @@ include "Global/global.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
-
+        case 'dathangthanhcong':
+            include 'view/page/dathangthanhcong.php';
+            break;
         case 'giohang':
+            if (isset($_SESSION['cart'])) {
+                // var_dump($_SESSION['cart']);
+                $thongbao = '';
+                $cartlistitem = pdo_giohangsanpham();
+                // var_dump($_SESSION['cartitems']);
+            } else {
+                $thongbao = 'Không có sản phẩm, hãy chọn sản phẩm!';
+            }
             include "view/page/giohang.php";
-                break;
+            break;
+        case 'thanhtoan':
+            include 'view/page/thanhtoan.php';
+            break;
         case 'dangky':
             include "view/user/dangky.php";
 
@@ -40,19 +53,19 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/user/dangnhap.php";
             break;
         case 'dangnhap':
-            DANGNHAP:
             if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
                 $user_email = $_POST['user_email'];
                 $user_password = $_POST['user_password'];
                 $checkuser = checkuser($user_email, $user_password);
                 if (is_array($checkuser)) {
                     $_SESSION['nguoidung'] = $checkuser;
-                    if($_SESSION['nguoidung']['user_vaitro'] == 'khachhang'){
+                    if ($_SESSION['nguoidung']['user_vaitro'] == 'khachhang') {
                         header('location: index.php');
-                    }
-                    else{
+                    } else {
                         header('location: admin/index.php');
                     }
+                    ob_end_clean();
+                    exit();
                 } else {
                     $thongbao = "Tài khoản không tồn tại";
                 }
@@ -115,7 +128,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case "dangxuat":
             session_destroy();
-            header('location: index.php?act=');
+            header('location: index.php');
             break;
 
         case "chitietsanpham":
@@ -133,7 +146,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (isset($_GET['dm_id']) && ($_GET['dm_id'] > 0)) {
                 $dm_id = $_GET['dm_id'];
                 $sp_dm = pdo_sanpham_theo_danhmuc($dm_id);
-                // var_dump($sp_dm);
+                // $all_danhmuc = pdo_all_danhmuc();
+                // var_dump($all_danhmuc);
                 include "view/page/sanpham.php";
             } else {
                 include "view/page/notfound404.php";

@@ -52,6 +52,9 @@
             case "giohang":
                 echo '<link rel="stylesheet" href="assets/css/giohang.css">';
                 break;
+            case "thanhtoan":
+                echo '<link rel="stylesheet" href="assets/css/thanhtoan.css">';
+                break;
         }
     } else {
         echo '<link rel="stylesheet" href="assets/css/home.css">';

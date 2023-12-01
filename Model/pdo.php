@@ -78,15 +78,14 @@ function pdo_query_one($sql)
     }
 }
 
-function pdo_query_value($sql)
+function pdo_query_assoc($sql)
 {
-    $sql_args = array_slice(func_get_args(), 1);
     try {
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
+        $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        return array_values($row)[0];
+        return $row;
     } catch (PDOException $e) {
         throw $e;
     } finally {

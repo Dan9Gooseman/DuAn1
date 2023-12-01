@@ -51,15 +51,19 @@ submit.addEventListener('click', (e) => {
 		}
 		xhr1.open('GET', `Model/themvaogiohang.php?btsp_id=${btsp_id}&soluong=${soluong}`,true);
 		xhr1.send();
-        // const url = `?act=giohang&btsp_id=${btsp_id}&soluong=${soluong}`;
-        // window.location.href = url;
+		Swal.fire({
+			title: 'Success',
+			text: 'Đã thêm vào giỏ hàng',
+			icon: 'success',
+			confirmButtonText: 'OK'
+		  });
     } else {
         Swal.fire({
 			title: 'Error!',
 			text: 'Hãy chọn dung tích sản phẩm',
 			icon: 'error',
 			confirmButtonText: 'OK'
-		  })
+		  });
     }
 });
 

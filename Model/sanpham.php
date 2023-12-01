@@ -78,4 +78,15 @@
         $binhluansanpham = pdo_query($sql);
         return $binhluansanpham;
     }
+    function pdo_giohangsanpham(){
+        $cartlistitem = array();
+        foreach($_SESSION['cart'] as $btsp_id => $soluong){
+            $sql = "select btsp_id, btsp_ten, btsp_giatien from bienthesanpham where btsp_id = '$btsp_id'";
+            $item = pdo_query_assoc($sql);
+            if($item){
+                $cartlistitem[] = array_merge($item, array('soluong' => $soluong));
+            }
+        }
+        return $cartlistitem;
+    }
 ?>

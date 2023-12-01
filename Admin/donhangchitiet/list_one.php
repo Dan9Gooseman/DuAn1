@@ -7,23 +7,31 @@
 
             <table>
                 <tr class="a" colspan="2">
-                    <th class="b"></th>
-                    <th class="b">ID_DHCT</th>
-                    <th class="b">ID_DH </th>
-                    <th class="b">ID_BTSP</th>
+                    <th class="b">DHCT_ID</th>
+                    <th class="b">DH_ID </th>
+                    <th class="b">Ảnh</th>
+                    <th class="b">Tên biến thể sản phẩm</th>
                     <th class="b">SỐ LƯỢNG</th>
-                <?php
-                foreach ($one as $o) {
-                extract($o);
-                echo '  <tr>
-                            <th><input type="checkbox"></th>
+                    <th class="b">Thành tiền</th>
+                    <?php
+                    foreach ($one as $o) {
+                        extract($o);
+                        $img = "../assets/uploads/" . $sp_img;
+                        if (is_file($img)) {
+                            $hinh = "<img src='" . $img . "' height='100' width='75'>";
+                        } else {
+                            $hinh = "không hình ảnh";
+                        }
+                        echo '  <tr>
                             <th>' . $dhct_id . '</th>
                             <th>' . $dh_id . '</th>
-                            <th>' . $btsp_id . '</th>
+                            <th>' . $hinh . '</th>
+                            <th>' . $btsp_ten . '</th>
                             <th>' . $dhct_soluong . '</th>
+                            <th>' . $thanh_tien . '</th>
                         </tr>';
                     }
-                ?>
+                    ?>
             </table>
         </div>
     </div>

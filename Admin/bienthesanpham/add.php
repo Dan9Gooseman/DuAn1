@@ -13,7 +13,7 @@
             
             <div class="dulieu">
             ID  SẢN PHẨM :<br>
-                <select name="sp_id" id="">
+                <select name="sp_id" id="" >
                     <?php 
                     foreach ($listsanpham as $sp) {
                         extract($sp);
@@ -33,7 +33,7 @@
                     
                 </select><br>
                 ID DUNG TÍCH :<br>
-                <select name="dt_id" id="">
+                <select name="dt_id" id="" required>
                     <?php 
                     foreach ($listdungtich as $dt) {
                         extract($dt);
@@ -42,7 +42,7 @@
                     ?>
                     
                 </select><br>
-                ID DANH MỤC : <br>
+                 ID DANH MỤC : <br>
                 <select name="dm_id" id="">
                     <?php 
                     foreach ($listdanhmuc as $dm) {

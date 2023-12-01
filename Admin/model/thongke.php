@@ -10,3 +10,11 @@ function loadall_thongke()
     return $listthongke;
     
 }
+function loadall_sptop()
+{
+    $sql=" select sanpham.sp_id, sanpham.sp_img, sanpham.sp_ten, sanpham.sp_luotmua from  sanpham order by sp_luotmua desc limit 10 ";
+    $listsptop = pdo_query($sql);
+    return $listsptop;
+
+
+}

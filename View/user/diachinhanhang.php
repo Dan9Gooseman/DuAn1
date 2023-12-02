@@ -1,8 +1,8 @@
-<div class="container-acount">
+<div class="container-suadiachi">
     <div class="header">
         <div class="taikhoan">
             <div class="anh">
-                <img src="../img/5.jpg" alt="" />
+                <img src="../../img/5.jpg" alt="" />
             </div>
             <div class="ten">
                 <span>
@@ -43,24 +43,29 @@
         </div>
     </div>
     <div class="main">
-        <div class="sp">
-            <div class="sp1" id="donhang">
-                <a href="index.php?act=diachinhanhang">
-                    <h3>Cập nhật địa chỉ nhận hàng</h3>
-                </a>
-                <p>Thay đổi và cập nhật địa chỉ nhận hàng của bạn</p>
+        <span>Các địa chỉ bên dưới mặc định sẽ được sử dụng ở trang thanh toán sản
+            phẩm.</span>
+        <div class="content">
+            <div class="ct1">
+                <div class="chu">
+                    <h4>Địa chỉ thanh toán</h4>
+                </div>
+                <div class="nut">
+                    <a href="index.php?act=suadiachi"><input type="submit" value="SỬA"></a>
+                </div>
             </div>
-            <div class="sp1" id="thongtin">
-                <a href="index.php?act=edit_tk">
-                    <h3>Thay đổi thông tin</h3>
-                </a>
-                <p>Chỉnh sửa thông tin cá nhân và mật khẩu của bạn</p>
-            </div>
-            <div class="sp1" id="capnhat">
-                <a href="index.php?act=lichsudathang">
-                    <h3>Lịch sử mua hàng</h3>
-                </a>
-                <p>Kiểm tra các đơn hàng mà bạn đã từng đặt tại Website</p>
+            <div class="ct1">
+                <?php
+                foreach ($listdonhang as $donhang) {
+                    extract($donhang);
+                    echo '<tr>
+                    <td>' . $user_hovaten . '</td><br>
+                    <td>' . $dcnh_sdt . '</td><br>
+                    <td>' . $dcnh_diachi . '</td><br>
+                    </tr>';
+                }
+                // var_dump($listdonhang);
+                ?>
             </div>
         </div>
     </div>

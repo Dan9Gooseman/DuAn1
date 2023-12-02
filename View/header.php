@@ -28,9 +28,27 @@
             case "hoso":
                 echo '<link rel="stylesheet" href="assets/css/trangcanhan.css">';
                 break;
+            case "lichsudathang":
+                echo '<link rel="stylesheet" href="assets/css/lichsudathang.css">';
+                break;
+            case "diachinhanhang":
+                echo '<link rel="stylesheet" href="assets/css/diachithanhtoan.css">';
+                break;
+            case "suadiachi":
+                echo '<link rel="stylesheet" href="assets/css/suadiachi.css">';
+                break;
+            case "luudiachi":
+                echo '<link rel="stylesheet" href="assets/css/suadiachi.css">';
+                break;
             case "edit_tk":
+                echo '<link rel="stylesheet" href="assets/css/thaydoithongtin.css">';
+                break;
             case "capnhattk":
+                echo '<link rel="stylesheet" href="assets/css/thaydoithongtin.css">';
+                break;
             case "capnhatmk":
+                echo '<link rel="stylesheet" href="assets/css/thaydoithongtin.css">';
+                break;
             case "edit_mk":
                 echo '<link rel="stylesheet" href="assets/css/thaydoithongtin.css">';
                 break;

@@ -1,0 +1,66 @@
+
+.container-suadiachi {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* width: 800px;
+    max-width: 100%;
+    min-height: 300px; */
+}
+.container-suadiachi .header {
+  background-color: #e0e0e0;
+}
+.container-suadiachi .header .taikhoan {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-suadiachi .header .menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container-suadiachi .header .menu .menu1 {
+  padding-right: 20px;
+}
+.container-suadiachi .header .menu .menu2 {
+  padding-left: 20px;
+}
+/* h4 {
+  padding: 30px 30px 30px 30px;
+} */
+.form {
+  padding: 20px 20%;
+  border: solid #e0e0e0 1px;
+  /* width: 1101px; */
+}
+.nut {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.nut2 {
+  width: 100%;
+}
+p {
+  padding-bottom: 10px;
+}
+.container-suadiachi h4 {
+  padding: 20px 20%;
+}
+.nut input {
+  width: 100%;
+}
+.container-suadiachi button {
+  /* margin: 20px 20px 0 0; */
+  background-color: black;
+  color: #e0e0e0;
+  border: #255c45 1px;
+  margin: 20px 20%;
+  padding: 5px 5px 5px 5px;
+}
+.container-suadiachi button:hover {
+  color: #e0e0e0;
+  background-color: #255c45;
+}

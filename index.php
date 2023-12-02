@@ -130,7 +130,66 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             session_destroy();
             header('location: index.php');
             break;
+        case "diachinhanhang":
+            $listdonhang = loadall_donhang();
+            include "view/user/diachinhanhang.php";
+            break;
+        case "suadiachi":
+            if (empty($_SESSION['nguoidung'])) {
+                header('location: index.php');
+            } else {
+                $diachinhanhang = diachinhanhang();
+            }
+            include "view/user/suadiachi.php";
+            break;
+        case "luudiachi":
+            if (isset($_POST['luudiachi']) && ($_POST['luudiachi'])) {
+                $dcnh_hovaten = $_POST['dcnh_hovaten'];
+                $dcnh_sdt = $_POST['dcnh_sdt'];
+                $dcnh_diachi = $_POST['dcnh_diachi'];
+                $dcnh_id = $_POST['dcnh_id'];
+                $dc_capnhat = update_diachi($dcnh_hovaten, $dcnh_sdt, $dcnh_diachi, $dcnh_id);
 
+                echo '<script>
+                            alert("Cập nhật địa chỉ thành công");
+                            window.location.href = "index.php?act=suadiachi";
+                        </script>';
+
+                // Đảm bảo không có mã HTML hoặc văn bản nào khác xuất hiện sau đoạn mã JavaScript
+                exit();
+            } else {
+                include "view/user/suadiachi.php";
+            }
+
+            break;
+        case "lichsudathang":
+            $listdonhang = loadall_donhang();
+            include "view/user/lichsudathang.php";
+            break;
+        case 'suatrangthai':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $iddh = $_GET['id'];
+                $dh = loadone_donhang($iddh);
+
+                if ($dh['dh_trangthaidonhang'] === 'Đang xử lý') {
+
+                    update_trangthaidonhang($iddh);
+                    echo '<script>
+                            alert("Bạn đã hủy đơn hàng thành công");
+                            window.location.href = "index.php?act=lichsudathang";
+                        </script>';
+                } elseif ($dh['dh_trangthaidonhang'] === 'Đang giao' || $dh['dh_trangthaidonhang'] === 'Thất bại' || $dh['dh_trangthaidonhang'] === 'Đã nhận hàng') {
+
+                    echo '<script>
+                            alert("Đơn hàng đang giao. Bạn không thể hủy");
+                            window.location.href = "index.php?act=thongtindonhang";
+                        </script>';
+                } else {
+                }
+            }
+            $listdonhang = loadall_donhang(0);
+            include "view/user/thongtindonhang.php";
+            break;
         case "chitietsanpham":
             if (isset($_GET['sp_id']) && ($_GET['sp_id'] > 0)) {
                 $sp_id = (int)$_GET['sp_id'];

@@ -31,7 +31,7 @@
         </div>
         <div class="menu">
             <div class="menu1">
-                <a href="../trangcanhan/trangcanhan.html">Trang cá nhân</a>
+                <a href="index.php?act=hoso">Trang cá nhân</a>
             </div>
             <div class="menu2">
                 <a href="index.php?act=">Ghé thăm cửa hàng</a>

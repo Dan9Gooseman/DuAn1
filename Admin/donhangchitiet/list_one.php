@@ -23,7 +23,7 @@
                             $hinh = "không hình ảnh";
                         }
                         echo '  <tr>
-                            <th>' . $dhct_id . '</th>
+                            <th style="width:12%;">' . $dhct_id . '</th>
                             <th>' . $dh_id . '</th>
                             <th>' . $hinh . '</th>
                             <th>' . $btsp_ten . '</th>

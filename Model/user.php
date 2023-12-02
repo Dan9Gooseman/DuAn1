@@ -44,7 +44,7 @@ function loadone_donhang($iddh)
 }
 function update_diachi($dcnh_hovaten, $dcnh_sdt, $dcnh_diachi, $dcnh_id)
 {
-    var_dump($dcnh_hovaten);
+    // var_dump($dcnh_hovaten);
     $sql = "update diachinhanhang set dcnh_hovaten='" . $dcnh_hovaten . "', dcnh_sdt='" . $dcnh_sdt . "', 
     dcnh_diachi='" . $dcnh_diachi . "' where dcnh_id=" . $dcnh_id;
     pdo_execute($sql);

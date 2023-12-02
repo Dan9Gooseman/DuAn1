@@ -10,7 +10,6 @@
         <p id="result"></p></div>
             <table>
                 <tr class="a">
-                    <th class="b"></th>
                     <th class="b">MÃ SẢN PHẨM</th>
                     <th class="b">TÊN SẢN PHẨM</th>
                     <th class="b">ẢNH SẢN PHẨM</th>
@@ -31,8 +30,7 @@
                         $hinh = "không hình ảnh";
                     }
                     echo '<tr>
-                    <th><input type="checkbox"></th>
-                    <th>' . $sp_id . '</th>
+                    <th style="width:12%;">' . $sp_id . '</th>
                     <th>' . $sp_ten . '</th>
                     <th>' . $hinh . '</th>
                     <th>' . $sp_mota . '</th>
@@ -47,9 +45,6 @@
 
         </div>
         <div class="nut_cn">
-        <input class="mr" type="button" value="chọn tât cả"  onclick="toggleCheckbox()">
-            <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
-            <input class="mr" type="button" value="xóa mục đã chọn">
             <a href="index.php?act=addsp"><input type="button" value="nhập thêm"></a>
         </div>
     </div>

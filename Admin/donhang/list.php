@@ -11,7 +11,6 @@
         </div>
             <table>
                 <tr class="a">
-                    <th class="b"></th>
                     <th class="b">ID ĐƠN HÀNG</th>
                     <th class="b">NGÀY TẠO</th>
                     <th class="b">TỔNG TIỀN</th>
@@ -30,8 +29,7 @@
                     $suatrangthai = "index.php?act=suatrangthai&id=" . $dh_id;
                     $chitiet="index.php?act=list_one&iddh=".$dh_id;
                     echo '<tr>
-                    <th><input type="checkbox"></th>
-                    <th>' . $dh_id . '</th>
+                    <th style="width:12%;">' . $dh_id . '</th>
                     <th>' . $dh_ngaytao . '</th>
                     <th>' . $dh_tongtien . '</th>
                     <th>'.$dh_thanhtoan.'</th>

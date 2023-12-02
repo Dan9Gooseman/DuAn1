@@ -11,7 +11,6 @@
             </div>
             <table>
                 <tr class="a">
-                    <th class="b"></th>
                     <th class="b">MÃ BIẾN THỂ SP</th>
                     <th class="b">TÊN BIẾN THỂ SP</th>
                     <th class="b">GIÁ TIỀN BIẾN THỂ SP</th>
@@ -28,8 +27,7 @@
                     $xoabtsp = "index.php?act=xoabtsp&id=" . $btsp_id;
                     $suabtsp = "index.php?act=suabtsp&id=" . $btsp_id;
                     echo '<tr>
-                        <th><input type="checkbox"></th>
-                        <th>' . $btsp_id . '</th>
+                        <th style="width:12%;">' . $btsp_id . '</th>
                         <th>' . $btsp_ten . '</th>
                         <th>' . $btsp_giatien . '</th>
                         <th>' . $btsp_soluongconlai . '</th>
@@ -46,9 +44,6 @@
 
         </div>
         <div class="nut_cn">
-            <input class="mr" type="button" value="chọn tât cả" onclick="toggleCheckbox()">
-            <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
-            <input class="mr" type="button" value="xóa mục đã chọn">
             <a href="index.php?act=addbtsp"><input type="button" value="nhập thêm"></a>
         </div>
     </div>

@@ -10,7 +10,6 @@
         <p id="result"></p></div>
             <table>
                 <tr class="a">
-                    <th class="b"></th>
                     <th class="b">MÃ DUNG TÍCH</th>
                     <th class="b">DUNG TÍCH</th>
                     <th class="b">TRẠNG THÁI</th>
@@ -22,8 +21,7 @@
                     // $xoadt = "index.php?act=xoadt&id=" . $dt_id;<th><a href="' . $xoadt . '"><input class="c" type="button" value="xóa"></a>
                     $suadt = "index.php?act=suadt&id=" . $dt_id;
                     echo '<tr>
-                    <th><input type="checkbox"></th>
-                    <th>' . $dt_id . '</th>
+                    <th style="width:12%;">' . $dt_id . '</th>
                     <th>' . $dt_dungtich . '</th>
                     <th>' . $is_active . '</th>
                     <th class="center">
@@ -36,9 +34,6 @@
 
         </div>
         <div class="nut_cn">
-            <input class="mr" type="button" value="chọn tât cả"  onclick="toggleCheckbox()">
-            <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
-            <!-- <input class="mr" type="button" value="xóa mục đã chọn"> -->
             <a href="index.php?act=adddt"><input type="button" value="nhập thêm"></a>
         </div>
     </div>

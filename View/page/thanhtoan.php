@@ -14,6 +14,7 @@ include "Model/thanhtoan.php";
             <input type="text" name="email" value="<?php echo $diachinhanhang['user_email']; ?>">
             <label>Ghi chú :</label>
             <textarea name="ghichu" cols="50" rows="10"></textarea>
+            <input type="text" hidden readonly name="dcnh_id" value="<?php echo $diachinhanhang['dcnh_id']; ?>">
         </div>
         <div class="divider1"></div>
         <div class="total">

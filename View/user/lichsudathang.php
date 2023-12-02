@@ -52,8 +52,7 @@
     <table>
         <tr class="a">
             <!-- <th class="b"></th> -->
-            <th class="b">HỌ TÊN KHÁCH HÀNG</th>
-            <th class="b">SDT</th>
+            <th class="b">MÃ ĐƠN HÀNG</th>
             <th class="b">ĐỊA CHỈ</th>
             <th class="b">NGÀY TẠO</th>
             <th class="b">TỔNG TIỀN</th>
@@ -64,8 +63,7 @@
         </tr>
         <?php foreach ($listdonhang as $donhang) : ?>
         <tr>
-            <th> <?= $donhang['user_hovaten'] ?> </th>
-            <th> <?= $donhang['dcnh_sdt'] ?> </th>
+            <th> <?= $donhang['dh_id'] ?> </th>
             <th> <?= $donhang['dcnh_diachi'] ?> </th>
             <th> <?= $donhang['dh_ngaytao'] ?> </th>
             <th> <?= $donhang['dh_tongtien'] ?> </th>
@@ -74,7 +72,7 @@
             <th>
                 <?php
                     // Sửa điều kiện để kiểm tra nếu trạng thái là 'Đang xử lý' hoặc 'Đang giao'
-                    if ($donhang['dh_trangthaidonhang'] == 'Đang xử lý' || $donhang['dh_trangthaidonhang'] == 'Đang giao') {
+                    if ($donhang['dh_trangthaidonhang'] == 'Đang xử lý' ) {
                         echo '<a href="index.php?act=suatrangthai&id=' . $donhang['dh_id'] . '"><input class="c" id="nuthuydh" type="button" value="Hủy đơn hàng" name="huydonhang"></a>';
                     }
                     ?>

@@ -11,7 +11,6 @@
     </div>
             <table>
                 <tr class="a">
-                    <th class="b"></th>
                     <th class="b">MÃ TÀI KHOẢN</th>
                     <th class="b">USER</th>
                     <th class="b">PASS</th>
@@ -25,8 +24,7 @@
                     extract($user);
                     $xoauser = "index.php?act=xoauser&id=" . $user_id;
                     echo '<tr>
-                    <th><input type="checkbox"></th>
-                    <th>' . $user_id . '</th>
+                    <th style="width:12%;">' . $user_id . '</th>
                     <th>' . $user_hovaten . '</th>
                     <th>' . $user_password . '</th>
                     <th>' . $user_email . '</th>
@@ -38,11 +36,6 @@
                 ?>
             </table>
 
-        </div>
-        <div class="nut_cn">
-        <input class="mr" type="button" value="chọn tât cả"  onclick="toggleCheckbox()">
-            <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
-            <input class="mr" type="button" value="xóa mục đã chọn">
         </div>
     </div>
 

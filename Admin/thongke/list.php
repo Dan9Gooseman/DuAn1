@@ -38,7 +38,6 @@
                     </div>
             <table>
                 <tr class="a">
-                    <th class="b"></th>
                     <th class="b">MÃ SẢN PHẨM</th>
                     <th class="b">TÊN SẢN PHẨM</th>
                     <th class="b">ẢNH SẢN PHẨM</th>
@@ -54,8 +53,7 @@
                         $hinh = "không hình ảnh";
                     }
                     echo '<tr>
-                    <th><input type="checkbox"></th>
-                    <th>'.$sp_id.'</th>
+                    <th style="width:12%;">'.$sp_id.'</th>
                     <th>'.$sp_ten.'</th>
                     <th>'.$hinh.'</th>
                     <th>'.$sp_luotmua.'</th>

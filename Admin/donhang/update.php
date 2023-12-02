@@ -11,15 +11,39 @@ if (is_array($dh)) {
         <form action="index.php?act=updatetrangthai" method="post">
             <div class="dulieu">
                 ID ĐƠN HÀNG :
-                <input type="text"  value="<?=$dh_id  ?>" disabled>
-                 TRẠNG THÁI :
-                 <select name="trangthai">
-                    <option ><?=$dh_trangthaidonhang?></option>
+                <input type="text" value="<?= $dh_id  ?>" disabled>
+                TRẠNG THÁI :
+                <select name="trangthai">
+                    <!-- <option value="<?php echo $dh_trangthaidonhang; ?>">Hiện tại: <?php echo $dh_trangthaidonhang; ?></option>
+                    <option value="Đang xử lí">Đang xử lý</option>
+                    <option value="Đang chuẩn bị hàng">đang chuẩn bị hàng</option>
+                    <option value="Đã giao cho đơn vị vận chuyển">Đã giao cho đơn vị vận chuyển</option>
                     <option value="Đang giao">Đang giao</option>
-                    <option value="Đã nhận hàng">Đã nhận hàng</option>
-                    <option value="Thất Bại">Thất Bại</option>
-                    
-                    </select>
+                    <option value="Giao Hàng Thành công">Giao Hàng Thành công</option>
+                    <option value="Giao Hàng Thất Bại">Giao Hàng Thất Bại</option> -->
+                    <?php
+                    $options = array(
+                        "Đang xử lý",
+                        "Đang chuẩn bị hàng",
+                        "Đã giao cho đơn vị vận chuyển",
+                        "Đang giao",
+                        "Giao Hàng Thành công",
+                        "Giao Hàng Thất Bại"
+                    );
+
+                    $selectedValue = $dh_trangthaidonhang;
+
+                    // Find the index of the selected value in the options array
+                    $selectedIndex = array_search($selectedValue, $options);
+
+                    // Display options starting from the index of the selected value to the end of the array
+                    echo '<option value="' . $dh_trangthaidonhang . '"> Hiện tại : ' .$dh_trangthaidonhang . '</option>';
+                    for ($i = $selectedIndex + 1; $i < count($options); $i++) {
+                        $optionValue = $options[$i];
+                        echo '<option value="' . $optionValue . '">' . $optionValue . '</option>';
+                    }
+                    ?>
+                </select>
 
             </div>
             <div class="nut_cn">

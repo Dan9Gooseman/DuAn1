@@ -9,7 +9,8 @@
   min-height: 400px;
 }
 .container-acount .header {
-  background-color: #e0e0e0;
+  background-color: #255c45;
+  margin-top: 10px;
 }
 .container-acount .header .taikhoan {
   padding-top: 20px;

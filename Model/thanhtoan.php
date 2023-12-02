@@ -28,8 +28,25 @@ function themvaodonhangchitiet($dh_id){
         pdo_execute($sql);
     }
 }
+function updatediachinguoidung($dcnh_id,$diachi,$sdt,$hovaten,$user_id){
+    if(isset($dcnh_id)){
+        $sql = "update diachinhanhang
+                set dcnh_diachi = '$diachi', dcnh_sdt = '$sdt', dcnh_hovaten = $hovaten
+                where dcnh_id = '$dcnh_id'";
+        pdo_execute($sql);
+    }else{
+        $sql1 = "insert into diachinhanhang (dcnh_diachi, dcnh_sdt, dcnh_hovaten)
+                values ('$diachi', '$sdt','$hovaten')";
+        $sql2 = "update user
+                set dcnh_id = ( select dcnh_id from diachinhanhang order by dcnh_id DESC limit 1)
+                where user_id = '$user_id'";
+        pdo_execute($sql1);
+        pdo_execute($sql2);
+    }
+}
 if(isset($_POST['submit']) && ($_POST['submit'])){
     $user_id =  $_SESSION['nguoidung']['user_id'];
+    $dcnh_id = $_POST['dcnh_id'];
     $hovaten = $_POST['hovaten'];
     $diachi = $_POST['diachi'];
     $sdt = $_POST['sdt'];
@@ -37,6 +54,8 @@ if(isset($_POST['submit']) && ($_POST['submit'])){
     $phuongthucthanhtoan = $_POST['phuongthucthanhtoan'];
     $ghichu = $_POST['ghichu'];
     $tongtien = $_POST['tongtien'];
+    //update địa chỉ nhận hàng
+    // updatediachinguoidung($dcnh_id,$diachi,$sdt,$hovaten,$user_id);
     //tạo đơn hàng mới
     themvaodonhang($tongtien, $user_id,  $phuongthucthanhtoan, $ghichu);
     //lấy id đơn hàng mới về

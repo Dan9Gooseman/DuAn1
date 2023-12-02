@@ -10,21 +10,20 @@
         <p id="result"></p></div>
             <table>
                 <tr class="a">
-                    <th class="b"></th>
+
                     <th class="b">MÃ BÌNH LUẬN</th>
                     <th class="b">NỘI DUNG BÌNH LUẬN</th>
                     <th class="b">ID USER</th>
                     <th class="b">ID PRODUCT</th>
                     <th class="b">NGÀY BÌNH LUẬN</th>
-                    <th class="b"></th>
+
                 </tr>
                 <?php
                 foreach ($listbinhluan as $bl) {
                     extract($bl);
                     $xoabl = "index.php?act=xoabl&id=" . $bl_id;
                     echo '<tr>
-                    <th></th>
-                    <th>' . $bl_id . '</th>
+                    <th style="width:12%;">' . $bl_id . '</th>
                     <th>' . $bl_noidung . '</th>
                     <th' . $user_id . '</th>
                     <th>' . $sp_id. '</th>
@@ -39,11 +38,6 @@
 
             </table>
 
-        </div>
-        <div class="nut_cn">
-            <input class="mr" type="button" value="chọn tât cả" onclick="toggleCheckbox()">
-            <input class="mr" type="button" value="bỏ chọn tất cả"onclick="uncheckAll()">
-            <input class="mr" type="button" value="xóa mục đã chọn">
         </div>
     </div>
 

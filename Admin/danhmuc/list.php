@@ -10,7 +10,6 @@
         <p id="result"></p></div>
             <table>
                 <tr class="a">
-                    <th class="b"></th>
                     <th class="b">MÃ DANH MỤC</th>
                     <th class="b">TÊN DANH MỤC</th>
                     <th class="b">TRẠNG THÁI</th>
@@ -21,8 +20,7 @@
                     extract($dm);
                     $suadm = "index.php?act=suadm&id=" . $dm_id;
                     echo '<tr>
-                        <th><input type="checkbox"></th>
-                        <th>' . $dm_id . '</th>
+                        <th style="width:12%;">' . $dm_id . '</th>
                         <th>' . $dm_danhmuc . '</th>
                         <th>' . $is_active . '</th>
                         <th class="center">
@@ -35,9 +33,6 @@
 
         </div>
         <div class="nut_cn">
-            <input class="mr" type="button" value="chọn tât cả"  onclick="toggleCheckbox()">
-            <input class="mr" type="button" value="bỏ chọn tất cả" onclick="uncheckAll()">
-            <input class="mr" type="button" value="xóa mục đã chọn">
             <a href="index.php?act=adddm"><input type="button" value="nhập thêm"></a>
         </div>
     </div>

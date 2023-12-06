@@ -55,7 +55,7 @@ echo $_SESSION['nguoidung']['dcnh_id'];
             <?php
             foreach ($top10_buy as $buy) {
                 extract($buy);
-                $linksp = "index.php?act=chitietsanpham&btsp_id=" . $btsp_id;
+                $linksp = "index.php?act=chitietsanpham&sp_id=" . $sp_id;
                 $anh = $img_path . $sp_img;
                 echo '<div class="product-box">
                     <a href="' . $linksp . '">

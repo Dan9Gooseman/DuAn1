@@ -5,7 +5,7 @@ if (is_array($th)) {
 ?>
 <div class="row">
     <div class="row formtile mb10">
-        <h1 style="text-align: center;">SỬA THƯƠNG HIỆU</h1>
+        <h1 style="text-align: center;">CẬP NHẬT THƯƠNG HIỆU</h1>
     </div>
     <div>
         <form action="index.php?act=updateth" method="post">

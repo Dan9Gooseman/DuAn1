@@ -5,7 +5,7 @@ if (is_array($dh)) {
 ?>
 <div class="row">
     <div class="row formtile mb10">
-        <h1 style="text-align: center;">CẬP NHẬT DANH MỤC</h1>
+        <h1 style="text-align: center;">CẬP NHẬT ĐƠN HÀNG</h1>
     </div>
     <div>
         <form action="index.php?act=updatetrangthai" method="post">

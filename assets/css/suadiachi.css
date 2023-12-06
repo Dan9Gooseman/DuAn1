@@ -61,6 +61,10 @@ p {
   padding: 5px 5px 5px 5px;
 }
 .container-suadiachi button:hover {
-  color: #e0e0e0;
+  color: white;
   background-color: #255c45;
+}
+.menu1>a,.menu2>a{
+  text-decoration: none;
+  color:#255c45;
 }

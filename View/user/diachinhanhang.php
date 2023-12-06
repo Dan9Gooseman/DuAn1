@@ -18,27 +18,17 @@
                     ?>
                 </span> <br />
                 <?php
-                if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['user_hovaten']) {
+                if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['user_hovaten']) :
                 ?>
-                <!-- <li><a class="dropdown-item" href="index.php?act=hoso">Hồ sơ</a></li> -->
-                <li><a class="dropdown-item" href="index.php?act=dangxuat">Đăng xuất</a></li>
                 <?php
-                } else {
-                    echo "";
-                }
+                endif;
                 ?>
                 <!-- <button>Đăng xuất</button> -->
             </div>
         </div>
         <div class="menu">
             <div class="menu1">
-                <a href="index.php?act=edit_tk">Cập nhật hồ sơ</a>
-            </div>
-            <div class="menu1">
                 <a href="index.php?act=edit_mk">Đổi mật khẩu</a>
-            </div>
-            <div class="menu2">
-                <a href="home.php">Ghé thăm cửa hàng</a>
             </div>
         </div>
     </div>
@@ -56,14 +46,13 @@
             </div>
             <div class="ct1">
                 <?php
-                foreach ($listdonhang as $donhang) {
-                    extract($donhang);
+                // var_dump($diachinhanhang);
                     echo '<tr>
-                    <td>' . $user_hovaten . '</td><br>
-                    <td>' . $dcnh_sdt . '</td><br>
-                    <td>' . $dcnh_diachi . '</td><br>
+                    <td>' . $diachinhanhang['dcnh_hovaten'] . '</td><br>
+                    <td>' . $diachinhanhang['dcnh_sdt'] . '</td><br>
+                    <td>' . $diachinhanhang['dcnh_diachi'] . '</td><br>
+                    <td>' . $diachinhanhang['user_email'] . '</td><br>
                     </tr>';
-                }
                 // var_dump($listdonhang);
                 ?>
             </div>

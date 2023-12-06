@@ -34,37 +34,37 @@ function numberFormat(number) {
 
 var submit = document.getElementById('submit1');
 submit.addEventListener('click', (e) => {
-    e.preventDefault();
-    const btsp_id = document.querySelector('#btspID').value;
-    const soluong = document.querySelector('#num').value;
+	e.preventDefault();
+	const btsp_id = document.querySelector('#btspID').value;
+	const soluong = document.querySelector('#num').value;
 
-    // Check if btsp_id is not blank or null
-    if (btsp_id !== null && btsp_id.trim() !== "") {
+	// Check if btsp_id is not blank or null
+	if (btsp_id !== null && btsp_id.trim() !== "") {
 		var xhr1 = new XMLHttpRequest();
-		xhr1.onreadystatechange = function(){
-			if(xhr1.readyState == 4 && xhr1.status == 200){
+		xhr1.onreadystatechange = function () {
+			if (xhr1.readyState == 4 && xhr1.status == 200) {
 				// console.log(xhr1.responseText);
 				var responseData1 = JSON.parse(xhr1.responseText);
-        		console.log(responseData1);
+				console.log(responseData1);
 
 			}
 		}
-		xhr1.open('GET', `Model/themvaogiohang.php?btsp_id=${btsp_id}&soluong=${soluong}`,true);
+		xhr1.open('GET', `Model/themvaogiohang.php?btsp_id=${btsp_id}&soluong=${soluong}`, true);
 		xhr1.send();
 		Swal.fire({
 			title: 'Success',
 			text: 'Đã thêm vào giỏ hàng',
 			icon: 'success',
 			confirmButtonText: 'OK'
-		  });
-    } else {
-        Swal.fire({
+		});
+	} else {
+		Swal.fire({
 			title: 'Error!',
 			text: 'Hãy chọn dung tích sản phẩm',
 			icon: 'error',
 			confirmButtonText: 'OK'
-		  });
-    }
+		});
+	}
 });
 
 ////////////////////////////////////////////////////////
@@ -102,3 +102,18 @@ if (num !== undefined && minus !== undefined && plus !== undefined && num !== nu
 	plus.addEventListener('click', fnplus);
 
 }
+
+
+// Store the scroll position before form submission
+document.getElementById('myForm').addEventListener('submit', function () {
+	sessionStorage.setItem('scrollPosition', window.scrollY);
+});
+
+// Restore the scroll position after page reload
+window.onload = function () {
+	var storedScrollPosition = sessionStorage.getItem('scrollPosition');
+	if (storedScrollPosition !== null) {
+		window.scrollTo(0, storedScrollPosition);
+		sessionStorage.removeItem('scrollPosition'); // Clear the stored position
+	}
+};

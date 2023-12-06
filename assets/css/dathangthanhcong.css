@@ -1,0 +1,15 @@
+.success{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10rem 0;
+}
+.success > h1{
+    text-transform: uppercase;
+}
+.success > a{
+    text-decoration: underline;
+    text-transform: uppercase;
+    color:#255c45;
+}

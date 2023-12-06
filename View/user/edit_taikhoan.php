@@ -16,28 +16,12 @@
                         echo "Chưa đăng nhập";
                     }
                     ?>
+                    <br>
                 </span> <br />
-                <?php
-                if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['user_hovaten']) {
-                ?>
-                    <!-- <li><a class="dropdown-item" href="index.php?act=hoso">Hồ sơ</a></li> -->
-                    <li><a class="dropdown-item" href="index.php?act=dangxuat">Đăng xuất</a></li>
-                <?php
-                } else {
-                    echo "";
-                }
-                ?>
-            </div>
-        </div>
-        <div class="menu">
-            <div class="menu1">
-                <a href="index.php?act=hoso">Trang cá nhân</a>
-            </div>
-            <div class="menu2">
-                <a href="index.php?act=">Ghé thăm cửa hàng</a>
             </div>
         </div>
     </div>
+    <?php if(isset($_SESSION['nguoidung'])) : ?>
     <form action="index.php?act=capnhattk" method="post">
         <div class="form">
             <div class="form1">
@@ -71,4 +55,5 @@
             ?>
         </h2>
     </form>
+    <?php endif;?>
 </div>

@@ -1,7 +1,6 @@
 
 .container-thongtin {
   margin: 0 5rem;
-
   position: relative;
   overflow: hidden;
   /* width: 800px; */
@@ -32,6 +31,9 @@
 .form {
   padding: 20px 20%;
   border: solid #e0e0e0 1px;
+}
+.dathang{
+  margin:3rem 0;
 }
 .nut {
   display: flex;

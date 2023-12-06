@@ -7,6 +7,6 @@ function loadall_user()
 }
 function delete_user($id)
 {
-    $sql = "delete from user where user_id=" . $id;
+    $sql = "update user set is_active = 0 where user_id=" . $id;
     pdo_execute($sql);
 }

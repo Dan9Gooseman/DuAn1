@@ -3,6 +3,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  padding: 0 5rem;
   /* max-width: 100%;
     min-height: 300px; */
 }
@@ -29,7 +30,7 @@
 }
 .main {
   padding: 30px 30px 30px 30px;
-  border: solid #e0e0e0 1px;
+  /* border: solid #e0e0e0 1px; */
 }
 .ct1 {
   padding-top: 30px;
@@ -46,4 +47,8 @@
 .nut button:hover {
   color: #e0e0e0;
   background-color: #255c45;
+}
+.menu1>a,.menu2>a{
+  text-decoration: none;
+  color:#255c45;
 }

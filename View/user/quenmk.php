@@ -5,7 +5,7 @@
                 email.</p>
             <p class="p">Tên đăng nhập hoặc email</p>
             <input type="email" name="user_email">
-            <input type="submit" value="Gửi" name="guiemail">
+            <input type="submit" value="Gửi" name="guiemail" class="quenmk">
             <h2 class="thongbao">
                 <?php
 

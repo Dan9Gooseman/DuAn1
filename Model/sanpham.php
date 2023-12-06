@@ -89,4 +89,14 @@
         }
         return $cartlistitem;
     }
+
+    // function damuahangchua($sp_id){
+    //     $sql = "select dh.dh_trangthaidonhang
+    //             FROM donhang dh 
+    //             JOIN binhluan bl ON u.user_id = bl.user_id 
+    //             JOIN sanpham sp ON bl.sp_id = sp.sp_id 
+    //             WHERE sp.sp_id = '$sp_id' and sp.is_active = 1";
+    //     $damuahangchua = pdo_query($sql);
+    //     return $damuahangchua;
+    // }
 ?>

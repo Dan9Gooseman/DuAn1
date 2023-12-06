@@ -1,6 +1,6 @@
 <div class="row">
     <div class="row formtile mb10">
-        <h1 style="text-align: center;">THÊM MỚI DANH MỤC</h1>
+        <h1 style="text-align: center;">THÊM MỚI DUNG TÍCH</h1>
     </div>
     <div>
         <form action="index.php?act=adddm" method="post">

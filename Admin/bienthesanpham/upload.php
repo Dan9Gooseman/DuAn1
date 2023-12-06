@@ -1,12 +1,12 @@
 <?php
 if (is_array($btsp)) {
     extract($btsp);
-    var_dump($btsp);
+    // var_dump($btsp);
 }
 ?>
 <div class="row">
     <div class="row formtile mb10">
-        <h1 style="text-align: center;">UPLOAD BIẾN THỂ SẢN PHẨM</h1>
+        <h1 style="text-align: center;">SỬA BIẾN THỂ SẢN PHẨM</h1>
     </div>
     <div>
         <form action="index.php?act=updatebtsp" method="post">

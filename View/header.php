@@ -73,6 +73,9 @@
             case "thanhtoan":
                 echo '<link rel="stylesheet" href="assets/css/thanhtoan.css">';
                 break;
+            case "dathangthanhcong":
+                echo '<link rel="stylesheet" href="assets/css/dathangthanhcong.css">';
+                break;
         }
     } else {
         echo '<link rel="stylesheet" href="assets/css/home.css">';
@@ -98,12 +101,7 @@
                         kiếm</button>
                 </div>
                 <div class="search-result" id="search-result">
-                    <!-- <a href="" title="Initio Addictive Vibration Eau de Parfum | 5ml - 10ml - 90ml" class="quicksearch_item ">
-                        <img src="" alt="a" class="search-img">
-                        <span class="search-info">
-                            <strong class="search-title">Initio Addict</strong>
-                            <span class="search-price">12355</span>
-                    </a> -->
+
                 </div>
             </div>
             <div class="header-user-cart">

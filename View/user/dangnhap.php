@@ -4,11 +4,11 @@
       <form action="index.php?act=dangnhap" method="post">
         <div class="row mb10">
           Email
-          <input type="email" name="user_email">
+          <input type="email" name="user_email" required>
         </div>
         <div class="row mb10">
           Mật khẩu
-          <input type="password" name="user_password">
+          <input type="password" name="user_password" required>
         </div>
         <div class="row mb10">
           <input type="submit" value="Đăng nhập" name="dangnhap">

@@ -131,7 +131,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             header('location: index.php');
             break;
         case "diachinhanhang":
-            $listdonhang = loadall_donhang();
+            $diachinhanhang = diachinhanhang();
             include "view/user/diachinhanhang.php";
             break;
         case "suadiachi":
@@ -163,7 +163,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             break;
         case "lichsudathang":
-            $listdonhang = loadall_donhang();
+
+            if(isset($_SESSION['nguoidung'])){
+            $listdonhang = loadall_donhang();}
             include "view/user/lichsudathang.php";
             break;
         case 'suatrangthai':

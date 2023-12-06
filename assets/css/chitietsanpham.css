@@ -150,9 +150,24 @@
   padding:1rem;
   border-radius: 1rem;
 }
+.comment-box > form > input{
+  border-radius: 1rem;
+  background-color: white;
+  transition: 0.3s;
+}
+.comment-box > form > input:hover{
+  background-color: black;
+  color:white;
+}
 .comment{
   background-color:rgb(244, 244, 244);
   border-radius: 1rem;
   padding: 0.5rem 1rem;
   margin: 1rem 0 ;
+}
+#new-comment{
+  resize: none;
+  width:100%;
+  border-radius: 1rem;
+  padding:1rem;
 }

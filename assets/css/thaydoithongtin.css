@@ -1,26 +1,11 @@
-* {
-  /* margin: 0;
-      padding: 0; */
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
-img {
-  width: 100px;
-}
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  /* height: 100vh; */
-}
-.container-thongtin {
-  margin: 0 5rem;
 
+.container-thongtin {
+  padding: 0 5rem;
   position: relative;
   overflow: hidden;
   /* width: 800px; */
   width: 100%;
+  margin-bottom: 5rem;
   /* min-height: 300px; */
 }
 .container-thongtin .header {
@@ -46,7 +31,7 @@ body {
 }
 .form {
   padding: 20px 20%;
-  border: solid #e0e0e0 1px;
+  /* border: solid #e0e0e0 1px; */
 }
 .nut {
   padding-top: 10px;
@@ -71,4 +56,9 @@ body {
 .container-thongtin button:hover {
   color: #e0e0e0;
   background-color: #255c45;
+}
+.doimatkhau{
+  display: flex;
+  justify-content: center;
+  padding:5rem 0;
 }

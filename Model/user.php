@@ -66,7 +66,7 @@ function loadall_donhang()
     if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['user_hovaten']) {
         $user_id = $_SESSION["nguoidung"]["user_id"];
         // var_dump($user_id);
-        $sql = "select dh.dh_id, dh.dh_ngaytao, dh.dh_tongtien, dh.dh_thanhtoan, u.user_hovaten, dcnh.dcnh_sdt, dcnh.dcnh_diachi, dh.dh_trangthaidonhang";
+        $sql = "select dh.dh_id, dh.dh_ngaytao, dh.dh_tongtien, dh.dh_thanhtoan, u.user_hovaten, dcnh.dcnh_sdt, dcnh.dcnh_diachi,dcnh_hovaten, dh.dh_trangthaidonhang";
         $sql .= " FROM donhang dh";
         $sql .= " JOIN user u ON dh.user_id = u.user_id";
         $sql .= " JOIN diachinhanhang dcnh ON u.dcnh_id = dcnh.dcnh_id";

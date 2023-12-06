@@ -22,3 +22,11 @@
   color:white;
   background-color: black;
 }
+.quenmk{
+  background-color: white;
+  transition: 0.3s;
+}
+.quenmk:hover{
+  background-color: black;
+  color:white;
+}

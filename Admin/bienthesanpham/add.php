@@ -12,7 +12,7 @@
             </div>
             
             <div class="dulieu">
-            ID  SẢN PHẨM :<br>
+            TÊN SẢN PHẨM :<br>
                 <select name="sp_id" id="" >
                     <?php 
                     foreach ($listsanpham as $sp) {

@@ -4,7 +4,7 @@ if (is_array($sp)) {
 }
 ?><div class="row">
     <div class="row formtile mb10">
-        <h1 style="text-align: center;">THÊM MỚI SẢN PHẨM</h1>
+        <h1 style="text-align: center;">CẬP NHẬT SẢN PHẨM</h1>
     </div>
     <div>
         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">

@@ -1,6 +1,6 @@
 
 .container-acount {
-  margin: 0 5rem;
+  padding: 0 5rem;
 
   position: relative;
   overflow: hidden;
@@ -9,8 +9,7 @@
   min-height: 400px;
 }
 .container-acount .header {
-  background-color: #255c45;
-  margin-top: 10px;
+  background-color: lightgray;
 }
 .container-acount .header .taikhoan {
   padding-top: 20px;
@@ -30,6 +29,10 @@
 .container-acount .header .menu .menu2 {
   padding-left: 20px;
 }
+.menu1>a,.menu2>a{
+  text-decoration: none;
+  color:#255c45;
+}
 .sp {
   margin-top: 30px;
   display: grid;
@@ -38,6 +41,10 @@
 }
 .sp1 {
   text-align: center;
+}
+.sp1 > a{
+  text-decoration: none;
+  color:#255c45;
 }
 .sp1:hover {
   text-align: center;

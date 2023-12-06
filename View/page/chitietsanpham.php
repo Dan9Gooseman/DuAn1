@@ -71,7 +71,12 @@
     <h4>Bình luận</h4>
   </div>
   <div class="comment-box">
+    <form method="post" action="" id="myForm">
+      <textarea name="new-comment" id="new-comment" cols="500" rows="2" placeholder="Bình luận mới"></textarea>
+      <input type="submit" name="submit-comment" value="Thêm bình luận">
+    </form>
     <?php
+
     foreach ($binhluansanpham as $binhluan) {
       extract($binhluan);
       echo '<div class="comment">

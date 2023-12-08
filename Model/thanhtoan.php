@@ -11,30 +11,34 @@ if (empty($_SESSION['nguoidung']) || empty($_SESSION['cart'])) {
         $tongtien += $item['btsp_giatien'] * $item['soluong'];
     }
 }
-function themvaodonhang($tongtien,$user_id,$phuongthucthanhtoan,$ghichu){
+function themvaodonhang($tongtien, $user_id, $phuongthucthanhtoan, $ghichu)
+{
     $sql = "insert into donhang(dh_tongtien,user_id, dh_thanhtoan, dh_ghichu)
             values('$tongtien','$user_id','$phuongthucthanhtoan','$ghichu') ";
     pdo_execute($sql);
 }
-function laydonhangIDmoi(){
+function laydonhangIDmoi()
+{
     $sql2 = "SELECT dh_id FROM donhang ORDER BY dh_id DESC LIMIT 1";
     $dh_id =  pdo_query_one($sql2);
     return $dh_id;
 }
-function themvaodonhangchitiet($dh_id){
-    foreach($_SESSION['cart'] as $btsp_id => $soluong){
+function themvaodonhangchitiet($dh_id)
+{
+    foreach ($_SESSION['cart'] as $btsp_id => $soluong) {
         $sql = "insert into donhangchitiet(btsp_id, dhct_soluong, dh_id)
                 values('$btsp_id','$soluong','$dh_id')";
         pdo_execute($sql);
     }
 }
-function updatediachinguoidung($dcnh_id,$diachi,$sdt,$hovaten,$user_id){
-    if(isset($dcnh_id)){
+function updatediachinguoidung($dcnh_id, $diachi, $sdt, $hovaten, $user_id)
+{
+    if (isset($dcnh_id)) {
         $sql = "update diachinhanhang
                 set dcnh_diachi = '$diachi', dcnh_sdt = '$sdt', dcnh_hovaten = $hovaten
                 where dcnh_id = '$dcnh_id'";
         pdo_execute($sql);
-    }else{
+    } else {
         $sql1 = "insert into diachinhanhang (dcnh_diachi, dcnh_sdt, dcnh_hovaten)
                 values ('$diachi', '$sdt','$hovaten')";
         $sql2 = "update user
@@ -44,7 +48,28 @@ function updatediachinguoidung($dcnh_id,$diachi,$sdt,$hovaten,$user_id){
         pdo_execute($sql2);
     }
 }
-if(isset($_POST['submit']) && ($_POST['submit'])){
+function xoasoluongsanpham()
+{
+    foreach ($_SESSION['cart'] as $btsp_id => $soluong) {
+        $sql = "update bienthesanpham
+                set btsp_soluongconlai = btsp_soluongconlai - '$soluong'
+                where btsp_id = '$btsp_id'";
+        pdo_execute($sql);
+    }
+}
+function tangluotmua()
+{
+    foreach ($_SESSION['cart'] as $btsp_id => $soluong) {
+        $sql = "update sanpham as sp 
+                join bienthesanpham as btsp on sp.sp_id = btsp.sp_id 
+                set sp.sp_luotmua = sp.sp_luotmua + 1 
+                where btsp.btsp_id = '$btsp_id'";
+        pdo_execute($sql);
+    }
+}
+
+
+if (isset($_POST['submit']) && ($_POST['submit'])) {
     $user_id =  $_SESSION['nguoidung']['user_id'];
     $dcnh_id = $_POST['dcnh_id'];
     $hovaten = $_POST['hovaten'];
@@ -63,8 +88,9 @@ if(isset($_POST['submit']) && ($_POST['submit'])){
     $dh_id =  $dh_id['dh_id'];
     //thêm đơn hàng chi tiết
     themvaodonhangchitiet($dh_id);
+    xoasoluongsanpham();
+    tangluotmua();
     unset($_SESSION['cart']);
     $_SESSION['dathangthanhcong'] = 'đặt hàng thành công';
     header('location: index.php?act=dathangthanhcong');
 }
-?>

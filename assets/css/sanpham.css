@@ -1,7 +1,7 @@
 /* hiển thị sản phẩm theo danh mục */
 .bgc{
     background-color:#ececec;
-    padding:0 5rem 5rem 5rem;
+    padding:0 5rem 10rem 5rem;
 }
 .product-container{
     background-color: white;
@@ -11,6 +11,7 @@
     flex-wrap: wrap;
 }
 .product {
+    width:100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -31,6 +32,7 @@
     height:25rem;
     background-color: white;
     border:none;
+    position:relative;
 }
 .product-image {
     width:95px;
@@ -39,7 +41,7 @@
 
 .product-name {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 1rem 0 2rem 0;
     height:45px;
 }
 
@@ -48,6 +50,7 @@
 }
 
 .product-buy{
+    /* position: absolute; */
     border:2px solid black;
     padding:0.5rem;
     transition: 0.3s;

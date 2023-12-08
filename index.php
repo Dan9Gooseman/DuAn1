@@ -226,3 +226,4 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     include "View/home.php";
 }
 include "View/footer.php";
+var_dump($_SESSION['cart']);

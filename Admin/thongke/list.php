@@ -5,10 +5,42 @@
     <div class="">
         <div class="">
             <div class="dulieu2">
-            <input type="text" id="searchInput" placeholder="Nhập tên cần tìm kiếm">
-            <button onclick="searchCharacter()">Tìm kiếm</button>
-            <p id="result"></p>
-        </div>
+                <input type="text" id="searchInput" placeholder="Nhập tên cần tìm kiếm">
+                <button onclick="searchCharacter()">Tìm kiếm</button>
+                <p id="result"></p>
+            </div>
+            <table>
+                <tr class="a">
+                    <th class="b">THỜI GIAN</th>
+                    <th class="b">DOANH THU</th>
+                </tr>
+                <?php
+                echo '<tr>
+                            <th>30 Ngày vừa qua</th>
+                            <th>' . number_format($doanhthu_30[0]['tong_tien']) . 'đ</th>
+                        </tr>';
+                ?>
+            </table>
+            <table>
+                <tr class="a">
+                    <th class="b">NĂM</th>
+                    <th class="b">THÁNG</th>
+                    <th class="b">DOANH THU</th>
+                </tr>
+                <?php
+                foreach ($doanhthu_theothoigian as $thoigian) {
+                    extract($thoigian);
+                    echo '<tr>
+                            <th>'.$nam.'</th>
+                            <th>'.$thang.'</th>
+                            <th>'.number_format($doanh_thu).'đ</th>
+                        </tr>';
+                }
+                ?>
+            </table>
+            <div class="nut_cn">
+                <a href="index.php?act=bieudo2"><input type="button" value="XEM BIỂU ĐỒ THỐNG KÊ DOANH THU THEO THÁNG"></a>
+            </div>
             <table>
                 <tr class="a">
                     <th class="b">MÃ SẢN PHẨM</th>
@@ -17,25 +49,25 @@
                     <th class="b">GIÁ THẤP NHẤT</th>
                     <th class="b">GIÁ CAO NHẤT</th>
                     <th class="b">GIÁ TRUNG BÌNH</th>
-                    
+
                 </tr>
                 <?php
                 foreach ($listthongke as $tk) {
                     extract($tk);
                     echo '<tr>
-                    <th>'.$sp_id.'</th>
-                    <th>'.$sp_ten.'</th>
-                    <th>'.$countsp.'</th>
-                    <th>'.$mingiatien.'</th>
-                    <th>'.$maxgiatien.'</th>
-                    <th>'.$avggiatien.'</th>
+                    <th>' . $sp_id . '</th>
+                    <th>' . $sp_ten . '</th>
+                    <th>' . $countsp . '</th>
+                    <th>' . number_format($mingiatien) . 'đ</th>
+                    <th>' . number_format($maxgiatien) . 'đ</th>
+                    <th>' . number_format($avggiatien) . 'đ</th>
                 </tr>';
                 }
                 ?>
             </table>
             <div class="nut_cn">
-                        <a href="index.php?act=bieudo"><input type="button" value="XEM BIỂU ĐỒ THỐNG KÊ SẢN PHẨM VÀ BIẾN THỂ"></a>
-                    </div>
+                <a href="index.php?act=bieudo"><input type="button" value="XEM BIỂU ĐỒ THỐNG KÊ SẢN PHẨM VÀ BIẾN THỂ"></a>
+            </div>
             <table>
                 <tr class="a">
                     <th class="b">MÃ SẢN PHẨM</th>
@@ -53,10 +85,10 @@
                         $hinh = "không hình ảnh";
                     }
                     echo '<tr>
-                    <th style="width:12%;">'.$sp_id.'</th>
-                    <th>'.$sp_ten.'</th>
-                    <th>'.$hinh.'</th>
-                    <th>'.$sp_luotmua.'</th>
+                    <th style="width:12%;">' . $sp_id . '</th>
+                    <th>' . $sp_ten . '</th>
+                    <th>' . $hinh . '</th>
+                    <th>' . $sp_luotmua . '</th>
                 </tr>';
                 }
                 ?>

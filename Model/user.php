@@ -6,8 +6,12 @@ function insert_user($user_hovaten, $user_email, $user_password)
 }
 function update_user($user_hovaten, $user_email, $user_id)
 {
-    $sql = "update user set user_hovaten='" . $user_hovaten . "', user_email='" . $user_email . "' where user_id=" . $user_id;
-    pdo_execute($sql);
+    $sql1 = "update user set user_hovaten='" . $user_hovaten . "', user_email='" . $user_email . "' where user_id=" . $user_id;
+    $sql2 = "update diachinhanhang 
+            join user on diachinhanhang.dcnh_id = user.dcnh_id 
+            set dcnh_hovaten ='$user_hovaten' where user_id= '$user_id' ";
+    pdo_execute($sql1);
+    pdo_execute($sql2);
 }
 function update_userpass($user_password, $user_id)
 {
@@ -71,8 +75,26 @@ function loadall_donhang()
         $sql .= " JOIN user u ON dh.user_id = u.user_id";
         $sql .= " JOIN diachinhanhang dcnh ON u.dcnh_id = dcnh.dcnh_id";
         $sql .= " WHERE u.user_id =" . $user_id;
+        $sql .= " ORDER BY dh.dh_id DESC";
         // var_dump($sql);
         $listdonhang = pdo_query($sql);
         return $listdonhang;
+    }
+}
+function loadall_sanphamtrongdonhang($dh_id)
+{
+    if (isset($_SESSION['nguoidung']) && $_SESSION['nguoidung']['user_hovaten']) {
+        $user_id = $_SESSION["nguoidung"]["user_id"];
+        $sql = "select sp.sp_id, btsp.btsp_ten, btsp.btsp_giatien, dhct.dhct_soluong
+                from sanpham sp
+                join bienthesanpham btsp on sp.sp_id = btsp.sp_id
+                join donhangchitiet dhct on btsp.btsp_id = dhct.btsp_id 
+                join donhang dh on dhct.dh_id = dh.dh_id 
+                join user u on dh.user_id = u.user_id 
+                where dh.dh_id = '$dh_id' and u.user_id = '$user_id'
+                ";
+        // var_dump($sql);
+        $listsanphamtrongdonhang = pdo_query($sql);
+        return $listsanphamtrongdonhang;
     }
 }

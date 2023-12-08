@@ -88,7 +88,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             if (!empty($_SESSION['nguoidung'])) {
                 include "view/user/hoso.php";
             } else {
-                header('location:http://localhost:82/DuAn1-master/DuAn1-master/index.php?act=dangnhap');
+                header('location:index.php?act=dangnhap');
                 exit();
             }
             break;
@@ -96,19 +96,15 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "view/user/edit_taikhoan.php";
             break;
         case "capnhattk":
-            $thongbao = '';
+            include "view/user/edit_taikhoan.php";
             if (isset($_POST['capnhat_tk']) && ($_POST['capnhat_tk'])) {
                 $user_hovaten = $_POST['user_hovaten'];
                 $user_email = $_POST['user_email'];
                 $user_id = $_POST['user_id'];
                 update_user($user_hovaten, $user_email, $user_id);
-                $thongbao = "Cập nhật hồ sơ thành công";
-                include "view/user/edit_taikhoan.php";
-                // var_dump($thongbao);
-                // header('location: index.php?act=edit_tk');
-            } else {
-                include "view/user/edit_taikhoan.php";
-            }
+                $_SESSION['nguoidung']['user_hovaten'] = $user_hovaten;
+                header('location:index.php?act=capnhattk');
+            } 
             break;
         case "edit_mk":
             include "view/user/edit_mk.php";
@@ -163,10 +159,21 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             break;
         case "lichsudathang":
-
             if(isset($_SESSION['nguoidung'])){
-            $listdonhang = loadall_donhang();}
+            $listdonhang = loadall_donhang();
             include "view/user/lichsudathang.php";
+            }else{
+                header("location:index.php?act=dangnhap");
+            }
+            break;
+        case "chitietdonhang":
+            if(isset($_SESSION['nguoidung'])){
+                $dh_id = $_GET['dh_id'];
+                $listsanphamtrongdonhang = loadall_sanphamtrongdonhang($dh_id);
+                include "view/user/chitietdonhang.php";
+                }else{
+                    header("location:index.php?act=dangnhap");
+                }
             break;
         case 'suatrangthai':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {

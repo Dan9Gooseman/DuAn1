@@ -71,12 +71,18 @@
     <h4>Bình luận</h4>
   </div>
   <div class="comment-box">
-    <form method="post" action="" id="myForm">
-      <textarea name="new-comment" id="new-comment" cols="500" rows="2" placeholder="Bình luận mới"></textarea>
-      <input type="submit" name="submit-comment" value="Thêm bình luận">
-    </form>
     <?php
-
+      $damua = damuahangchua($sp_id);
+      if($damua == 'roi') {
+      echo '<form method="post" action="" id="myForm">
+              <textarea name="new-comment" id="new-comment" cols="500" rows="2" placeholder="Bình luận mới"></textarea>
+              <input type="submit" name="submit-comment" value="Thêm bình luận">
+            </form>';
+      } else {
+        echo '<p style="color:white;">Bạn phải đặt mua và nhận được sản phẩm này mới có thể bình luận</p>';
+      }
+    
+    
     foreach ($binhluansanpham as $binhluan) {
       extract($binhluan);
       echo '<div class="comment">

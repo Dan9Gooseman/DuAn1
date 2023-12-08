@@ -31,6 +31,9 @@
             case "lichsudathang":
                 echo '<link rel="stylesheet" href="assets/css/lichsudathang.css">';
                 break;
+            case "chitietdonhang":
+                echo '<link rel="stylesheet" href="assets/css/chitietdonhang.css">';
+                break;
             case "diachinhanhang":
                 echo '<link rel="stylesheet" href="assets/css/diachithanhtoan.css">';
                 break;

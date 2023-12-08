@@ -46,7 +46,7 @@
             </p>
             <input type="submit" value="Lưu thay đổi" name="capnhat_tk">
         </div>
-        <h2 class="thongbao">
+        <h2 class="thongbao" style="text-align: center;">
             <?php
             if (isset($thongbao) && ($thongbao != "")) {
 

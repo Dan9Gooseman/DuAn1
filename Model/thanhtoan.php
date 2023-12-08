@@ -1,16 +1,16 @@
 <?php
-
+$diachinhanhang = diachinhanhang();
 
 if (empty($_SESSION['nguoidung']) || empty($_SESSION['cart'])) {
     header('location: index.php');
 } else {
-    $diachinhanhang = diachinhanhang();
     $cartlistitem = pdo_giohangsanpham();
     $tongtien = 0;
     foreach ($cartlistitem as $item) {
         $tongtien += $item['btsp_giatien'] * $item['soluong'];
     }
 }
+
 function themvaodonhang($tongtien, $user_id, $phuongthucthanhtoan, $ghichu)
 {
     $sql = "insert into donhang(dh_tongtien,user_id, dh_thanhtoan, dh_ghichu)
@@ -33,7 +33,7 @@ function themvaodonhangchitiet($dh_id)
 }
 function updatediachinguoidung($dcnh_id, $diachi, $sdt, $hovaten, $user_id)
 {
-    if (isset($dcnh_id)) {
+    if (!empty($dcnh_id) && $dcnh_id !== null) {
         $sql = "update diachinhanhang
                 set dcnh_diachi = '$diachi', dcnh_sdt = '$sdt', dcnh_hovaten = $hovaten
                 where dcnh_id = '$dcnh_id'";
@@ -80,7 +80,7 @@ if (isset($_POST['submit']) && ($_POST['submit'])) {
     $ghichu = $_POST['ghichu'];
     $tongtien = $_POST['tongtien'];
     //update địa chỉ nhận hàng
-    // updatediachinguoidung($dcnh_id,$diachi,$sdt,$hovaten,$user_id);
+    updatediachinguoidung($dcnh_id,$diachi,$sdt,$hovaten,$user_id);
     //tạo đơn hàng mới
     themvaodonhang($tongtien, $user_id,  $phuongthucthanhtoan, $ghichu);
     //lấy id đơn hàng mới về

@@ -5,13 +5,13 @@ include "Model/thanhtoan.php";
     <form class="form" action="" method="post">
         <div class="address">
             <label>Họ và tên :</label>
-            <input type="text" name="hovaten" value="<?php echo $diachinhanhang['dcnh_hovaten']; ?>">
+            <input type="text" name="hovaten" value="<?php echo $diachinhanhang['dcnh_hovaten']; ?>" required>
             <label>Địa chỉ :</label>
-            <input type="text" name="diachi" value="<?php echo $diachinhanhang['dcnh_diachi']; ?>">
+            <input type="text" name="diachi" value="<?php echo $diachinhanhang['dcnh_diachi']; ?>" required>
             <label>số điện thoại :</label>
-            <input type="text" name="sdt" value="<?php echo $diachinhanhang['dcnh_sdt']; ?>">
+            <input type="text" name="sdt" value="<?php echo $diachinhanhang['dcnh_sdt']; ?>" required>
             <label>Email :</label>
-            <input type="text" name="email" value="<?php echo $diachinhanhang['user_email']; ?>">
+            <input type="text" name="email" value="<?php echo $diachinhanhang['user_email']; ?>" required>
             <label>Ghi chú :</label>
             <textarea name="ghichu" cols="50" rows="10"></textarea>
             <input type="text" hidden readonly name="dcnh_id" value="<?php echo $diachinhanhang['dcnh_id']; ?>">

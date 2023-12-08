@@ -103,6 +103,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $user_id = $_POST['user_id'];
                 update_user($user_hovaten, $user_email, $user_id);
                 $_SESSION['nguoidung']['user_hovaten'] = $user_hovaten;
+                $_SESSION['nguoidung']['user_email'] = $user_email;
                 header('location:index.php?act=capnhattk');
             } 
             break;
@@ -226,4 +227,3 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     include "View/home.php";
 }
 include "View/footer.php";
-var_dump($_SESSION['cart']);

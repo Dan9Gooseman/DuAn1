@@ -1,9 +1,6 @@
 <div class="container-thongtin">
     <div class="header">
         <div class="taikhoan">
-            <div class="anh">
-                <img src="../img/5.jpg" alt="" />
-            </div>
             <div class="ten">
                 <span>
                     <?php
